@@ -1,0 +1,77 @@
+<html>
+
+	<head>
+		<title>IMWT Tests</title>
+		
+		<style>
+			.tiledCols {
+			  width: 100%;
+			  
+			  font-size: normal;
+			  margin: 0 auto;
+			}
+
+			.tile {
+			  width: 33.1%;
+			  height: 98vh;
+			  display: inline-block;
+			  vertical-align: top;
+			  overflow-y: scroll;
+			}
+
+			.tile h2 {
+			  font-size: 20px;
+			}
+			
+			object {
+				width: 100%;
+				height: 100%;
+				overflow-y: disabled;
+			}
+			
+		</style>
+	
+	</head>
+	
+	
+	<body onload="load_articles()">
+	
+		<div class="pageTop">
+			<p>
+				Header della pagina con menu
+			</p>
+			<hr/>
+		</div>
+	
+		<div class="tiledCols">
+		  <div id="article1" class="tile" >
+			
+		  </div>
+		  <div id="tile2" class="tile">
+			<div id="article2">
+			</div>
+		  </div>
+		  <div id="tile3" class="tile">
+			<div id="article3">
+			</div>
+		  </div>
+		</div>
+	
+	</body>
+	
+	
+	<script>
+	
+		function load_articles() {
+			 document.getElementById("article1").innerHTML='<object type="text/html" data="article1.html" ></object>';
+			//article1.innerHTML = await (await fetch('article1.html')).text();
+			document.getElementById("article2").innerHTML='<object type="text/html" data="article2.html" ></object>';
+			document.getElementById("article3").innerHTML='<object type="text/html" data="article3.html" ></object>';
+		}
+		
+		
+
+	</script>
+	
+
+</html>
