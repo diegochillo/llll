@@ -13,10 +13,10 @@
 
 			.tile {
 			  width: 33.1%;
-			  height: 98vh;
+			  height: 90vh;
 			  display: inline-block;
 			  vertical-align: top;
-			  overflow-y: scroll;
+			  overflow-y: hidden;
 			}
 
 			.tile h2 {
@@ -63,8 +63,7 @@
 	<script>
 	
 		function load_articles() {
-			 document.getElementById("article1").innerHTML='<object type="text/html" data="article1.html" ></object>';
-			//article1.innerHTML = await (await fetch('article1.html')).text();
+			document.getElementById("article1").innerHTML='<object type="text/html" data="article1.html" ></object>';
 			document.getElementById("article2").innerHTML='<object type="text/html" data="article2.html" ></object>';
 			document.getElementById("article3").innerHTML='<object type="text/html" data="article3.html" ></object>';
 		}
