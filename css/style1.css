@@ -2,5 +2,9 @@
 
 body {
   background-color: black;
-  color: white;
+  color: lightgray;
+}
+
+.article {
+  color: lightgray;
 }
