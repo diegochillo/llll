@@ -1,22 +1,14 @@
 /* Main CSS file */
 
-.tiledCols {
-  width: 100%;
-  font-size: normal;
-  margin: 0 auto;
-}
-
-
-
 .artiCol {
     height: 88vh;
-    display: inline-block;
-    vertical-align: top;
     overflow-y: scroll;
 }
 
 
-
+.navbar {
+  height: 80pt;
+}
 
 
 /* Slim scrollbar */
