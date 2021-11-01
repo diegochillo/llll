@@ -2,11 +2,11 @@
 
 .tiledCols {
   width: 100%;
-
   font-size: normal;
   margin: 0 auto;
 }
 
+/*
 .article {
   width: 33.1%;
   height: 88vh;
@@ -15,10 +15,11 @@
   overflow-y: scroll;
 }
 
+
 .article h2 {
   font-size: 20px;
 }
-
+*/
 
 
 /* TESTED AND REMOVED
@@ -29,3 +30,47 @@ object {
   overflow-y: disabled;
 }
 */
+
+
+.artiCol {
+    height: 88vh;
+    display: inline-block;
+    vertical-align: top;
+    overflow-y: scroll;
+}
+
+.scrollable {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.no-touch .scrollable.hover {
+  overflow-y: hidden;
+}
+.no-touch .scrollable.hover:hover {
+  overflow: visible;
+  overflow-y: auto;
+}
+.slimScrollBar {
+  border-radius: 5px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box !important;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
