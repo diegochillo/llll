@@ -1,20 +1,6 @@
-/* Style 1 */
+/* Style 2 */
 
 body {
-  background-color: black;
-  color: lightgray;
-  font-family: "Times New Roman"
+  background-color: white;
+  color: black;
 }
-
-.article {
-  color: lightgray;
-}
-
-
-
-/* Slim scrollbar */
-::-webkit-scrollbar {
-    width: 12px;
-    background-color: lightgray;
-}
-/* END of slim scrollbar */

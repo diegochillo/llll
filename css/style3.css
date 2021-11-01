@@ -1,0 +1,32 @@
+/* Style 1 */
+
+body {
+  background-color: fuchsia;
+  color: green;
+  font-family: "Verdana"
+}
+
+.article {
+  color: green;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: green!important;
+}
+
+.navbar-brand {
+  color: green!important;
+}
+
+img.itemIcon {
+  filter: hue-rotate(90deg);
+}
+
+
+
+/* Slim scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: green;
+}
+/* END of slim scrollbar */

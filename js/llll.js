@@ -15,8 +15,10 @@ function load_articles() {
 
 
 
-function switchToSS (nodeE,nodeD1) {
+function switchToSS (nodeE,nodeD1,nodeD2,nodeD3) {
   nodeE.media = '';
   nodeD1.media = 'none';
+  nodeD2.media = 'none';
+  nodeD3.media = 'none';
   /* nodeD2.media = 'none'; */
 }
