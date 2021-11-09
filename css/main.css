@@ -26,3 +26,17 @@
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 /* END of slim scrollbar */
+
+
+/* Representative image of the articles */
+.articleImg {
+  width: 100%;
+}
+
+.imgSource {
+  font-size: x-small;
+}
+
+.imgCaption {
+  font-size: smaller;
+}

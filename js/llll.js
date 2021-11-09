@@ -1,12 +1,12 @@
 /* Loads the articles inside the columns using JQuery*/
 
 $(document).ready(function(){
-   $('#article1').load("articles/article1.html");
-   $('#article2').load("articles/article2.html");
-   $('#article3').load("articles/article3.html");
-   $('#article4').load("articles/article4.html");
-   $('#article5').load("articles/article5.html");
-   $('#article6').load("articles/article6.html");
+   $('#article1_1').load("articles/article1_1.html");
+   $('#article1_2').load("articles/article1_2.html");
+   $('#article1_3').load("articles/article1_3.html");
+   $('#article2_1').load("articles/article2_1.html");
+   $('#article2_2').load("articles/article2_2.html");
+   $('#article2_3').load("articles/article2_3.html");
 });
 
 /*
