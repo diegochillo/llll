@@ -1,7 +1,18 @@
 /* Main CSS file */
 
+body {
+  overflow: hidden;
+}
+
+/* Article columns */
 .artiCol {
-    height: 88vh;
+    height: 68vh;
+    overflow-y: scroll;
+}
+
+/* Metadata columns */
+.metaCol {
+    height: 20vh;
     overflow-y: scroll;
 }
 

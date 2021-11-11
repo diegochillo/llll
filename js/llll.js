@@ -7,7 +7,25 @@ $(document).ready(function(){
    $('#article2_1').load("articles/article2_1.html");
    $('#article2_2').load("articles/article2_2.html");
    $('#article2_3').load("articles/article2_3.html");
+
 });
+
+
+$(window).on('load', function() {
+  var dataList = $(".person").map(function() {
+          return $(this).data("label");
+      }).get();
+
+      //console.log(dataList.join("<br>"));
+      $('#metaData1_1').html(dataList.join("<br>"));
+
+  // alert($('#article1_1').data("label"));
+});
+
+
+
+
+
 
 /*
 function load_articles() {
@@ -17,7 +35,7 @@ function load_articles() {
 }
 */
 
-
+/* Enables the stylesheet with ID nodeE and disables the three others */
 function switchToSS (nodeE,nodeD1,nodeD2,nodeD3) {
   nodeE.media = '';
   nodeD1.media = 'none';
@@ -29,3 +47,15 @@ function switchToSS (nodeE,nodeD1,nodeD2,nodeD3) {
 
 /* Loads topbar.html in topBar div */
 $(function(){$("#topBar").load("components/topbar.html"); });
+
+
+
+
+function getMetadata(elementId,className) {
+  var dataList = $("."+className).map(function() {
+    return $(document.getElementById(elementId)).data("label");
+  }).get();
+  //console.log(dataList.join("<br>"));
+  return dataList;
+  /*  $('#personList').html(dataList.join("<br>")); */
+}
