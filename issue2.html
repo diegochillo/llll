@@ -35,6 +35,19 @@
       <div id="topBar"></div> <!-- A jQuery function loads content inside this div -->
 
 
+      <!-- METADATA ROW -->
+      <div class="row align-items-start">
+        <div class="col metaCol" id="metaData2_1">
+            Content of the first metadata box loaded by JavaScript
+        </div>
+        <div class="col metaCol" id="metaData2_2">
+            Content of the second metadata box loaded by JavaScript
+        </div>
+        <div class="col metaCol" id="metaData2_3">
+            Content of the third metadata box loaded by JavaScript
+        </div>
+      </div>
+
       <!-- ARTICLE ROW -->
       <div class="row align-items-start">
          <div class="col artiCol" id="article2_1">
@@ -55,6 +68,22 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script>
+
+    // Loads metadata
+    $(window).on('load', function() {
+      var dataList = $(".person").map(function() {
+              return $(this).data("label");
+          }).get();
+
+          var dataListU=[... new Set(dataList)];
+          $('#metaData2_1').html(dataListU.join("<br>"));
+
+      // alert($('#article1_1').data("label"));
+    });
+
+    </script>
 
   </body>
 

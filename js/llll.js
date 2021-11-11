@@ -11,16 +11,7 @@ $(document).ready(function(){
 });
 
 
-$(window).on('load', function() {
-  var dataList = $(".person").map(function() {
-          return $(this).data("label");
-      }).get();
 
-      //console.log(dataList.join("<br>"));
-      $('#metaData1_1').html(dataList.join("<br>"));
-
-  // alert($('#article1_1').data("label"));
-});
 
 
 
