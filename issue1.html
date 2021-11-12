@@ -25,6 +25,18 @@
     <script language="javascript" src="js/llll.js"></script>
 
 
+    <script>
+
+      $(window).on('load', function() {
+          });
+          /*
+          $(document).ready(function(){
+             $('#article1_1').load("articles/article1_1.html", function() { getMetadata("#article1_1","#metaData1_1") } );
+          });
+          */
+    </script>
+
+
   </head>
 
 
@@ -72,19 +84,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <script>
+    /*
+    function getMetadata(elementReadId,elementMetaId) {
+      // Loads metadata
 
-    // Loads metadata
-    $(window).on('load', function() {
-      var dataList = $(".person").map(function() {
-              return $(this).data("label");
-          }).get();
+        var dataList = $(".person").map(function() {
+                return $(this).data("label");
+            }).get();
 
-          var dataListU=[... new Set(dataList)];
-          $('#metaData1_1').html(dataListU.join("<br>"));
+            var dataListU=[... new Set(dataList)];
+            $(elementMetaId).html(dataListU.join("<br>"));
 
-      // alert($('#article1_1').data("label"));
-    });
+            //$(elementMetaId).html($(article1_1).html());
 
+        // alert($('#article1_1').data("label"));
+        //$(elementMetaId).html("Ciao scemo!");
+    }
+    */
     </script>
 
   </body>
