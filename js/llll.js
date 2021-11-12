@@ -1,3 +1,8 @@
+
+/* Loads topbar.html in topBar div */
+$(function(){$("#topBar").load("components/topbar.html"); });
+
+
 /* Loads the articles inside the columns using JQuery*/
 
 $(document).ready(function(){
@@ -22,16 +27,12 @@ function switchToSS (nodeE,nodeD1,nodeD2,nodeD3) {
 }
 
 
-/* Loads topbar.html in topBar div */
-$(function(){$("#topBar").load("components/topbar.html"); });
-
-
 
 
 function getMetadata(elementReadId,elementMetaId) {
   // Loads metadata
 
-    var dataList = $(".person").map(function() {
+    var dataList = $(elementReadId + " .person").map(function() {
         return $(this).data("label");
     }).get();
 
