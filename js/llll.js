@@ -1,6 +1,5 @@
 /* Loads the articles inside the columns using JQuery*/
 
-
 $(document).ready(function(){
    $('#article1_1').load("articles/article1_1.html", function() { getMetadata("#article1_1","#metaData1_1") } );
    $('#article1_2').load("articles/article1_2.html", function() { getMetadata("#article1_2","#metaData1_2") } );
@@ -12,20 +11,6 @@ $(document).ready(function(){
 });
 
 
-
-
-
-
-
-
-
-/*
-function load_articles() {
-  document.getElementById("article1").innerHTML='<object type="text/html" data="articles/article1.html" ></object>';
-  document.getElementById("article2").innerHTML='<object type="text/html" data="articles/article2.html" ></object>';
-  document.getElementById("article3").innerHTML='<object type="text/html" data="articles/article3.html" ></object>';
-}
-*/
 
 /* Enables the stylesheet with ID nodeE and disables the three others */
 function switchToSS (nodeE,nodeD1,nodeD2,nodeD3) {
