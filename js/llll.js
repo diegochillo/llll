@@ -37,6 +37,11 @@ function getMetadata(elementReadId,elementMetaId) {
     }).get();
 
     var dataListU=[... new Set(dataList)];
-    $(elementMetaId).html(dataListU.join("<br>"));
+    // $(elementMetaId).html(dataListU.join("<br>"));
+
+    // Cycles over found elements and shows checkboxes
+    for (let li of dataListU) {
+      $(elementMetaId).append("<input type='checkbox' class='metaCheck' id='metaCheck-1' value='1'> "+li+"<br/>");
+    }
 
 }
