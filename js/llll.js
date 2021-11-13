@@ -56,6 +56,12 @@ function showMeta(elementReadId,label,chkbx) {
       if ($(this).text() == label) {
         if (chkbx.checked) {
           $(this).css("background-color", thisTimeColor);
+
+            $(elementReadId).animate({
+                //$scrollable.delay(3000).animate({scrollTop: $scrollable.scrollTop() + 300});
+                scrollTop: $(elementReadId).scrollTop() + $(this).offset().top - 400
+            }, 1000);
+
         } else {
           $(this).css("background-color", "");
         }
