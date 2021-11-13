@@ -28,7 +28,7 @@ function switchToSS (nodeE,nodeD1,nodeD2,nodeD3) {
 
 
 
-
+// Gets the list of metadata and shows it in the metaData box (only for .person class at the moment)
 function getMetadata(elementReadId,elementMetaId) {
   // Loads metadata
 
@@ -40,8 +40,26 @@ function getMetadata(elementReadId,elementMetaId) {
     // $(elementMetaId).html(dataListU.join("<br>"));
 
     // Cycles over found elements and shows checkboxes
-    for (let li of dataListU) {
-      $(elementMetaId).append("<input type='checkbox' class='metaCheck' id='metaCheck-1' value='1'> "+li+"<br/>");
+    cntr=1;
+    for (let md of dataListU) {
+      $(elementMetaId).append('<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this)"> ' + md + '<br/>');
+      cntr=cntr+1;
     }
+
+}
+
+
+// Highlights the text corresponding to the selected checkbox (only for .person class at the moment)
+function showMeta(elementReadId,label,chkbx) {
+    thisTimeColor = "#" + Math.floor((Math.random() * 65535) + 1).toString(16);
+    $(elementReadId + " .person").each(function(index) {
+      if ($(this).text() == label) {
+        if (chkbx.checked) {
+          $(this).css("background-color", thisTimeColor);
+        } else {
+          $(this).css("background-color", "");
+        }
+      }
+    }); // end each)
 
 }
