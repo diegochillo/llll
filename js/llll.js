@@ -6,12 +6,12 @@ $(function(){$("#topBar").load("components/topbar.html"); });
 /* Loads the articles inside the columns using JQuery*/
 
 $(document).ready(function(){
-   $('#article1_1').load("articles/article1_1.html", function() { getMetadata(1,1); } ); //"#article1_1","#metaData1_1"
-   $('#article1_2').load("articles/article1_2.html", function() { getMetadata(1,2); } );
-   $('#article1_3').load("articles/article1_3.html", function() { getMetadata(1,3); } );
-   $('#article2_1').load("articles/article2_1.html", function() { getMetadata(2,1); } );
-   $('#article2_2').load("articles/article2_2.html", function() { getMetadata(2,2); } );
-   $('#article2_3').load("articles/article2_3.html", function() { getMetadata(2,3); } );
+   $('#article1_1').load("articles/article1_1.html", function() { getMetadata(1,1,["person","language"]); } ); //"#article1_1","#metaData1_1"
+   $('#article1_2').load("articles/article1_2.html", function() { getMetadata(1,2,["person","language"]); } );
+   $('#article1_3').load("articles/article1_3.html", function() { getMetadata(1,3,["person","language"]); } );
+   $('#article2_1').load("articles/article2_1.html", function() { getMetadata(2,1,["person","language"]); } );
+   $('#article2_2').load("articles/article2_2.html", function() { getMetadata(2,2,["person","language"]); } );
+   $('#article2_3').load("articles/article2_3.html", function() { getMetadata(2,3,["person","language"]); } );
 });
 
 
@@ -27,43 +27,26 @@ function switchToSS (nodeE,nodeD1,nodeD2,nodeD3) {
 
 
 // Gets the list of metadata and shows it in the metaData box (only for .person class at the moment)
-function getMetadata(nIssue,nArticle) {
+function getMetadata(nIssue,nArticle,metaList) {
 
     var elementReadId = "#article" + nIssue + "_" + nArticle;
-    var metaType = "";
 
-    // PERSONS
-    metaType = "person";
-    elementMetaId="#" + metaType + "s" + nIssue + "_" + nArticle;
-    var dataList = $(elementReadId + " ." + metaType).map(function() {
-        return $(this).data("label");
-    }).get();
+    for (const metaType of metaList) {
+      //metaType = "person";
+      elementMetaId="#" + metaType + "s" + nIssue + "_" + nArticle;
+      var dataList = $(elementReadId + " ." + metaType).map(function() {
+          return $(this).data("label");
+      }).get();
 
-    var dataListU=[... new Set(dataList)];
-    // $(elementMetaId).html(dataListU.join("<br>"));
+      var dataListU=[... new Set(dataList)];
+      // $(elementMetaId).html(dataListU.join("<br>"));
 
-    // Cycles over found elements and shows checkboxes
-    cntr=1;
-    for (let md of dataListU) {
-      $(elementMetaId).append('<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"> ' + md + '<br/>');
-      cntr=cntr+1;
-    }
-
-    // PERSONS
-    metaType = "language";
-    elementMetaId="#" + metaType + "s" + nIssue + "_" + nArticle;
-    var dataList = $(elementReadId + " ." + metaType).map(function() {
-        return $(this).data("label");
-    }).get();
-
-    var dataListU=[... new Set(dataList)];
-    // $(elementMetaId).html(dataListU.join("<br>"));
-
-    // Cycles over found elements and shows checkboxes
-    cntr=1;
-    for (let md of dataListU) {
-      $(elementMetaId).append('<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"> ' + md + '<br/>');
-      cntr=cntr+1;
+      // Cycles over found elements and shows checkboxes
+      cntr=1;
+      for (let md of dataListU) {
+        $(elementMetaId).append('<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"> ' + md + '<br/>');
+        cntr=cntr+1;
+      }
     }
 
 }
