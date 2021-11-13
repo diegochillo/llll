@@ -51,7 +51,7 @@ function getMetadata(elementReadId,elementMetaId) {
 
 // Highlights the text corresponding to the selected checkbox (only for .person class at the moment)
 function showMeta(elementReadId,label,chkbx) {
-    thisTimeColor = "#" + Math.floor((Math.random() * 65535) + 1).toString(16);
+    thisTimeColor = "#" + Math.floor((Math.random() * 16777215) + 1).toString(16);
     $(elementReadId + " .person").each(function(index) {
       if ($(this).text() == label) {
         if (chkbx.checked) {
