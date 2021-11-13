@@ -6,12 +6,12 @@ $(function(){$("#topBar").load("components/topbar.html"); });
 /* Loads the articles inside the columns using JQuery*/
 
 $(document).ready(function(){
-   $('#article1_1').load("articles/article1_1.html", function() { getMetadata("#article1_1","#metaData1_1") } );
-   $('#article1_2').load("articles/article1_2.html", function() { getMetadata("#article1_2","#metaData1_2") } );
-   $('#article1_3').load("articles/article1_3.html", function() { getMetadata("#article1_3","#metaData1_3") } );
-   $('#article2_1').load("articles/article2_1.html", function() { getMetadata("#article2_1","#metaData2_1") } );
-   $('#article2_2').load("articles/article2_2.html", function() { getMetadata("#article2_2","#metaData2_2") } );
-   $('#article2_3').load("articles/article2_3.html", function() { getMetadata("#article2_3","#metaData2_3") } );
+   $('#article1_1').load("articles/article1_1.html", function() { getMetadata("#article1_1","#metaData1_1"); } );
+   $('#article1_2').load("articles/article1_2.html", function() { getMetadata("#article1_2","#metaData1_2"); } );
+   $('#article1_3').load("articles/article1_3.html", function() { getMetadata("#article1_3","#metaData1_3"); } );
+   $('#article2_1').load("articles/article2_1.html", function() { getMetadata("#article2_1","#metaData2_1"); } );
+   $('#article2_2').load("articles/article2_2.html", function() { getMetadata("#article2_2","#metaData2_2"); } );
+   $('#article2_3').load("articles/article2_3.html", function() { getMetadata("#article2_3","#metaData2_3"); } );
 
 });
 
