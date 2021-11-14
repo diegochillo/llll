@@ -51,3 +51,22 @@ body {
 .imgCaption {
   font-size: smaller;
 }
+
+
+/* Some article elements:
+Bigger first letter; ASIDE text */
+
+.big-first-letter::first-letter {
+  font-size: 200%;
+}
+
+aside {
+  width: 30%;
+  text-align: center;
+  margin-right: 15px;
+  float: left;
+  font-style: italic;
+  font-size: larger;
+  border: 1px;
+  border-style: solid none;
+}
