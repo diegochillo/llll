@@ -24,6 +24,13 @@ function switchToSS (nodeE,nodeD1,nodeD2,nodeD3) {
   nodeD3.media = 'none';
 }
 
+function cleanUpSS() {
+  $('#cssstyle1').attr('media', 'none');
+  $('#cssstyle2').attr('media', 'none');
+  $('#cssstyle3').attr('media', 'none');
+  $('#cssstyle4').attr('media', 'none');
+}
+
 
 
 // Gets the list of metadata and shows it in the metaData box (only for .person class at the moment)

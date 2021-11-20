@@ -1,6 +1,5 @@
-/* Style 2 */
+@import url('http://fonts.cdnfonts.com/css/belle-epoque');
 
-body {
-  background-color: white;
-  color: black;
+* {
+	font-family: 'Belle Epoque', sans-serif;
 }
