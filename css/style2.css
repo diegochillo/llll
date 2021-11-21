@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Milestone";
-  src: local("fonts/style2/MilestoneFreeVersion-Script.otf");
+  src: url("fonts/style2/MilestoneFreeVersion-Script.otf");
 }
 
 @font-face {
