@@ -1,17 +1,17 @@
 /* Style 1 */
 
 @font-face {
-  font-family: "Milestone";
+  font-family: "MilestoneFreeVersion-Script";
   src: url("./fonts/style2/MilestoneFreeVersion-Script.otf");
 }
 
 @font-face {
   font-family: "Roots";
-  src: local(./fonts/style2/Roots.ttf) format('truetype');;
+  src: url("./fonts/style2/Roots.ttf");
 }
 
 h1 {
-  font-family: "Milestone";
+  font-family: "MilestoneFreeVersion-Script";
   color: black;
 }
 
