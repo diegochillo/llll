@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: "Milestone";
-  src: url("fonts/style2/MilestoneFreeVersion-Script.otf");
+  src: local("fonts/style2/MilestoneFreeVersion-Script.otf");
 }
 
 @font-face {
   font-family: "Roots";
-  src: url(fonts/style2/Roots.ttf);
+  src: local(fonts/style2/Roots.ttf);
 }
 
 h1 {
