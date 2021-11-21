@@ -1,5 +1,26 @@
-@import url('https://fonts.cdnfonts.com/css/belle-epoque');
+/* @import url('https://fonts.cdnfonts.com/css/belle-epoque');
 
 * {
 	font-family: 'Belle Epoque', sans-serif;
+} */
+
+@font-face{
+ font-family: Bembo;
+ src: url(fonts/style1/BemboStd.otf);
+}
+
+@font-face{
+ font-family: Goudylni;
+ src: url(fonts/style1/Goudylni.ttf);
+}
+
+body {
+  background-color: #F2EFDC;
+  color: #1D1A13;
+  font-family: Bembo;
+}
+
+.h1 {
+  color: #B63323;
+  font-family: Goudylni;
 }
