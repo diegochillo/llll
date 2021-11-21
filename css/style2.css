@@ -1,11 +1,27 @@
 /* Style 1 */
 
-body {
-  background-color: black;
-  color: lightgray;
-  font-family: "Times New Roman"
+@font-face {
+  font-family: Milestone;
+  src: url(fonts/style2/MilestoneFreeVersion-Script.otf);
 }
 
+@font-face {
+  font-family: Roots;
+  src: url(fonts/style2/Roots.ttf);
+}
+
+h1 {
+  font-family: Milestone;
+  color: black;
+}
+
+body {
+  background-color: #FAF8F9;
+  color: black;
+  font-family: Roots;
+}
+
+/*
 .article {
   color: lightgray;
 }
