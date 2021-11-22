@@ -1,4 +1,4 @@
-/* Style 1 */
+/* Style 3 */
 
 @font-face {
   font-family: "White on Black";
@@ -41,6 +41,6 @@ img.itemIcon {
 /* Slim scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
-    background-color: green;
+    background-color: ghostwhite;
 }
 /* END of slim scrollbar */
