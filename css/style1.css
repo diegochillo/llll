@@ -6,7 +6,7 @@
 
 @font-face{
  font-family: "Bembo";
- src: local("BemboStd"), url(fonts/style1/BemboStd.otf);
+ src: url("./fonts/style1/BemboStd.otf");
 }
 
 @font-face{
