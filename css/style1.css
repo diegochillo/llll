@@ -10,6 +10,11 @@
 }
 
 @font-face{
+ font-family: "FloralCapitals";
+ src: url("./fonts/style1/FloralCapitals.ttf");
+}
+
+@font-face{
  font-family: "Goudylni";
  src: url("./fonts/style1/Goudylni.ttf")
 }
