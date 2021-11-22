@@ -11,7 +11,7 @@
 
 @font-face{
  font-family: "Goudylni";
- src: url(fonts/style1/Goudylni.ttf);
+ src: local("Goudylni"), url(fonts/style1/Goudylni.ttf);
 }
 
 body {

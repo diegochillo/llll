@@ -1,9 +1,23 @@
 /* Style 1 */
 
+@font-face {
+  font-family: "White on Black";
+  src: url("./fonts/style3/White On Black.ttf");
+}
+
+@font-face {
+  font-family: "Sixty";
+  src: url("./fonts/style3/SIXTY.TTF");
+}
+
+h1 {
+  font-family: "White on Black";
+}
+
 body {
   background-color: fuchsia;
-  color: green;
-  font-family: "Verdana"
+  color: white;
+  font-family: "Sixty";
 }
 
 .article {
