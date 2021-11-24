@@ -32,9 +32,11 @@ body {
   color: green!important;
 }
 
+/* Because we don't want to change the color of icons
 img.itemIcon {
   filter: hue-rotate(90deg);
 }
+*/
 
 
 /* Slim scrollbar */
