@@ -4,6 +4,14 @@ body {
   overflow: hidden;
 }
 
+.selectorBar { /* !important to avoid changing with the theme */
+  color: #212529!important;
+  background-color: #FFF!important;
+  font-family: var(--bs-body-font-family)!important;
+  font-size: var(--bs-body-font-size)!important;
+  filter: none!important;
+}
+
 /* Article columns */
 .artiCol {
     height: 66vh;
@@ -60,7 +68,7 @@ Bigger first letter; ASIDE text */
   font-size: 200%;
 }
 
-aside {
+aside { /* Side notes in the text of the articles */
   width: 30%;
   text-align: center;
   margin-right: 15px;
