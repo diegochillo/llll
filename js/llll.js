@@ -88,7 +88,8 @@ function getMetadata(nIssue,nArticle,metaList) {
 // Highlights the text corresponding to the selected checkbox with a random color
 function showMeta(elementReadId,label,chkbx,metaType) {
 
-    var thisTimeColor = "#" + Math.floor((Math.random() * 15000000) + 777215).toString(16);
+    // var thisTimeColor = "#" + Math.floor((Math.random() * 15000000) + 777215).toString(16);
+    var thisTimeColor = "hsl(" + 360 * Math.random() + ',' + (25 + 70 * Math.random()) + '%,' + (75 + 10 * Math.random()) + '%)';
     var found=false;
 
     $(elementReadId + " ." + metaType).each(function(index) {
