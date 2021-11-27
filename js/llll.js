@@ -39,8 +39,8 @@ function getMetadata(nIssue,nArticle,metaList) {
     var suffix = nIssue + "_" + nArticle;
     var elementReadId = "#article" + suffix;
     var elementMetaTabs = "#tabs" +  suffix;
-    var elementMetaData = "#metaData" + suffix;
     var elementTabContent = "#content" + suffix;
+    // var elementMetaData = "#metaData" + suffix;
 
     // Creates the tab menu inside the metadata selector box
     var ariasel=true;
