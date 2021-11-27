@@ -69,7 +69,7 @@ function getMetadata(nIssue,nArticle,metaList) {
       cntr=1;
       for (let md of dataListU) {
         // $(elementMetaId).append('<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"> ' + md + '<br/>');
-        mystring+='<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"> ' + md + '<br/>';
+        mystring+='<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"><label for="metaCheck-' + cntr + '">&nbsp;' + md + '</label><br/>';
         cntr=cntr+1;
       }
 
@@ -85,10 +85,10 @@ function getMetadata(nIssue,nArticle,metaList) {
 }
 
 
-// Highlights the text corresponding to the selected checkbox (only for .person class at the moment)
+// Highlights the text corresponding to the selected checkbox with a random color
 function showMeta(elementReadId,label,chkbx,metaType) {
 
-    var thisTimeColor = "#" + Math.floor((Math.random() * 16777215) + 1).toString(16);
+    var thisTimeColor = "#" + Math.floor((Math.random() * 15000000) + 777215).toString(16);
     var found=false;
 
     $(elementReadId + " ." + metaType).each(function(index) {
@@ -106,5 +106,13 @@ function showMeta(elementReadId,label,chkbx,metaType) {
         }
       }
     }); // end each)
+
+    // Sets the same background color for the checkbox label (or removes it if unchecked)
+    if ($(chkbx)  .is(':checked')) {
+      $(chkbx).next('label').css("background-color", thisTimeColor);
+    } else {
+      $(chkbx).next('label').css("background-color", '');
+    }
+
 
 }
