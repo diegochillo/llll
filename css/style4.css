@@ -10,6 +10,7 @@ body {
   color: lightgray;
 }
 
+/* Navbar doesn't have to change
 .navbar-light .navbar-nav .nav-link.active {
   color: lightgray!important;
 }
@@ -17,8 +18,9 @@ body {
 .navbar-brand {
   color: lightgray!important;
 }
+*/
 
-/* Because we don't want to change the color of icons 
+/* Because we don't want to change the color of icons
 img.itemIcon {
   filter: invert(100%);
 }

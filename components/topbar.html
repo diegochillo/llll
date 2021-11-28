@@ -21,7 +21,7 @@
               <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 Our Issues
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="issuesList">
                 <li><a class="dropdown-item" href="issue1.html">Issue 1</a></li>
                 <li><a class="dropdown-item" href="issue2.html">Issue 2</a></li>
               </ul>
@@ -65,10 +65,13 @@
 
 <script type="text/javascript">
   //var issuesDet = JSON.parse(fs.readFileSync("issuesDb.json"));
+
+  // Adds one link to the menu for each issue contained in the issuesDb.json file
   $.getJSON('./issuesDb.json', function(objson){
             //console.log(objson.topic);
             for (const jsonissue of objson.issues) {
-              console.log(jsonissue.number);
+              $("#issuesList").append('<li><a class="dropdown-item" href="issue.html?number=' + jsonissue.number + '">Issue ' + jsonissue.topic + ' (JSON link)</a></li>');
+              //console.log(jsonissue.number);
               console.log(jsonissue.topic);
             }
         }).fail(function(){
