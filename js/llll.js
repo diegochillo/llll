@@ -1,6 +1,7 @@
 
 /* Loads topbar.html in topBar div */
 $(function(){$("#topBar").load("components/topbar.html"); });
+$(function(){$("#footerBar").load("components/footer.html"); });
 
 
 /* Loads the articles inside the columns using JQuery*/
@@ -76,7 +77,7 @@ function getMetadata(nIssue,nArticle,metaList) {
       mystring+='</div>';
 
       $(elementTabContent).append(mystring);
-      tabactive='';
+      tabactive='fade';
 
       // console.log($("#metaData2_1").html());
 

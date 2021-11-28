@@ -2,11 +2,11 @@
   "issues":[
     {
     	"number":"1",
-		  "topic":"Science",
+		  "topic":"Science"
 	},
     {
     	"number":"2",
-    	"topic":"Language",
-    },
+    	"topic":"Language"
+    }
     ]
 }
