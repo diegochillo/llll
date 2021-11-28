@@ -24,6 +24,10 @@ body {
     overflow-y: scroll;
 }
 
+.metaTitle {
+  font-weight: 700;
+}
+
 
 .navbar {
   height: 80pt;

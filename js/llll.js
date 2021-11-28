@@ -7,12 +7,24 @@ $(function(){$("#footerBar").load("components/footer.html"); });
 /* Loads the articles inside the columns using JQuery*/
 
 $(document).ready(function(){
+   // This part will be probably deleted
    $('#article1_1').load("articles/article1_1.html", function() { getMetadata(1,1,["person","place","date","keyword"]); } ); //"#article1_1","#metaData1_1"
    $('#article1_2').load("articles/article1_2.html", function() { getMetadata(1,2,["person","place","date","keyword"]); } );
    $('#article1_3').load("articles/article1_3.html", function() { getMetadata(1,3,["person","place","date","keyword"]); } );
    $('#article2_1').load("articles/article2_1.html", function() { getMetadata(2,1,["person","language","place","date","keyword"]); } );
    $('#article2_2').load("articles/article2_2.html", function() { getMetadata(2,2,["person","language","place","date","keyword"]); } );
    $('#article2_3').load("articles/article2_3.html", function() { getMetadata(2,3,["person","language","place","date","keyword"]); } );
+
+   // This part works with the single issue.html file
+   const urlParams = new URLSearchParams(window.location.search);
+   const issueNumber = urlParams.get('number');
+   if (issueNumber>0) {
+     $('#article1').load("articles/article" + issueNumber + "_1.html", function() { getMetadataNew(1,["person","place","date","keyword"]); } );
+     $('#article2').load("articles/article" + issueNumber + "_2.html", function() { getMetadataNew(2,["person","place","date","keyword"]); } );
+     $('#article3').load("articles/article" + issueNumber + "_3.html", function() { getMetadataNew(3,["person","place","date","keyword"]); } );
+   }
+   //console.log(issueNumber);
+
 });
 
 
@@ -87,6 +99,7 @@ function getMetadata(nIssue,nArticle,metaList) {
 
 
 // Highlights the text corresponding to the selected checkbox with a random color
+// This works both with issue1.html/issue2.html and with single issue.html file
 function showMeta(elementReadId,label,chkbx,metaType) {
 
     // var thisTimeColor = "#" + Math.floor((Math.random() * 15000000) + 777215).toString(16);
@@ -116,5 +129,66 @@ function showMeta(elementReadId,label,chkbx,metaType) {
       $(chkbx).next('label').css("background-color", '');
     }
 
+
+}
+
+
+
+
+
+
+
+
+
+
+// Gets the list of metadata and shows it in the metaData box tabs
+// using the NEW SINGLE ISSUE.HTML FILE
+function getMetadataNew(nArticle,metaList) {
+
+    var suffix = nArticle;
+    var elementReadId = "#article" + suffix;
+    var elementMetaTabs = "#tabs" +  suffix;
+    var elementTabContent = "#content" + suffix;
+    // var elementMetaData = "#metaData" + suffix;
+
+    // Creates the tab menu inside the metadata selector box
+    var ariasel=true;
+    var tabactive='active';
+    for (const metaType of metaList) {
+      $(elementMetaTabs).append('<li class="nav-item waves-effect waves-light" role="presentation"><a class="nav-link ' + tabactive + '" id="' + metaType + '-tab' + suffix + '" data-toggle="tab" href="#' + metaType + suffix + '" type="button" role="tab" aria-controls="' + metaType + '" aria-selected="' + ariasel + '">' + metaType + '</a></li>');
+      ariasel='false';
+      tabactive='';
+    }
+
+    var tabactive='active';
+    var mystring='';
+    for (const metaType of metaList) {  // For each type of metadata
+
+      mystring='<div class="tab-pane ' + tabactive + '" id="' + metaType + suffix + '" role="tabpanel" aria-labelledby="' + metaType + '-tab' + suffix+'">';
+      // console.log(mystring);
+
+      elementMetaId="#" + metaType + "s" + nArticle;
+      var dataList = $(elementReadId + " ." + metaType).map(function() {
+          return $(this).data("label");
+      }).get();
+
+      var dataListU=[... new Set(dataList)];
+
+      // Cycles over found elements and shows checkboxes
+      cntr=1;
+      for (let md of dataListU) {
+        // $(elementMetaId).append('<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"> ' + md + '<br/>');
+        mystring+='<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"><label for="metaCheck-' + cntr + '">&nbsp;' + md + '</label><br/>';
+        cntr=cntr+1;
+      }
+
+      mystring+='</div>';
+
+      $(elementTabContent).append(mystring);
+      tabactive='fade';
+
+      // console.log($("#metaData2_1").html());
+
+    }
 
 }

@@ -70,7 +70,7 @@
   $.getJSON('./issuesDb.json', function(objson){
             //console.log(objson.topic);
             for (const jsonissue of objson.issues) {
-              $("#issuesList").append('<li><a class="dropdown-item" href="issue.html?number=' + jsonissue.number + '">Issue ' + jsonissue.topic + ' (JSON link)</a></li>');
+              $("#issuesList").append('<li><a class="dropdown-item" href="issuecover.html?number=' + jsonissue.number + '">Issue ' + jsonissue.number + ': ' + jsonissue.topic + ' (with cover from JSON file)</a></li>');
               //console.log(jsonissue.number);
               console.log(jsonissue.topic);
             }
