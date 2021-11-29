@@ -24,6 +24,7 @@ body {
   color: green;
 }
 
+/* NAVBAR doesn't have to change!
 .navbar-light .navbar-nav .nav-link.active {
   color: green!important;
 }
@@ -31,6 +32,7 @@ body {
 .navbar-brand {
   color: green!important;
 }
+*/
 
 /* Because we don't want to change the color of icons
 img.itemIcon {

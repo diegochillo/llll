@@ -3,10 +3,14 @@
     {
     	"number":"1",
 		  "topic":"Science",
+      "editor":"Laura Travaglini",
+      "date":"01/11/2021"
 	},
     {
     	"number":"2",
     	"topic":"Language",
-    },
+      "editor":"Diego Chillo",
+      "date":"15/11/2021"
+    }
     ]
 }
