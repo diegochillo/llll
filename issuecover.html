@@ -48,9 +48,9 @@
               <span class="metaTitle">Date: </span><span id="issueDate"></span><br/>
               <br/>
               In this number<br/>
-              <span class="artTitle">1: </span><span id="artN1"></span><br/>
-              <span class="artTitle">2: </span><span id="artN2"></span><br/>
-              <span class="artTitle">3: </span><span id="artN3"></span><br/>
+              <span class="artTitle"></span><span id="artN1"></span><br/>
+              <span class="artTitle"></span><span id="artN2"></span><br/>
+              <span class="artTitle"></span><span id="artN3"></span><br/>
               <br/>
               <div id="openIssue"></div>
             </p>
@@ -89,7 +89,6 @@
                     $("#artN1").append(jsonissue.art1);
                     $("#artN2").append(jsonissue.art2);
                     $("#artN3").append(jsonissue.art3);
-
                     $("#openIssue").append('<a href="issue.html?number=' + issueNumber + '">Enter Magazine</a>');
                   }
 
