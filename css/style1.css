@@ -15,21 +15,24 @@
 }
 
 @font-face{
- font-family: "Goudylni";
- src: url("./fonts/style1/Goudylni.ttf")
+ font-family: "ArabesqueInitialen";
+ src: url("./fonts/style1/ArabesqueInitialen.ttf");
 }
 
 body {
   background-color: #F2EFDC;
   color: #1D1A13;
   font-family: Bembo;
+  font-size: 18px;
 }
 
 .h1 {
   color: #B63323;
-  font-family: Goudylni;
+  font-family: Bembo;
+  font-size: 30px;
 }
 
 .big-first-letter {
-  font-family: FloralCapitals;
+  font-family: ArabesqueInitialen;
+  font-size: 50px;
 }
