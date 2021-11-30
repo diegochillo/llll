@@ -13,7 +13,10 @@
     	"number":"2",
     	"topic":"Language",
       "editor":"Diego Chillo",
-      "date":"15/11/2021"
+      "date":"15/11/2021",
+      "art1":"articolo1",
+      "art2":"articolo2",
+      "art3":"articolo3"
     }
     ]
 }
