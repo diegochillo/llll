@@ -6,8 +6,20 @@
       "editor":"Laura Travaglini",
       "date":"01/11/2021",
       "art1":"How to Undo Gender Stereotypes in Math—With Math!",
+      "art1Mag":"WIRED",
+      "art1Aut":"by Eugenia Chung",
+      "art1Date":"08.05.2020",
+      "art1KW": ["math", "stereotypes", "gender"],
       "art2":"The bias that blinds: why some people get dangerously different medical care",
-      "art3":"Curbing implicit bias: what works and what doesn't"
+      "art2Mag":"",
+      "art2Aut":"",
+      "art2Date":"",
+      "art2KW":"",
+      "art3":"Curbing implicit bias: what works and what doesn't",
+      "art3Mag":"",
+      "art3Aut":"",
+      "art3Date":"",
+      "art3KW":""
 	},
     {
     	"number":"2",
