@@ -54,7 +54,7 @@
               <span class="artMeta"></span><span id="artN1Mag"></span><br/>
               <span class="artMeta"></span><span id="artN1Aut"></span><br/>
               <span class="artMeta"></span><span id="artN1Date"></span><br/>
-              <span class="artMeta"></span><span id="artN1KW"></span>
+              <span class="artMeta"></span><span id="artN1KW1"></span> <span class="artMeta"></span><span id="artN1KW2"></span> <span class="artMeta"></span><span id="artN1KW3"></span>
               <br/><br/>
 
               <span class="artTitle"></span><span id="artN2"></span><br/>
@@ -102,7 +102,9 @@
                     $("#artN1Mag").append(jsonissue.art1Mag);
                     $("#artN1Aut").append(jsonissue.art1Aut);
                     $("#artN1Date").append(jsonissue.art1Date);
-                    $("#artN1KW").append(jsonissue.art1KW); 
+                    $("#artN1KW1").append(jsonissue.art1KW);
+                    $("#artN1KW2").append(jsonissue.art1KW);
+                    $("#artN1KW3").append(jsonissue.art1KW); 
                     $("#artN2").append(jsonissue.art2);
                     $("#artN3").append(jsonissue.art3);
                     $("#openIssue").append('<a href="issue.html?number=' + issueNumber + '">Enter Magazine</a>');
