@@ -32,9 +32,27 @@
     	"topic":"Language",
       "editor":"Diego Chillo",
       "date":"15/11/2021",
-      "art1":"articolo1",
-      "art2":"articolo2",
-      "art3":"articolo3"
+      "art1":"How to Undo Gender Stereotypes in Math—With Math!",
+      "art1Mag":"WIRED",
+      "art1Aut":"by Eugenia Chung",
+      "art1Date":"08.05.2020",
+      "art1KW1":"math",
+      "art1KW2":"stereotypes",
+      "art1KW3":"gender",
+      "art2":"The bias that blinds: why some people get dangerously different medical care",
+      "art2Mag":"The Guardian",
+      "art2Aut":"by Jessica Nordell",
+      "art2Date":"Tue 21 Sep 2021 06.00 BST",
+      "art2KW1":"health",
+      "art2KW2":"bias",
+      "art2KW3":"racism",
+      "art3":"Curbing implicit bias: what works and what doesn't",
+      "art3Mag":"Knowable Magazine",
+      "art3Aut":"By Betsy Mason",
+      "art3Date":"06.04.2020",
+      "art3KW1":"psychology",
+      "art3KW2":"bias",
+      "art3KW3":"society"
     }
     ]
 }
