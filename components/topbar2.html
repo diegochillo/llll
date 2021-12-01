@@ -1,4 +1,18 @@
  <!--versione della topbar con le mani-->
+ <style> 
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+</style>
 
 	<div class="container">
 		<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
@@ -45,7 +59,7 @@
       </div>
 
       <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
       <button class="btn btn-outline-light" type="submit" width="20" height="20"><img src="img/lens.png" width="20" height="20" alt="search lens"></button>
     </form>
 
