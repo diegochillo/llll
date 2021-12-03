@@ -8,9 +8,9 @@ $(function(){$("#footerBar").load("components/footer.html"); });
 
 $(document).ready(function(){
    // This part will be probably deleted
-   $('#article1_1').load("articles/article1_1.html", function() { getMetadata(1,1,["person","place","date","keyword"]); } ); //"#article1_1","#metaData1_1"
-   $('#article1_2').load("articles/article1_2.html", function() { getMetadata(1,2,["person","place","date","keyword"]); } );
-   $('#article1_3').load("articles/article1_3.html", function() { getMetadata(1,3,["person","place","date","keyword"]); } );
+   $('#article1_1').load("articles/article1_1.html", function() { getMetadata(1,1,["person","place","organization","keyword"]); } ); //"#article1_1","#metaData1_1"
+   $('#article1_2').load("articles/article1_2.html", function() { getMetadata(1,2,["person","place","organization","keyword"]); } );
+   $('#article1_3').load("articles/article1_3.html", function() { getMetadata(1,3,["person","place","organization","keyword"]); } );
    $('#article2_1').load("articles/article2_1.html", function() { getMetadata(2,1,["person","language","place","date","keyword"]); } );
    $('#article2_2').load("articles/article2_2.html", function() { getMetadata(2,2,["person","language","place","date","keyword"]); } );
    $('#article2_3').load("articles/article2_3.html", function() { getMetadata(2,3,["person","language","place","date","keyword"]); } );
