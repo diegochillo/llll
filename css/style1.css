@@ -41,3 +41,14 @@ body {
   color: #B63323;
   font-family: Bembo;
   font-size: 30px;
+}
+
+.articleImg {
+  filter: sepia(100%); 
+  -webkit-filter: sepia(100%);
+}
+
+
+
+
+
