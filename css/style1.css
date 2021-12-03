@@ -43,7 +43,7 @@ body {
   font-size: 30px;
 }
 
-.articleImg {
+img {
   filter: sepia(100%); 
   -webkit-filter: sepia(100%);
 }
