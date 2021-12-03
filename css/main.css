@@ -1,7 +1,7 @@
 /* Main CSS file */
 
 body {
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .selectorBar { /* !important to avoid changing with the theme */
