@@ -1,6 +1,6 @@
  <!--versione della topbar con le mani-->
  <style> 
-input[type=text] {
+ input[type=text] {
   width: 100%;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -14,23 +14,23 @@ input[type=text] {
 }
 </style>
 
-	<div class="container">
-		<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-			<a href="index.html" class="">
-				<img src="img/btns/logo_u.png" style="width:60px; margin:-3px 0px 0px 0px;"/>
-      </a>
+<div class="container">
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+   <a href="index.html" class="">
+    <img src="img/btns/logo_u.png" style="width:60px; margin:-3px 0px 0px 0px;"/>
+  </a>
 
-      <ul class="nav col-12 col-md-auto mb-2 mb-md-0">
-        <li class="nav-item dropdown">
-              <a class="nav-link px-2 link-dark dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Issues</a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="issue1.html">Issue 1</a></li>
-                <li><a class="dropdown-item" href="issue1cover.html">Issue 2</a></li>
-              </ul>
-            </li>
-        <li><a href="#" class="nav-link px-2 link-dark">Disclaimer</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Documentation</a></li>
+  <ul class="nav col-12 col-md-auto mb-2 mb-md-0">
+    <li class="nav-item dropdown">
+      <a class="nav-link px-2 link-dark dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Issues</a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <li><a class="dropdown-item" href="issue1.html">Issue 1</a></li>
+        <li><a class="dropdown-item" href="issue1cover.html">Issue 2</a></li>
       </ul>
+    </li>
+    <li><a href="#" class="nav-link px-2 link-dark">Disclaimer</a></li>
+    <li><a href="#" class="nav-link px-2 link-dark">Documentation</a></li>
+  </ul>
 
   <!-- STYLE MENU -->
   <div class="col-5">
@@ -54,19 +54,19 @@ input[type=text] {
     </nav>
   </div>
   
-      <div class="text-end">
-        <button type="button" class="btn btn-outline-dark me-2">Login</button>
-      </div>
-
-      <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
-      <button class="btn btn-outline-light" type="submit" width="20" height="20"><img src="img/lens.png" width="20" height="20" alt="search lens"></button>
-    </form>
-
-    </header>
+  <div class="text-end">
+    <button type="button" class="btn btn-outline-dark me-2">Login</button>
   </div>
 
-  <script type="text/javascript">
+  <form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+    <button class="btn btn-outline-light" type="submit" width="20" height="20"><img src="img/lens.png" width="20" height="20" alt="search lens"></button>
+  </form>
+
+</header>
+</div>
+
+<script type="text/javascript">
   //var issuesDet = JSON.parse(fs.readFileSync("issuesDb.json"));
 
   // Adds one link to the menu for each issue contained in the issuesDb.json file
@@ -77,7 +77,7 @@ input[type=text] {
               //console.log(jsonissue.number);
               console.log(jsonissue.topic);
             }
-        }).fail(function(){
+          }).fail(function(){
             console.log("An error has occurredz.");
-        });
-</script>
+          });
+        </script>
