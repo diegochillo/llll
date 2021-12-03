@@ -19,9 +19,9 @@ $(document).ready(function(){
    const urlParams = new URLSearchParams(window.location.search);
    const issueNumber = urlParams.get('number');
    if (issueNumber>0) {
-     $('#article1').load("articles/article" + issueNumber + "_1.html", function() { getMetadataNew(1,["person","place","date","keyword"]); } );
-     $('#article2').load("articles/article" + issueNumber + "_2.html", function() { getMetadataNew(2,["person","place","date","keyword"]); } );
-     $('#article3').load("articles/article" + issueNumber + "_3.html", function() { getMetadataNew(3,["person","place","date","keyword"]); } );
+     $('#article1').load("articles/article" + issueNumber + "_1.html", function() { getMetadataNew(1,["person","place","organization","keyword"]); } );
+     $('#article2').load("articles/article" + issueNumber + "_2.html", function() { getMetadataNew(2,["person","place","organization","keyword"]); } );
+     $('#article3').load("articles/article" + issueNumber + "_3.html", function() { getMetadataNew(3,["person","place","organization","keyword"]); } );
    }
    //console.log(issueNumber);
 
