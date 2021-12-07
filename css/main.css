@@ -12,6 +12,12 @@ body {
   filter: none!important;
 }
 
+/* Articles and Metadata */
+
+#metaRow, #artRow {
+  padding: 3px;
+}
+
 /* Article columns */
 .artiCol {
     height: 66vh;
