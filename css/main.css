@@ -2,6 +2,7 @@
 
 body {
   overflow: scroll;
+  padding: 20px;
 }
 
 .selectorBar { /* !important to avoid changing with the theme */
