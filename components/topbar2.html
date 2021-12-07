@@ -15,16 +15,9 @@ input[type=text] {
   padding: 12px 20px 12px 40px;
 }
 
- /* prova sticky header on scroll */ 
- #hd {
-  position: fixed; /* Fixed position - sit on top of the page */
-  width: 100%; /* Full width */
-  transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
-}
-
 </style>
 
-<div class="container" id="hd">
+<div class="container">
   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
    <a href="index.html" class="">
     <img src="img/btns/logo_u.png" style="width:60px; margin:-3px 0px 0px 0px;"/>
@@ -91,19 +84,7 @@ input[type=text] {
             console.log("An error has occurredz.");
           });
         </script>
-      
-<script type="text/javascript">
-   // When the user scrolls down 50px from the top of the document, resize the header's font size
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("hd").style.fontSize = "30px";
-  } else {
-    document.getElementById("hd").style.fontSize = "90px";
-  }
-}
-</script>
+    
 
 
 
