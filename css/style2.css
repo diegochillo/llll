@@ -24,11 +24,11 @@ body {
 
 
 img {
-filter: grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
--webkit-filter: grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
--moz-filter: grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
--ms-filter:  grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
--o-filter:  grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
+filter: grayscale(6%) brightness(85%) saturate(216%) contrast(55%);
+-webkit-filter: grayscale(6%) brightness(85%) saturate(216%) contrast(55%);
+-moz-filter: grayscale(6%) brightness(85%) saturate(216%) contrast(55%);
+-ms-filter: grayscale(6%) brightness(85%) saturate(216%) contrast(55%);
+-o-filter: grayscale(6%) brightness(85%) saturate(216%) contrast(55%);
 }
 /*
 .article {
