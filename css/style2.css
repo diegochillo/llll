@@ -19,7 +19,7 @@ body {
   background-color: #FAF8F9;
   color: black;
   font-family: Roots;
-  cursor: url("../img/style2/50hand.png"), auto;
+  cursor: url(".../img/style2/50hand.png"), auto;
 }
 
 .cursor {
