@@ -19,7 +19,21 @@ body {
   background-color: #FAF8F9;
   color: black;
   font-family: Roots;
+  cursor: url("../img/style2/50hand.png"), auto;
 }
+
+.cursor {
+  position: absolute; /* so it is out of the flow */
+  width: 20px;
+  height: 20px;
+  background: white;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  transform: translate(-50%, -50%); /* so it is center with the cursor pointer */
+  transition: 200ms ease-out;
+}
+
+
 
 /*
 .article {
