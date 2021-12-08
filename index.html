@@ -45,7 +45,6 @@
 
 
 <body>
-   <div class="cursor"></div>
 
  <!-- <div class="container-fluid">  MAIN CONTAINER -->
 
@@ -311,16 +310,6 @@
  document.getElementById("currentDateTime").value = dateTime;
 </script>
 
-<script>
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", customizeCursor);
-
-function customizeCursor(e) {
-  cursor.style.top = e.pageY + "px"; 
-  cursor.style.left = e.pageX + "px";
-}
-</script>
 
 </body>
 
