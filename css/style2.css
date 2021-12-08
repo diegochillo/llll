@@ -24,7 +24,7 @@ body {
 
 
 img {
-filter: hue-rotate(180deg) sepia(75%) contrast(150%) saturate(300%) hue-rotate(180deg);
+filter: saturate(var(--value, 5);
 }
 /*
 .article {
