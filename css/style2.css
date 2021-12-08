@@ -24,7 +24,7 @@ body {
 
 
 img {
--webkit-filter: brightness(10%) contrast(130%) sepia(20%);
+filter: hue-rotate(180deg) sepia(75%) contrast(150%) saturate(300%) hue-rotate(180deg);
 }
 /*
 .article {
