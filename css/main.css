@@ -17,8 +17,6 @@ body {
 .artiCol {
     height: 66vh;
     overflow-y: scroll;
-    float:none; 
-    background:yellow;
 }
 
 /* Metadata columns */
@@ -31,13 +29,6 @@ body {
   font-weight: 700;
 }
 
-
-/* Things, imgs in articles */ 
-.lateralCard {
-  float:left;
-  width:30%;
-  background:red;
-}
 
 .navbar {
   height: 80pt;
