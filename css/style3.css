@@ -25,6 +25,14 @@ body {
   color: green;
 }
 
+img {
+  filter: brightness(80%) saturate(139%) contrast(198%);
+-webkit-filter: brightness(80%) saturate(139%) contrast(198%);
+-moz-filter: brightness(80%) saturate(139%) contrast(198%);
+-ms-filter: brightness(80%) saturate(139%) contrast(198%) ;
+-o-filter: brightness(80%) saturate(139%) contrast(198%);
+}
+
 /* NAVBAR doesn't have to change!
 .navbar-light .navbar-nav .nav-link.active {
   color: green!important;
