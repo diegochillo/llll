@@ -23,6 +23,9 @@ body {
 }
 
 
+img {
+-webkit-filter: brightness(10%) contrast(130%) sepia(20%);
+}
 /*
 .article {
   color: lightgray;
