@@ -24,7 +24,9 @@ body {
 
 
 img {
-filter: saturate(var(--value, 5);
+filter: grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
+-webkit-filter: grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
+-moz-filter: grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
 }
 /*
 .article {
