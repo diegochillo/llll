@@ -27,6 +27,8 @@ img {
 filter: grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
 -webkit-filter: grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
 -moz-filter: grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
+-ms-filter:  grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
+-o-filter:  grayscale(6%) brightness(85%) saturate(323%) contrast(83%);
 }
 /*
 .article {
