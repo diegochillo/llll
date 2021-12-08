@@ -18,6 +18,7 @@ body {
   background-color: black;
   color: white;
   font-family: "Sixty";
+  cursor: url(middlefinger.png), auto;
 }
 
 .article {
