@@ -57,7 +57,7 @@ filter: sepia(100%);
 hr {
     border:0;
     height:20px;
-    background:url("../img/style1/decor.png");
+    background:url(decor.png);
 }
 
 
