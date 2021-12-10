@@ -6,6 +6,7 @@ body {
 
 .active a{
     color: grey;!important;
+    
 }
 
 .selectorBar { /* !important to avoid changing with the theme */
