@@ -4,6 +4,10 @@ body {
   overflow: scroll;
 }
 
+.active a{
+    color: grey;!important;
+}
+
 .selectorBar { /* !important to avoid changing with the theme */
   color: #212529!important;
   background-color: #FFF!important;
