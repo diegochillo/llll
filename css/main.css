@@ -4,8 +4,9 @@ body {
   overflow: scroll;
 }
 
-.active a{
-    color: grey !important;
+#list-example {
+position: -webkit-sticky;
+  position: sticky;
 }
 
 .selectorBar { /* !important to avoid changing with the theme */
