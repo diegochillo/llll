@@ -5,8 +5,7 @@ body {
 }
 
 .active a{
-    color: grey;!important;
-    
+    color: grey !important;
 }
 
 .selectorBar { /* !important to avoid changing with the theme */
