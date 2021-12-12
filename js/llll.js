@@ -137,10 +137,6 @@ function showMeta(elementReadId,label,chkbx,metaType) {
 
 
 
-
-
-
-
 // Gets the list of metadata and shows it in the metaData box tabs
 // using the NEW SINGLE ISSUE.HTML FILE
 function getMetadataNew(nArticle,metaList) {
