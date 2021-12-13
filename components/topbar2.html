@@ -1,6 +1,6 @@
  <!-- versione della topbar con le mani -->
 
- <style> 
+ <style>
 
 input[type=text] {
   width: 100%;
@@ -10,7 +10,7 @@ input[type=text] {
   font-size: 16px;
   background-color: white;
   background-image: url('searchicon.png');
-  background-position: 10px 10px; 
+  background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
 }
@@ -27,9 +27,12 @@ input[type=text] {
   <ul class="nav col-12 col-md-auto mb-2 mb-md-0">
     <li class="nav-item dropdown">
       <a class="nav-link px-2 link-dark dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Issues</a>
-      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="issuesList">
+        <!--
+        IL MENU DEGLI ISSUES VIENE POPOLATO DAL JAVASCRIPT IN FONDO A QUESTO FILE LEGGENDO issuesDb.json
         <li><a class="dropdown-item" href="issuecover1.html">Issue 1</a></li>
         <li><a class="dropdown-item" href="issuecover2.html">Issue 2</a></li>
+      -->
       </ul>
     </li>
     <li><a href="disclaimer.html" class="nav-link px-2 link-dark">Disclaimer</a></li>
@@ -76,7 +79,7 @@ input[type=text] {
   $.getJSON('./issuesDb.json', function(objson){
             //console.log(objson.topic);
             for (const jsonissue of objson.issues) {
-              $("#issuesList").append('<li><a class="dropdown-item" href="issuecover.html?number=' + jsonissue.number + '">Issue ' + jsonissue.number + ': ' + jsonissue.topic + ' (with cover from JSON file)</a></li>');
+              $("#issuesList").append('<li><a class="dropdown-item" href="issuecover.html?number=' + jsonissue.number + '">Issue ' + jsonissue.number + ': ' + jsonissue.topic + '</a></li>');
               //console.log(jsonissue.number);
               console.log(jsonissue.topic);
             }
@@ -84,17 +87,3 @@ input[type=text] {
             console.log("An error has occurredz.");
           });
 </script>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
