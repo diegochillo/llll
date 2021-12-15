@@ -106,21 +106,21 @@
                     $("#artN1Date").append(jsonissue.art1Date);
                     $("#artN1KW1").append(jsonissue.art1KW1);
                     $("#artN1KW2").append(jsonissue.art1KW2);
-                    $("#artN1KW3").append(jsonissue.art1KW3); 
+                    $("#artN1KW3").append(jsonissue.art1KW3);
                     $("#artN2").append(jsonissue.art2);
                     $("#artN2Mag").append(jsonissue.art2Mag);
                     $("#artN2Aut").append(jsonissue.art2Aut);
                     $("#artN2Date").append(jsonissue.art2Date);
                     $("#artN2KW1").append(jsonissue.art2KW1);
                     $("#artN2KW2").append(jsonissue.art2KW2);
-                    $("#artN2KW3").append(jsonissue.art2KW3); 
+                    $("#artN2KW3").append(jsonissue.art2KW3);
                     $("#artN3").append(jsonissue.art3);
                     $("#artN3Mag").append(jsonissue.art3Mag);
                     $("#artN3Aut").append(jsonissue.art3Aut);
                     $("#artN3Date").append(jsonissue.art3Date);
                     $("#artN3KW1").append(jsonissue.art3KW1);
                     $("#artN3KW2").append(jsonissue.art3KW2);
-                    $("#artN3KW3").append(jsonissue.art3KW3); 
+                    $("#artN3KW3").append(jsonissue.art3KW3);
                     $("#openIssue").append('<a href="issue.html?number=' + issueNumber + '">Enter Magazine</a>');
                   }
 
