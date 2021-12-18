@@ -326,10 +326,12 @@
 
   // Random glossary definitions into lateral box
   $.getJSON('./glossaryDb.json', function(objson){
-    const rndInt = randomIntFromInterval(1, 6);
-    console.log(rndInt);
-    $("#learnterm").prepend(objson[rndInt]["term"]);
-    $("#learndefinition").append(objson[rndInt]["definition"]);
+    const lenGloss = objson.glossary.length;
+    // console.log(lenGloss); // debug
+    const rndInt = randomIntFromInterval(1, lenGloss);
+    // console.log(rndInt); // debug
+    $("#learnterm").prepend(objson["glossary"][rndInt]["term"]);
+    $("#learndefinition").append(objson["glossary"][rndInt]["definition"]);
   }).fail(function(){
     console.log("Get from glossaryDb: an error has occurred.");
   });
