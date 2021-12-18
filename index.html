@@ -328,7 +328,7 @@
   $.getJSON('./glossaryDb.json', function(objson){
     const lenGloss = objson.glossary.length;
     // console.log(lenGloss); // debug
-    const rndInt = randomIntFromInterval(1, lenGloss);
+    const rndInt = randomIntFromInterval(0, lenGloss-1);
     // console.log(rndInt); // debug
     $("#learnterm").prepend(objson["glossary"][rndInt]["term"]);
     $("#learndefinition").append(objson["glossary"][rndInt]["definition"]);
