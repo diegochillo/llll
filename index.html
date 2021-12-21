@@ -2,7 +2,7 @@
   <html lang="en">
 
   <head>
-    <title>IMWT Tests</title>
+    <title>hUmagazine</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/style2.css" media="none" id="cssstyle2">
     <link rel="stylesheet" href="css/style3.css" media="none" id="cssstyle3">
     <link rel="stylesheet" href="css/style4.css" media="none" id="cssstyle4">
-    
+
     <!-- Search by Algolia -->
     <link
   rel="stylesheet"
@@ -248,7 +248,7 @@
 
     </div>
 
-    <!-- Aside --> 
+    <!-- Aside -->
     <div class="col-md-4">
 
       <div class="position-sticky" style="top: 2rem;">
@@ -257,11 +257,16 @@
           <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
         </div>
 
+
+
         <div class="position-sticky" style="top: 2rem;">
           <div class="p-4 mb-3 bg-light rounded">
             <h4 class="fst-italic">Learn a new word!</h4>
-            <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+            <strong class="mb-0" id="learnterm">:</strong>  <!-- This div gets filled up with random term from glossaryDb.json -->
+            <span class="mb-0" id="learndefinition"></span> <!-- This div gets filled up with correspondent definition from glossaryDb.json -->
           </div>
+
+
 
           <div class="position-sticky" style="top: 2rem;">
             <div class="p-4 mb-3 bg-light rounded">
@@ -317,6 +322,20 @@
  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
  var dateTime = date+' '+time;
  document.getElementById("currentDateTime").value = dateTime;
+
+
+  // Random glossary definitions into lateral box
+  $.getJSON('./glossaryDb.json', function(objson){
+    const lenGloss = objson.glossary.length;
+    // console.log(lenGloss); // debug
+    const rndInt = randomIntFromInterval(0, lenGloss-1);
+    // console.log(rndInt); // debug
+    $("#learnterm").prepend(objson["glossary"][rndInt]["term"]);
+    $("#learndefinition").append(objson["glossary"][rndInt]["definition"]);
+  }).fail(function(){
+    console.log("Get from glossaryDb: an error has occurred.");
+  });
+
 </script>
 
 

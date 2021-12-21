@@ -28,12 +28,14 @@ body {
 .artiCol {
     height: 66vh;
     overflow-y: scroll;
+    overflow-x:hidden;
 }
 
 /* Metadata columns */
 .metaCol {
     height: 18vh;
     overflow-y: scroll;
+    overflow-x:hidden;
 }
 
 .metaTitle {
