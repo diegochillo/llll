@@ -50,7 +50,8 @@ function showMeta(elementReadId,label,chkbx,metaType) {
     var found=false;
 
     $(elementReadId + " ." + metaType).each(function(index) {
-      if ($(this).text() == label) {
+      //if ($(this).text() == label) {
+      if ($(this).attr("data-label") == label) {
         if (chkbx.checked) {
           $(this).css("background-color", thisTimeColor);
             if (!found) {
