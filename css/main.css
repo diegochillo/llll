@@ -25,19 +25,19 @@ body {
 
 
 #itemIcon1:hover {
-    content: url('css/fonts/pointer2.png');
+    content: url('pointer2.png');
     transform:rotate(90deg);
 }
 #itemIcon2:hover {
-    content: url('css/fonts/pointer2.png');
+    content: url('pointer2.png');
     transform:rotate(90deg);
 }
 #itemIcon3:hover {
-    content: url('css/fonts/pointer2.png');
+    content: url('pointer2.png');
     transform:rotate(90deg);
 }
 #itemIcon4:hover {
-    content: url('css/fonts/pointer2.png');
+    content: url('pointer2.png');
     transform:rotate(90deg);
 }
 #refreshIcon:hover {
