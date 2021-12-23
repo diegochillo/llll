@@ -140,6 +140,13 @@ function getMetadataNew(nArticle,metaList) {
 
 }
 
+// wikipediaPreview.js
+
+
+
+
+
+
 
 // Gets a random number between min and max (included)
 function randomIntFromInterval(min, max) {
