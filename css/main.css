@@ -24,6 +24,29 @@ body {
 }
 
 
+#itemIcon1:hover {
+    background-image: url('css/pointer2.png');
+    transform:rotate(90deg);
+}
+#itemIcon2:hover {
+    background-image: url('css/pointer2.png');
+    transform:rotate(90deg);
+}
+#itemIcon3:hover {
+    background-image: url('css/pointer2.png');
+    transform:rotate(90deg);
+}
+#itemIcon4:hover {
+    background-image: url('css/pointer2.png');
+    transform:rotate(90deg);
+}
+#refreshIcon:hover {
+    background-image: url('css/pointer2.png');
+    transform:rotate(90deg);
+}
+
+
+
 /* Article columns */
 .artiCol {
     height: 66vh;
