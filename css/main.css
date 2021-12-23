@@ -42,7 +42,7 @@ body {
 }
 #refreshIcon:hover {
     content: url('css/fonts/pointer2.png');
-    transform:rotate(90deg);
+    transform:rotate(360deg);
 }
 
 
