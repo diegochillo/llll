@@ -1,17 +1,25 @@
-[
 {
-  "1": {
-    "Heteronormativity": "The belief by people or institutions that heterosexuality is the normal/default way for people to identify and that heterosexuality is superior to all other sexualities. Heteronormativity can create social, cultural, political, and economic ideologies that can harm the lifestyles and livelihoods of LGBTQ people."},
-  "2": {
-    "LGBTQIA+": "An acronym referring to lesbian, gay, bisexual, trans, queer/questioning, intersex, asexual, etc. communities."},
-  "3": {
-    "Outing": "Exposing someone’s sexual orientation without their prior consent. This can be very harmful as they may not be in an environment that's safe to come out in."},
-  "4": {
-    "Queer": "Historically this term was used in a derogatory way to refer to the LGBTQ community. This word has since been used in a positive way by individuals to convey their identity when they prefer not to use terms that depend on sexuality or gender such as lesbian or gay."},
-  "5": {
-     "Sexual Orientation": "Referring to the enduring patterns or specific type of physical and emotional attraction that a person experiences toward other people. For example, heterosexual, bisexual, or homosexual. Sexual orientation can change over the course of one’s life and depending on the situation."},
-  "6": {
-     "Gender Dysphoria": "A medical diagnosis and term to reflect the distress experienced by individuals who have a misalignment between their sex assigned at birth and the gender that they identify with internally. This means that a person doesn’t feel right about their body parts, physical characteristics, or societal interactions in terms of their internal experience of gender."},
-  "7": {"Trans Man/Trans Woman: A trans man is someone who was assigned the sex of “female” at birth but who identifies as a man (also known as female-to-male or FTM). A trans woman is someone who was assigned the sex of “male” at birth but who identifies as a woman (also known as male-to-female or MTF)."},
-   }
-]
+  "glossary": [
+    {
+      "term":"Heteronormativity",
+      "definition":"The belief by people or institutions that heterosexuality is the normal/default way for people to identify and that heterosexuality is superior to all other sexualities. Heteronormativity can create social, cultural, political, and economic ideologies that can harm the lifestyles and livelihoods of LGBTQ people."},
+    {
+      "term":"LGBTQIA+",
+      "definition":"An acronym referring to lesbian, gay, bisexual, trans, queer/questioning, intersex, asexual, etc. communities."},
+    {
+      "term":"Outing",
+      "definition":"Exposing someone’s sexual orientation without their prior consent. This can be very harmful as they may not be in an environment that's safe to come out in."},
+    {
+      "term":"Queer",
+      "definition":"Historically this term was used in a derogatory way to refer to the LGBTQ community. This word has since been used in a positive way by individuals to convey their identity when they prefer not to use terms that depend on sexuality or gender such as lesbian or gay."},
+    {
+      "term":"Sexual Orientation",
+      "definition":"Referring to the enduring patterns or specific type of physical and emotional attraction that a person experiences toward other people. For example, heterosexual, bisexual, or homosexual. Sexual orientation can change over the course of one’s life and depending on the situation."},
+    {
+      "term":"Gender Dysphoria",
+      "definition":"A medical diagnosis and term to reflect the distress experienced by individuals who have a misalignment between their sex assigned at birth and the gender that they identify with internally. This means that a person doesn’t feel right about their body parts, physical characteristics, or societal interactions in terms of their internal experience of gender."},
+	{
+	  "term": "Trans Man/Trans Woman",
+	  "definition": "A trans man is someone who was assigned the sex of “female” at birth but who identifies as a man (also known as female-to-male or FTM). A trans woman is someone who was assigned the sex of “male” at birth but who identifies as a woman (also known as male-to-female or MTF)."}
+  ]
+}

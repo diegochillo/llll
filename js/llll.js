@@ -56,7 +56,7 @@ function showMeta(elementReadId,label,chkbx,metaType) {
           $(this).css("background-color", thisTimeColor);
             if (!found) {
               $(elementReadId).animate({
-                  scrollTop: $(elementReadId).scrollTop() + $(this).offset().top - 400
+                  scrollTop: $(elementReadId).scrollTop() + $(this).offset().top - 500
               }, 1000);
               found=true;
             }
