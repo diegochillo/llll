@@ -33,7 +33,7 @@ body {
     transform:rotate(90deg);
 }
 #itemIcon3:hover {
-    content: url('pointer2.png');
+    content: url('rocknroll.png');
     transform:rotate(90deg);
 }
 #itemIcon4:hover {
