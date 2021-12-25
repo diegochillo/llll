@@ -44,6 +44,22 @@ body {
     transform:rotate(360deg);
 }
 
+#arrow4 {
+  animation: MoveUpDown 1s linear infinite;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+}
+
 
 
 /* Article columns */
