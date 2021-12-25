@@ -29,7 +29,7 @@ body {
     transform:rotate(90deg);
 }
 #itemIcon2:hover {
-    content: url('pointer2.png');
+    content: url('50fingers.png');
     transform:rotate(90deg);
 }
 #itemIcon3:hover {
