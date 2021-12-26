@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <link href="css/wikipedia-preview.css" rel="stylesheet" type="text/css"/>
+
+  </head>
+
+  <body>
+    <p class="content">A linguistic anthropologist invites <span class="mention language" id="mention-" about="English" data-label="English" data-sort="English">English</span>-speaking
+      <span class="wmf-wp-with-preview" data-wikipedia-preview>cisgendered</span> allies to stop using "she" and "he" to advance radical gender inclusion.</p>
+    <!-- <div class="popup-container">test</div> -->
+  </body>
+
+
+  <script src="js/wikipedia-preview.production.js"></script>
+  <script type="text/javascript">
+    wikipediaPreview.init({
+                lang: 'en',
+                events: {
+                    onShow: function(title, lang, type) {
+                        console.log( 'Opening ' + type + ' popup for article ' + title + ' in ' + lang )
+                    },
+                    onWikiRead: function(title, lang) {
+                        console.log( 'Going to read article ' + title + ' in ' + lang + ' on Wikipedia' )
+                    }
+                }
+            });
+  </script>
+
+</html>
