@@ -30,7 +30,6 @@ body {
 }
 #itemIcon2:hover {
     content: url('50fingers.png');
-    transform:rotate(90deg);
 }
 #itemIcon3:hover {
     content: url('rocknroll.png');
