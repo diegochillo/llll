@@ -1,7 +1,7 @@
 /* Style 1 */
 
 body {
- background-color: url('gradient.jpg');
+ background: url('gradient.jpg');
 }
 
 button {
