@@ -27,7 +27,7 @@ body {
   cursor: url(pointer2.png), auto;
 }
 
-.h1 {
+h1 {
   color: #B63323;
   font-family: Bembo;
   font-size: 30px;
