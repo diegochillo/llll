@@ -30,6 +30,8 @@ body {
 }
 #itemIcon2:hover {
     content: url('50fingers.png');
+    width: 90px;
+    height: 90px;
 }
 #itemIcon3:hover {
     content: url('rocknroll.png');
