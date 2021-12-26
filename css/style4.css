@@ -24,7 +24,7 @@ input, label {
     -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: ivypresto-display, serif;
   font-style: normal;
   font-weight: 100;
