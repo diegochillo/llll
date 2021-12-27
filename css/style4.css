@@ -8,6 +8,7 @@
 body {
  background-image: url('gradient.jpg');
  font-family: CharlevoixPro;
+ color: white;
 }
 
 button {
