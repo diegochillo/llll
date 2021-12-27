@@ -114,7 +114,7 @@ function getMetadataNew(nArticle,metaList) {
           return $(this).data("label");
       }).get();
 
-      var dataListU=[... new Set(dataList)];
+      var dataListU=[... new Set(dataList)].sort();
 
       // Creates the tab only if there are metadata to show
       if (dataListU.length>0) {
