@@ -111,10 +111,31 @@ function getMetadataNew(nArticle,metaList) {
 
       elementMetaId="#" + metaType + "s" + nArticle;
       var dataList = $(elementReadId + " ." + metaType).map(function() {
-          return $(this).data("label");
+          return [[$(this).data("label"), $(this).data("sort")]];
       }).get();
 
-      var dataListU=[... new Set(dataList)].sort();
+      console.log(dataList);
+
+      var dataListS=dataList.sort(function(a, b) {
+        if ((a[1]==null) || (b[1]==null)) {
+          if (a[0] < b[0]) return -1;
+          if (a[0] > b[0]) return 1;
+          return 0;
+        } else {
+          if (a[1] < b[1]) return -1;
+          if (a[1] > b[1]) return 1;
+          return 0;
+        }
+      });
+      console.log(dataListS);
+
+      // var dataListU=[... new Set(dataListS)];
+
+      var dataListA  = new Set(dataListS.map(JSON.stringify));  // Passage to Set to keep only unique values
+      var dataListU = Array.from(dataListA).map(JSON.parse);    // Back from Set to Array
+
+
+        console.log(dataListU);
 
       // Creates the tab only if there are metadata to show
       if (dataListU.length>0) {
@@ -132,8 +153,8 @@ function getMetadataNew(nArticle,metaList) {
 
         for (let md of dataListU) {
           // $(elementMetaId).append('<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"> ' + md + '<br/>');
-          mystring+='<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')">';
-          mystring+='<label for="metaCheck-' + cntr + '">&nbsp;' + md + '</label><br/>';
+          mystring+='<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md[0] + '\',this,\'' + metaType + '\')">';
+          mystring+='<label for="metaCheck-' + cntr + '">&nbsp;' + md[0] + '</label><br/>';
           cntr=cntr+1;
         }
 
