@@ -8,7 +8,7 @@
 body {
  background-image: url('gradient.jpg');
  font-family: CharlevoixPro;
- color: white;
+ color: white !important ;
 }
 
 button {
@@ -31,10 +31,6 @@ h1, h2, h3 {
   font-weight: 100;
 }
 
-
-.article {
-  color: lightgray;
-}
 
 /* Navbar doesn't have to change
 .navbar-light .navbar-nav .nav-link.active {
