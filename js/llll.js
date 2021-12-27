@@ -47,24 +47,34 @@ function showMeta(elementReadId,label,chkbx,metaType) {
 
     // var thisTimeColor = "#" + Math.floor((Math.random() * 15000000) + 777215).toString(16);
     var thisTimeColor = "hsl(" + 360 * Math.random() + ',' + (25 + 70 * Math.random()) + '%,' + (75 + 10 * Math.random()) + '%)';
-    var found=false;
 
-    $(elementReadId + " ." + metaType).each(function(index) {
-      //if ($(this).text() == label) {
-      if ($(this).attr("data-label") == label) {
-        if (chkbx.checked) {
-          $(this).css("background-color", thisTimeColor);
-            if (!found) {
-              $(elementReadId).animate({
-                  scrollTop: $(elementReadId).scrollTop() + $(this).offset().top - 500
-              }, 1000);
-              found=true;
-            }
-        } else {
-          $(this).css("background-color", "");
+
+    var numArticles = [1,2,3];
+    for (let nA of numArticles) { // This is to cycle all the articles
+
+      var found=false;
+      elementReadId="#article" + nA;
+
+      // console.log("elementReadId = " + elementReadId); //DEBUG
+
+      $(elementReadId + " ." + metaType).each(function(index) {
+        //if ($(this).text() == label) {
+        if ($(this).attr("data-label") == label) {
+          if (chkbx.checked) {
+            $(this).css("background-color", thisTimeColor);
+              if (!found) {
+                $(elementReadId).animate({
+                    scrollTop: $(elementReadId).scrollTop() + $(this).offset().top - 500
+                }, 1000);
+                found=true;
+              }
+          } else {
+            $(this).css("background-color", "");
+          }
         }
-      }
-    }); // end each)
+      }); // end each)
+
+    }
 
     // Sets the same background color for the checkbox label (or removes it if unchecked)
     if ($(chkbx)  .is(':checked')) {
