@@ -57,7 +57,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 #article1:hover {
- transform: scale(1.01);
+ transform: scale(1.05);
+ box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
 }
 
 #article1::-webkit-scrollbar-track {
