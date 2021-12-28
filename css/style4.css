@@ -76,6 +76,24 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 
 
+.list1::-webkit-scrollbar-track {
+  border-radius: 10px;
+  border: 1px solid blue;
+  width: 20px;
+}
+.list1::-webkit-scrollbar {
+  width: 20px;
+  background-color: blue;
+  border-radius: 10px;
+}
+.list1::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: red;
+  border: 5px solid blue;
+  height: 20px;
+}
+
+
 
 
 
