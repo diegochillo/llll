@@ -61,8 +61,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
  box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
 }
 
-#article1:hover > #article2, #article3 {
- transform: scale(0.90);
+#article1:hover + #article2, #article3 {
+ transform: scale(0.5);
 }
 
 #article2:hover {
