@@ -63,6 +63,7 @@ body {
     height: 66vh;
     overflow-y: scroll;
     overflow-x: hidden;
+    border-top: solid grey;
 }
 
 /* Metadata columns */
