@@ -30,8 +30,8 @@ body {
 }
 #itemIcon2:hover {
     content: url('50fingers.png');
-    width: 95px;
-    height: 95px;
+    width: 100px;
+    height: 100px;
 }
 #itemIcon3:hover {
     content: url('rocknroll2.png');
@@ -48,20 +48,13 @@ body {
 }
 
 #arrow4 {
-  animation: MoveUpDown 1s linear infinite;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  transition: transform 250ms;
 }
 
-@keyframes MoveUpDown {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-100px);
-  }
-}
+#arrow4:hover {
+  transform: translateY(-10px);
+} 
 
 
 
@@ -69,14 +62,14 @@ body {
 .artiCol {
     height: 66vh;
     overflow-y: scroll;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 /* Metadata columns */
 .metaCol {
     height: 18vh;
     overflow-y: scroll;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .metaTitle {
