@@ -47,11 +47,26 @@ img.itemIcon {
   filter: invert(100%);
 }
 
+*/
 
+#article2, #article3, #metaData1, #metaData2, #metaData3 {
+::-webkit-scrollbar 
+  width: 2rem;
 
-/* Slim scrollbar */
-::-webkit-scrollbar {
-    width: 12px;
-    background-color: lightgray;
+::-webkit-scrollbar-track 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+  background-color: #444444;
+   margin: 20vh;
+
+::-webkit-scrollbar-thumb 
+  border-radius: 10px;
+  background-color: #D62929;
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                                            transparent 25%,
+                                            transparent 50%,
+                                            rgba(255, 255, 255, .2) 50%,
+                                            rgba(255, 255, 255, .2) 75%,
+                                            transparent 75%,
+                                            transparent)
 }
-/* END of slim scrollbar */
