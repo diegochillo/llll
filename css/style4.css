@@ -56,8 +56,12 @@ border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+#article1:hover {
+ 
+}
 
 
+/*
 #article1, #article2, #article3, #metaData1, #metaData2, #metaData3 {
 ::-webkit-scrollbar-track 
   border-radius: 5px;
