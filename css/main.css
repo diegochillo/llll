@@ -30,13 +30,13 @@ body {
 }
 #itemIcon2:hover {
     content: url('50fingers.png');
-    width: 90px;
-    height: 90px;
+    width: 95px;
+    height: 95px;
 }
 #itemIcon3:hover {
     content: url('rocknroll2.png');
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     transform:rotate(360deg);
 }
 #itemIcon4:hover {
