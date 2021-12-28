@@ -61,6 +61,31 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
  box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
 }
 
+#article2:hover {
+ transform: scale(1.05);
+ box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+#article3:hover {
+ transform: scale(1.05);
+ box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+#metaData1:hover {
+ transform: scale(1.05);
+ box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+#metaData2:hover {
+ transform: scale(1.05);
+ box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+#metaData3:hover {
+ transform: scale(1.05);
+ box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
+}
+
 #article1::-webkit-scrollbar-track {
   border-radius: 5px;
   border: transparent;
