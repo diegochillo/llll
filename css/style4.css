@@ -78,18 +78,19 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 #article1::-webkit-scrollbar-track {
   border-radius: 10px;
-  border: 1px solid blue;
+  border: transparent;
   width: 20px;
 }
 #article1::-webkit-scrollbar {
   width: 20px;
-  background-color: blue;
+  background-color: transparent;
   border-radius: 10px;
 }
 #article1::-webkit-scrollbar-thumb {
   border-radius: 100px;
   background-color: red;
   border: 5px solid blue;
+  box-shadow: inset blue;
   height: 20px;
 }
 
