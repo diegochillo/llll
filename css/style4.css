@@ -77,21 +77,21 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 
 #article1::-webkit-scrollbar-track {
-  border-radius: 10px;
+  border-radius: 5px;
   border: transparent;
-  width: 20px;
+  width: 10px;
   display: none;
 }
 #article1::-webkit-scrollbar {
-  width: 20px;
+  width: 10px;
   background-color: transparent;
   border-radius: 10px;
 }
 #article1::-webkit-scrollbar-thumb {
   border-radius: 100px;
   background-color: red;
-  box-shadow: inset blue;
-  height: 20px;
+  box-shadow: inset 0 0 5px blue;
+  height: 10px;
 }
 
 
