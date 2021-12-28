@@ -76,7 +76,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   height: 10px;
 }
 
-
+/*
 #article1::-webkit-scrollbar-track {
   background: linear-gradient( 90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 45%, #48eefc 45%, #48eefc 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
 }
@@ -89,11 +89,12 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   box-shadow: 0px 0px 10px #48eefc;
 }
 /* for firefox scrollbar has only two properties scrollbar-color scrollbar-width*/
+/*
 #article1 {
  scrollbar-color: #48eefc #8ea5b5;
  scrollbar-width: thin;
 }
-
+*/
 
 
 
