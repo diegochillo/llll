@@ -49,18 +49,18 @@ img.itemIcon {
 
 */
 
-::-webkit-scrollbar { 
+#article1::-webkit-scrollbar { 
   width: 2rem;
 }
 
 
-::-webkit-scrollbar-track {
+#article1::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
   background-color: #444444;
   margin: 20vh;
 }
 
-::-webkit-scrollbar-thumb {  
+#article1::-webkit-scrollbar-thumb {  
   border-radius: 10px;
   background-color: #D62929;
   background-image: -webkit-linear-gradient(45deg,
