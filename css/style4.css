@@ -57,7 +57,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 
-#article1, #article2, #article3, #metaData1, #metaData2, #metaData3 {
+#article2, #article3, #metaData1, #metaData2, #metaData3 {
 /* width */
 ::-webkit-scrollbar 
   width: 10px;
@@ -76,17 +76,17 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 
 
-.list1::-webkit-scrollbar-track {
+#article1::-webkit-scrollbar-track {
   border-radius: 10px;
   border: 1px solid blue;
   width: 20px;
 }
-.list1::-webkit-scrollbar {
+#article1::-webkit-scrollbar {
   width: 20px;
   background-color: blue;
   border-radius: 10px;
 }
-.list1::-webkit-scrollbar-thumb {
+#article1::-webkit-scrollbar-thumb {
   border-radius: 100px;
   background-color: red;
   border: 5px solid blue;
