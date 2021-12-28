@@ -104,6 +104,86 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   box-shadow: 0px 0px 10px #48eefc;
 }
 
+#article2::-webkit-scrollbar-track {
+ background: linear-gradient( 90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 45%, #48eefc 45%, #48eefc 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
+}
+
+#article2::-webkit-scrollbar {
+  width: 10px;
+}
+
+#article2::-webkit-scrollbar-thumb {
+  background-color: #48eefc;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px #48eefc;
+  -moz-box-shadow: 0px 0px 10px #48eefc;
+  box-shadow: 0px 0px 10px #48eefc;
+}
+
+#article3::-webkit-scrollbar-track {
+ background: linear-gradient( 90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 45%, #48eefc 45%, #48eefc 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
+}
+
+#article3::-webkit-scrollbar {
+  width: 10px;
+}
+
+#article3::-webkit-scrollbar-thumb {
+  background-color: #48eefc;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px #48eefc;
+  -moz-box-shadow: 0px 0px 10px #48eefc;
+  box-shadow: 0px 0px 10px #48eefc;
+}
+
+#metaData1::-webkit-scrollbar-track {
+ background: linear-gradient( 90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 45%, #48eefc 45%, #48eefc 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
+}
+
+#metaData1::-webkit-scrollbar {
+  width: 10px;
+}
+
+#metaData1::-webkit-scrollbar-thumb {
+  background-color: #48eefc;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px #48eefc;
+  -moz-box-shadow: 0px 0px 10px #48eefc;
+  box-shadow: 0px 0px 10px #48eefc;
+}
+
+#metaData2::-webkit-scrollbar-track {
+ background: linear-gradient( 90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 45%, #48eefc 45%, #48eefc 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
+}
+
+#metaData2::-webkit-scrollbar {
+  width: 10px;
+}
+
+#metaData2::-webkit-scrollbar-thumb {
+  background-color: #48eefc;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px #48eefc;
+  -moz-box-shadow: 0px 0px 10px #48eefc;
+  box-shadow: 0px 0px 10px #48eefc;
+}
+
+#metaData3::-webkit-scrollbar-track {
+ background: linear-gradient( 90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 45%, #48eefc 45%, #48eefc 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
+}
+
+#metaData3::-webkit-scrollbar {
+  width: 10px;
+}
+
+#metaData3::-webkit-scrollbar-thumb {
+  background-color: #48eefc;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px #48eefc;
+  -moz-box-shadow: 0px 0px 10px #48eefc;
+  box-shadow: 0px 0px 10px #48eefc;
+}
+
 /*
 #article1, #article2, #article3, #metaData1, #metaData2, #metaData3 {
 ::-webkit-scrollbar-track 
