@@ -56,7 +56,7 @@ img.itemIcon {
 
 #article1::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
-  background-color: #444444;
+  background-color: transparent;
 }
 
 #article1::-webkit-scrollbar-thumb {  
