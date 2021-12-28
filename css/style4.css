@@ -77,13 +77,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 
-#article1 {
- overflow-y: scroll;
-  direction: ltr !important;
-}
-
 #article1::-webkit-scrollbar {
-  width: 9px;
+  width: 10px;
 }
 
 #article1::-webkit-scrollbar-track {
