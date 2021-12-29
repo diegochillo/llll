@@ -70,3 +70,116 @@ img.itemIcon {
                                             transparent 75%,
                                             transparent)
 }
+
+#article2::-webkit-scrollbar { 
+  width: 10px;
+}
+
+#article2::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#article2::-webkit-scrollbar-thumb {  
+  border-radius: 10px;
+  min-height: 20px;
+  background-color: #D62929;
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                                            transparent 25%,
+                                            transparent 50%,
+                                            rgba(255, 255, 255, .2) 50%,
+                                            rgba(255, 255, 255, .2) 75%,
+                                            transparent 75%,
+                                            transparent)
+}
+
+#article3::-webkit-scrollbar { 
+  width: 10px;
+}
+
+#article3::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#article3::-webkit-scrollbar-thumb {  
+  border-radius: 10px;
+  min-height: 20px;
+  background-color: #D62929;
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                                            transparent 25%,
+                                            transparent 50%,
+                                            rgba(255, 255, 255, .2) 50%,
+                                            rgba(255, 255, 255, .2) 75%,
+                                            transparent 75%,
+                                            transparent)
+}
+
+#metaData1::-webkit-scrollbar { 
+  width: 10px;
+}
+
+#metaData1::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#metaData1::-webkit-scrollbar-thumb {  
+  border-radius: 10px;
+  min-height: 20px;
+  background-color: #D62929;
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                                            transparent 25%,
+                                            transparent 50%,
+                                            rgba(255, 255, 255, .2) 50%,
+                                            rgba(255, 255, 255, .2) 75%,
+                                            transparent 75%,
+                                            transparent)
+}
+
+#metaData2::-webkit-scrollbar { 
+  width: 10px;
+}
+
+#metaData2::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#metaData2::-webkit-scrollbar-thumb {  
+  border-radius: 10px;
+  min-height: 20px;
+  background-color: #D62929;
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                                            transparent 25%,
+                                            transparent 50%,
+                                            rgba(255, 255, 255, .2) 50%,
+                                            rgba(255, 255, 255, .2) 75%,
+                                            transparent 75%,
+                                            transparent)
+}
+
+#metaData3::-webkit-scrollbar { 
+  width: 10px;
+}
+
+#metaData3::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+#metaData3::-webkit-scrollbar-thumb {  
+  border-radius: 10px;
+  min-height: 20px;
+  background-color: #D62929;
+  background-image: -webkit-linear-gradient(45deg,
+                                            rgba(255, 255, 255, .2) 25%,
+                                            transparent 25%,
+                                            transparent 50%,
+                                            rgba(255, 255, 255, .2) 50%,
+                                            rgba(255, 255, 255, .2) 75%,
+                                            transparent 75%,
+                                            transparent)
+}
+
+
+
