@@ -61,16 +61,28 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
  box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
 }
 
-#article1:hover + #article2, #article1:hover + #article3 {
- transform: scale(0.9);
+#article1:hover + #article2 {
+ transform: scale(1.0);
 }
 
-#article2:hover + #article1, #article2:hover + #article3 {
- transform: scale(0.9);
+#article1:hover + #article3 {
+ transform: scale(1.0);
 }
 
-#article3:hover + #article1, #article3:hover + #article2 {
- transform: scale(0.9);
+#article2:hover + #article1 {
+ transform: scale(1.0);
+}
+
+#article2:hover + #article3 {
+ transform: scale(1.0);
+}
+
+#article3:hover + #article1 {
+ transform: scale(1.0);
+}
+
+#article3:hover + #article2 {
+ transform: scale(1.0);
 }
 
 
