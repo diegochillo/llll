@@ -103,7 +103,7 @@ img.itemIcon {
 
 #article3::-webkit-scrollbar-thumb {  
   border-radius: 10px;
-  min-height: 20px;
+  min-height: 40px;
   background-color: #D62929;
   background-image: -webkit-linear-gradient(45deg,
                                             rgba(255, 255, 255, .2) 25%,
