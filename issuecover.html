@@ -36,40 +36,49 @@
 
 
       <!-- HOMEPAGE ROW -->
-      <div class="row align-items-start">
-        <div class="col">
-          <div align="center">
-            <br/><br/>
-            <p>Issue Cover</p><br/>
-            <span class="metaTitle">Number: </span><span id="issueN"></span><br/>
-            <span class="metaTitle">Topic: </span><span id="issueTopic"></span><br/>
-            <span class="metaTitle">Editor: </span><span id="issueEditor"></span><br/>
-            <span class="metaTitle">Date: </span><span id="issueDate"></span><br/>
-            <p>In this number</p><br/>
-            <span class="artTitle"></span><span id="artN1"></span><br/>
-            <span class="artMeta"></span><span id="artN1Mag"></span><br/>
-            <span class="artMeta"></span><span id="artN1Aut"></span><br/>
-            <span class="artMeta"></span><span id="artN1Date"></span><br/>
-            <span class="artMeta"></span><span id="artN1KW1"></span> <span class="artMeta"></span><span id="artN1KW2"></span> <span class="artMeta"></span><span id="artN1KW3"></span>
-            <br/>
+      <div class="container container-small"> <!-- container-small is a CUSTOM class defined in main.css -->
 
-            <span class="artTitle"></span><span id="artN2"></span><br/><span class="artMeta"></span><span id="artN2Mag"></span><br/>
-            <span class="artMeta"></span><span id="artN2Aut"></span><br/>
-            <span class="artMeta"></span><span id="artN2Date"></span><br/>
-            <span class="artMeta"></span><span id="artN2KW1"></span> <span class="artMeta"></span><span id="artN2KW2"></span> <span class="artMeta"></span><span id="artN2KW3"></span>
-            <br/>
-
-            <span class="artTitle"></span><span id="artN3"></span><br/>
-            <span class="artMeta"></span><span id="artN3Mag"></span><br/>
-            <span class="artMeta"></span><span id="artN3Aut"></span><br/>
-            <span class="artMeta"></span><span id="artN3Date"></span><br/>
-            <span class="artMeta"></span><span id="artN3KW1"></span> <span class="artMeta"></span><span id="artN3KW2"></span> <span class="artMeta"></span><span id="artN3KW3"></span>
-            <br/>
-            <div id="openIssue"></div>
-            <br/><br/>
+        <div class="row align-items-start">
+          <div class="col">
+            <div align="center">
+              <p>Issue Cover</p>
+              <div><span class="metaTitle">Number: </span><span id="issueN"></span></div>
+              <div><span class="metaTitle">Topic: </span><span id="issueTopic"></span></div>
+              <div><span class="metaTitle">Editor: </span><span id="issueEditor"></span></div>
+              <div><span class="metaTitle">Date: </span><span id="issueDate"></span></div>
+              <br/>
+              <div>In this number:</div>
+              <br/>
+              <ol class="list-group-numbered text-left" align="left">
+                <li class="list-group-item border-0 ">
+                  <span class="artTitle"></span><span id="artN1"></span>,
+                  <span class="artMeta"></span><span id="artN1Aut"></span>,
+                  <span class="artMeta"> from </span><span id="artN1Mag"></span>,
+                  <span class="artMeta"></span><span id="artN1Date"></span><br/>
+                  <span class="artMeta"></span><span id="artN1KW1" class="card-subtitle text-muted"></span> <span class="artMeta"></span><span id="artN1KW2" class="card-subtitle text-muted"></span> <span class="artMeta"></span><span id="artN1KW3" class="card-subtitle text-muted"></span>
+                </li>
+                <li class="list-group-item border-0 ">
+                  <span class="artTitle"></span><span id="artN2"></span>,
+                  <span class="artMeta"></span><span id="artN2Aut"></span>,
+                  <span class="artMeta"> from </span><span id="artN2Mag"></span>,
+                  <span class="artMeta"></span><span id="artN2Date"></span><br/>
+                  <span class="artMeta"></span><span id="artN2KW1" class="card-subtitle text-muted"></span> <span class="artMeta"></span><span id="artN2KW2" class="card-subtitle text-muted"></span> <span class="artMeta"></span><span id="artN2KW3" class="card-subtitle text-muted"></span>
+                </li>
+                <li class="list-group-item border-0 ">
+                  <span class="artTitle"></span><span id="artN3"></span>,
+                  <span class="artMeta"></span><span id="artN3Aut"></span>,
+                  <span class="artMeta"> from </span><span id="artN3Mag"></span>,
+                  <span class="artMeta"></span><span id="artN3Date"></span><br/>
+                  <span class="artMeta"></span><span id="artN3KW1" class="card-subtitle text-muted"></span> <span class="artMeta"></span><span id="artN3KW2" class="card-subtitle text-muted"></span> <span class="artMeta"></span><span id="artN3KW3" class="card-subtitle text-muted"></span>
+                </li>
+              </ol>
+              <div id="openIssue"></div>
+              <br/><br/>
+            </div>
           </div>
         </div>
-      </div>
+
+      </div> <!-- End container -->
 
       <!-- FOOTER -->
       <div id="footerBar"></div>
