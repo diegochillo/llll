@@ -56,6 +56,13 @@ border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+/* metadata nav tablist style */
+
+
+
+
+/* hover effect */
+
 #article1:hover {
  transform: scale(1.05);
  box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
@@ -113,6 +120,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 
 /* scrollbar */ 
+
 #article1::-webkit-scrollbar-track {
  background: linear-gradient( 90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 45%, #48eefc 45%, #48eefc 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
 }
@@ -123,7 +131,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 #article1::-webkit-scrollbar-thumb {
   background-color: #48eefc;
-  border-radius: 5px;
+  border-radius: 100px;
   -webkit-box-shadow: 0px 0px 10px #48eefc;
   -moz-box-shadow: 0px 0px 10px #48eefc;
   box-shadow: 0px 0px 10px #48eefc;
@@ -140,6 +148,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 #article2::-webkit-scrollbar-thumb {
   background-color: #48eefc;
   border-radius: 5px;
+  height: 10px;
   -webkit-box-shadow: 0px 0px 10px #48eefc;
   -moz-box-shadow: 0px 0px 10px #48eefc;
   box-shadow: 0px 0px 10px #48eefc;
