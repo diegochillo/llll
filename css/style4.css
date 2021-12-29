@@ -58,7 +58,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 /* metadata nav tablist style */
 
-
+#tabs1 {
+  border: ;
+}
 
 
 /* hover effect */
@@ -69,7 +71,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 #article1:hover + #article2 {
- transform: scale(1.0);
+ transform: scale(0.95);
 }
 
 #article1:hover + #article3 {
