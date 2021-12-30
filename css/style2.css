@@ -59,14 +59,14 @@ img.itemIcon {
 
 #article1::-webkit-scrollbar-thumb {  
   border-radius: 10px;
-  min-height: 20px;
-  background-color: #D62929;
+  min-height: 60px;
+  background-color: #a80e0e;
   background-image: -webkit-linear-gradient(45deg,
-                                            rgba(255, 255, 255, .2) 25%,
+                                            rgb(255,255,255) 25%,
                                             transparent 25%,
                                             transparent 50%,
-                                            rgba(255, 255, 255, .2) 50%,
-                                            rgba(255, 255, 255, .2) 75%,
+                                            rgb(255, 255, 255) 50%,
+                                            rgba(255, 255, 255) 75%,
                                             transparent 75%,
                                             transparent)
 }
@@ -81,14 +81,14 @@ img.itemIcon {
 
 #article2::-webkit-scrollbar-thumb {  
   border-radius: 10px;
-  min-height: 20px;
-  background-color: #D62929;
+  min-height: 60px;
+  background-color: #a80e0e;
   background-image: -webkit-linear-gradient(45deg,
-                                            rgba(255, 255, 255, .2) 25%,
+                                            rgb(255,255,255) 25%,
                                             transparent 25%,
                                             transparent 50%,
-                                            rgba(255, 255, 255, .2) 50%,
-                                            rgba(255, 255, 255, .2) 75%,
+                                            rgb(255, 255, 255) 50%,
+                                            rgba(255, 255, 255) 75%,
                                             transparent 75%,
                                             transparent)
 }
@@ -103,14 +103,14 @@ img.itemIcon {
 
 #article3::-webkit-scrollbar-thumb {  
   border-radius: 10px;
-  min-height: 50px;
-  background-color: #D62929;
+  min-height: 60px;
+  background-color: #a80e0e;
   background-image: -webkit-linear-gradient(45deg,
-                                            rgba(255, 255, 255, .2) 25%,
+                                            rgb(255,255,255) 25%,
                                             transparent 25%,
                                             transparent 50%,
-                                            rgba(255, 255, 255, .2) 50%,
-                                            rgba(255, 255, 255, .2) 75%,
+                                            rgb(255, 255, 255) 50%,
+                                            rgba(255, 255, 255) 75%,
                                             transparent 75%,
                                             transparent)
 }
@@ -125,14 +125,14 @@ img.itemIcon {
 
 #metaData1::-webkit-scrollbar-thumb {  
   border-radius: 10px;
-  min-height: 20px;
-  background-color: #D62929;
+  min-height: 60px;
+  background-color: #a80e0e;
   background-image: -webkit-linear-gradient(45deg,
-                                            rgba(255, 255, 255, .2) 25%,
+                                            rgb(255,255,255) 25%,
                                             transparent 25%,
                                             transparent 50%,
-                                            rgba(255, 255, 255, .2) 50%,
-                                            rgba(255, 255, 255, .2) 75%,
+                                            rgb(255, 255, 255) 50%,
+                                            rgba(255, 255, 255) 75%,
                                             transparent 75%,
                                             transparent)
 }
@@ -147,14 +147,14 @@ img.itemIcon {
 
 #metaData2::-webkit-scrollbar-thumb {  
   border-radius: 10px;
-  min-height: 20px;
-  background-color: #D62929;
+  min-height: 60px;
+  background-color: #a80e0e;
   background-image: -webkit-linear-gradient(45deg,
-                                            rgba(255, 255, 255, .2) 25%,
+                                            rgb(255,255,255) 25%,
                                             transparent 25%,
                                             transparent 50%,
-                                            rgba(255, 255, 255, .2) 50%,
-                                            rgba(255, 255, 255, .2) 75%,
+                                            rgb(255, 255, 255) 50%,
+                                            rgba(255, 255, 255) 75%,
                                             transparent 75%,
                                             transparent)
 }
@@ -169,14 +169,14 @@ img.itemIcon {
 
 #metaData3::-webkit-scrollbar-thumb {  
   border-radius: 10px;
-  min-height: 20px;
-  background-color: #D62929;
+  min-height: 60px;
+  background-color: #a80e0e;
   background-image: -webkit-linear-gradient(45deg,
-                                            rgba(255, 255, 255, .2) 25%,
+                                            rgb(255,255,255) 25%,
                                             transparent 25%,
                                             transparent 50%,
-                                            rgba(255, 255, 255, .2) 50%,
-                                            rgba(255, 255, 255, .2) 75%,
+                                            rgb(255, 255, 255) 50%,
+                                            rgba(255, 255, 255) 75%,
                                             transparent 75%,
                                             transparent)
 }
