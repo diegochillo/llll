@@ -56,9 +56,16 @@ filter: sepia(100%);
 
 hr {
     border:0;
-    height:20px;
+    margin:5px;
+    height:40px;
     background:url(decor.png);
 }
 
+#endArt {
+  content: url(ulogo_manuzio.png);
+  height: auto;
+  width: auto;
+  margin: 5px;
+}
 
 
