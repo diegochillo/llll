@@ -10,11 +10,6 @@
 }
 
 @font-face{
- font-family: "FloralCapitals";
- src: url("./fonts/style1/FloralCapitals.ttf");
-}
-
-@font-face{
  font-family: "ArabesqueInitialen";
  src: url("./fonts/style1/ArabesqueInitialen.ttf");
 }
@@ -24,7 +19,26 @@ body {
   color: #1D1A13;
   font-family: Bembo;
   font-size: 18px;
-  cursor: url(pointer2.png), auto;
+}
+
+#cover1 {
+  background: url(cornice2.png);
+  margin-right: auto;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 600px;
+  width: 600px;
+}
+
+#issueMeta {
+  width: 300px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+  overflow: auto;
 }
 
 h1 {
@@ -35,7 +49,7 @@ h1 {
 
 .big-first-letter {
   font-family: ArabesqueInitialen;
-  font-size: 50px;
+  font-size: 80px;
 }
 
 .subtitle {
@@ -68,4 +82,14 @@ hr {
   margin: 5px;
 }
 
+.artiCol {
+  cursor: url(pointer2.png), pointer;
+}
 
+#space {
+  content: url(decoration.png);
+  height: auto;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
