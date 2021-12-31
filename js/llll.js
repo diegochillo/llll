@@ -183,7 +183,7 @@ function getMetadataNew(nArticle,metaList) {
     var totAmplitude = 0;
     var totPoliteness = 0;
     var totAvgLength = 0;
-    var totConfidence = 0;
+    var totDirtiness = 0;
 
     for (let i = 0; i < quanti; i++) {
       totSentiment+=analysisRes[i].profile.sentiment;
@@ -191,18 +191,17 @@ function getMetadataNew(nArticle,metaList) {
       totAmplitude+=analysisRes[i].profile.amplitude;
       totPoliteness+=analysisRes[i].profile.politeness;
       totAvgLength+=analysisRes[i].stats.avg_length;
-      totConfidence+=analysisRes[i].stats.confidence;
-
+      totDirtiness+=analysisRes[i].profile.dirtiness;
     }
 
     mystring += "<div><span class='analisysLabel'>Total words:</span> <span class='analysisValue'>" + totWords + "</span></div>";
-    mystring += "<div><span class='analisysLabel'>Sentiment:</span> <span class='analysisValue'>" + (totSentiment/quanti).toFixed(5) + "</span>";
-    mystring += "<div><span class='analisysLabel'>Amplitude:</span> <span class='analysisValue'>" + (totAmplitude/quanti).toFixed(5) + "</span>";
-    mystring += "<div><span class='analisysLabel'>Politeness:</span> <span class='analysisValue'>" + (totPoliteness/quanti).toFixed(5) + "</span>";
     mystring += "<div><span class='analisysLabel'>Words avg. length:</span> <span class='analysisValue'>" + (totAvgLength/quanti).toFixed(5) + "</span>";
-    mystring += "<div><span class='analisysLabel'>Confidence:</span> <span class='analysisValue'>" + (totConfidence/quanti).toFixed(5) + "</span>";
-
+    mystring += "<div><span class='analisysLabel'>Sentiment:</span> <span class='analysisValue'>" + (totSentiment/quanti).toFixed(5) + "</span>";
+    mystring += "<div><span class='analisysLabel'>Sentiment amplitude:</span> <span class='analysisValue'>" + (totAmplitude/quanti).toFixed(5) + "</span>";
+    mystring += "<div><span class='analisysLabel'>Politeness:</span> <span class='analysisValue'>" + (totPoliteness/quanti).toFixed(5) + "</span>";
+    mystring += "<div><span class='analisysLabel'>Dirtiness:</span> <span class='analysisValue'>" + (totDirtiness/quanti).toFixed(5) + "</span>";
     mystring+='</div>';
+
     $(elementTabContent).append(mystring);
 
 }
@@ -216,63 +215,3 @@ function getMetadataNew(nArticle,metaList) {
 function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
-
-
-
-
-
-
-
-// Gets the list of metadata and shows it in the metaData box tabs
-// OLD VERSION with separated issue[n].html files
-/*
-function getMetadata(nIssue,nArticle,metaList) {
-
-    var suffix = nIssue + "_" + nArticle;
-    var elementReadId = "#article" + suffix;
-    var elementMetaTabs = "#tabs" +  suffix;
-    var elementTabContent = "#content" + suffix;
-    // var elementMetaData = "#metaData" + suffix;
-
-    // Creates the tab menu inside the metadata selector box
-    var ariasel=true;
-    var tabactive='active';
-    for (const metaType of metaList) {
-      $(elementMetaTabs).append('<li class="nav-item waves-effect waves-light" role="presentation"><a class="nav-link ' + tabactive + '" id="' + metaType + '-tab' + suffix + '" data-toggle="tab" href="#' + metaType + suffix + '" type="button" role="tab" aria-controls="' + metaType + '" aria-selected="' + ariasel + '">' + metaType + 's</a></li>');
-      ariasel='false';
-      tabactive='';
-    }
-
-    var tabactive='active';
-    var mystring='';
-    for (const metaType of metaList) {  // For each type of metadata
-
-      mystring='<div class="tab-pane ' + tabactive + '" id="' + metaType + suffix + '" role="tabpanel" aria-labelledby="' + metaType + '-tab' + suffix+'">';
-      // console.log(mystring);
-
-      elementMetaId="#" + metaType + "s" + nIssue + "_" + nArticle;
-      var dataList = $(elementReadId + " ." + metaType).map(function() {
-          return $(this).data("label");
-      }).get();
-
-      var dataListU=[... new Set(dataList)];
-
-      // Cycles over found elements and shows checkboxes
-      cntr=1;
-      for (let md of dataListU) {
-        // $(elementMetaId).append('<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"> ' + md + '<br/>');
-        mystring+='<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"><label for="metaCheck-' + cntr + '">&nbsp;' + md + '</label><br/>';
-        cntr=cntr+1;
-      }
-
-      mystring+='</div>';
-
-      $(elementTabContent).append(mystring);
-      tabactive='fade';
-
-      // console.log($("#metaData2_1").html());
-
-    }
-
-}
-*/
