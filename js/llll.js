@@ -114,7 +114,7 @@ function getMetadataNew(nArticle,metaList) {
           return [[$(this).data("label"), $(this).data("sort")]];
       }).get();
 
-      console.log(dataList);
+      // console.log(dataList);
 
       var dataListS=dataList.sort(function(a, b) {
         if ((a[1]==null) || (b[1]==null)) {
@@ -127,7 +127,7 @@ function getMetadataNew(nArticle,metaList) {
           return 0;
         }
       });
-      console.log(dataListS);
+      // console.log(dataListS);
 
       // var dataListU=[... new Set(dataListS)];
 
@@ -135,7 +135,7 @@ function getMetadataNew(nArticle,metaList) {
       var dataListU = Array.from(dataListA).map(JSON.parse);    // Back from Set to Array
 
 
-        console.log(dataListU);
+      // console.log(dataListU);
 
       // Creates the tab only if there are metadata to show
       if (dataListU.length>0) {
@@ -169,10 +169,36 @@ function getMetadataNew(nArticle,metaList) {
 
     }
 
+    // Adds Analysis tabs
+    $(elementMetaTabs).append('<li class="nav-item waves-effect waves-light" role="presentation"><a class="nav-link" id="analysis-tab' + suffix + '" data-toggle="tab" href="#analysis' + suffix + '" type="button" role="tab" aria-controls="analysis" aria-selected="false">analysis</a></li>');
+    mystring = '<div class="tab-pane ' + tabactive + '" id="analysis' + suffix + '" role="tabpanel" aria-labelledby="analysis' + '-tab' + suffix+'">';
+    // mystring += "Text Analysis:<br/>";
+
+    var analysisRes=compendium.analyse($(elementReadId).text());
+    console.log( analysisRes );
+
+    var quanti = analysisRes.length;
+    var totWords = 0;
+    var totSentiment = 0;
+    var totAmplitude = 0;
+    var totPoliteness = 0;
+
+    for (let i = 0; i < quanti; i++) {
+      totSentiment+=analysisRes[i].profile.sentiment;
+      totWords+=analysisRes[i].stats.words;
+      totAmplitude+=analysisRes[i].profile.amplitude;
+      totPoliteness+=analysisRes[i].profile.politeness;
+
+    }
+    mystring += "Total words: " + totWords;
+    mystring += "<br>" + "Sentiment: " + (totSentiment/quanti);
+    mystring += "<br>" + "Amplitude: " + (totAmplitude/quanti);
+    mystring += "<br>" + "Politeness: " + (totPoliteness/quanti);
+
+    mystring+='</div>';
+    $(elementTabContent).append(mystring);
+
 }
-
-// wikipediaPreview.js
-
 
 
 
@@ -183,8 +209,6 @@ function getMetadataNew(nArticle,metaList) {
 function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
-
-
 
 
 

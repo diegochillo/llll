@@ -20,8 +20,6 @@ for (let i of issues) {
 window.pages=searchObj;
 console.log(window.pages);
 
-
-
 var searchIndex = lunr(function() {
     this.ref("id");
     //this.field("title", { boost: 10 });
