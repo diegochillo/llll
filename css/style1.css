@@ -15,7 +15,7 @@
 }
 
 body {
-  background-color: #F2EFDC;
+  background-color: #f6f1e8;
   color: #1D1A13;
   font-family: Bembo;
   font-size: 18px;
@@ -59,12 +59,12 @@ h1 {
 }
 
 img {
-filter: sepia(100%);
+filter: grayscale(90%);
 // Browser Specific
--webkit-filter: sepia(100%);
--moz-filter: sepia(100%);
--o-filter: sepia(100%);
--ms-filter: sepia(100%);
+-webkit-filter: grayscale(90%);
+-moz-filter: grayscale(90%);
+-o-filter: grayscale(90%);
+-ms-filter: grayscale(90%);
 }
 
 
@@ -92,4 +92,82 @@ hr {
   width: auto;
   margin-left: auto;
   margin-right: auto;
+}
+
+/*scrollbar */
+#article1::-webkit-scrollbar-track {
+  background-image: url(latosx.png);
+  background-size: contain;
+}
+#article1::-webkit-scrollbar {
+  width: 35px;
+}
+#article1::-webkit-scrollbar-thumb {
+  background-color: #B63323;
+  height: 10px;
+  border-radius: 100px;
+}
+
+#article2::-webkit-scrollbar-track {
+  background-image: url(latosx.png);
+  background-size: contain;
+}
+#article2::-webkit-scrollbar {
+  width: 35px;
+}
+#article2::-webkit-scrollbar-thumb {
+  background-color: #B63323;
+  height: 10px;
+  border-radius: 100px;
+}
+
+#article3::-webkit-scrollbar-track {
+  background-image: url(latosx.png);
+  background-size: contain;
+}
+#article3::-webkit-scrollbar {
+  width: 35px;
+}
+#article3::-webkit-scrollbar-thumb {
+  background-color: #B63323;
+  height: 10px;
+  border-radius: 100px;
+}
+
+#metaData1::-webkit-scrollbar-track {
+  background-image: url(latosx.png);
+  background-size: contain;
+}
+#metaData1::-webkit-scrollbar {
+  width: 35px;
+}
+#metaData1::-webkit-scrollbar-thumb {
+  background-color: #B63323;
+  height: 10px;
+  border-radius: 100px;
+}
+#metaData2::-webkit-scrollbar-track {
+  background-image: url(latosx.png);
+  background-size: contain;
+}
+#metaData2::-webkit-scrollbar {
+  width: 35px;
+}
+#metaData2::-webkit-scrollbar-thumb {
+  background-color: #B63323;
+  height: 10px;
+  border-radius: 100px;
+}
+
+#metaData3::-webkit-scrollbar-track {
+  background-image: url(latosx.png);
+  background-size: contain;
+}
+#metaData3::-webkit-scrollbar {
+  width: 35px;
+}
+#metaData3::-webkit-scrollbar-thumb {
+  background-color: #B63323;
+  height: 10px;
+  border-radius: 100px;
 }
