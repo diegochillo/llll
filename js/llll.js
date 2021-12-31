@@ -169,7 +169,7 @@ function getMetadataNew(nArticle,metaList) {
 
     }
 
-    // Adds Analysis tabs
+    // Adds ANALYSIS tab and calculates statistics
     $(elementMetaTabs).append('<li class="nav-item waves-effect waves-light" role="presentation"><a class="nav-link" id="analysis-tab' + suffix + '" data-toggle="tab" href="#analysis' + suffix + '" type="button" role="tab" aria-controls="analysis" aria-selected="false">analysis</a></li>');
     mystring = '<div class="tab-pane ' + tabactive + '" id="analysis' + suffix + '" role="tabpanel" aria-labelledby="analysis' + '-tab' + suffix+'">';
     // mystring += "Text Analysis:<br/>";
@@ -182,18 +182,25 @@ function getMetadataNew(nArticle,metaList) {
     var totSentiment = 0;
     var totAmplitude = 0;
     var totPoliteness = 0;
+    var totAvgLength = 0;
+    var totConfidence = 0;
 
     for (let i = 0; i < quanti; i++) {
       totSentiment+=analysisRes[i].profile.sentiment;
       totWords+=analysisRes[i].stats.words;
       totAmplitude+=analysisRes[i].profile.amplitude;
       totPoliteness+=analysisRes[i].profile.politeness;
+      totAvgLength+=analysisRes[i].stats.avg_length;
+      totConfidence+=analysisRes[i].stats.confidence;
 
     }
-    mystring += "Total words: " + totWords;
-    mystring += "<br>" + "Sentiment: " + (totSentiment/quanti);
-    mystring += "<br>" + "Amplitude: " + (totAmplitude/quanti);
-    mystring += "<br>" + "Politeness: " + (totPoliteness/quanti);
+
+    mystring += "<div><span class='analisysLabel'>Total words:</span> <span class='analysisValue'>" + totWords + "</span></div>";
+    mystring += "<div><span class='analisysLabel'>Sentiment:</span> <span class='analysisValue'>" + (totSentiment/quanti).toFixed(5) + "</span>";
+    mystring += "<div><span class='analisysLabel'>Amplitude:</span> <span class='analysisValue'>" + (totAmplitude/quanti).toFixed(5) + "</span>";
+    mystring += "<div><span class='analisysLabel'>Politeness:</span> <span class='analysisValue'>" + (totPoliteness/quanti).toFixed(5) + "</span>";
+    mystring += "<div><span class='analisysLabel'>Words avg. length:</span> <span class='analysisValue'>" + (totAvgLength/quanti).toFixed(5) + "</span>";
+    mystring += "<div><span class='analisysLabel'>Confidence:</span> <span class='analysisValue'>" + (totConfidence/quanti).toFixed(5) + "</span>";
 
     mystring+='</div>';
     $(elementTabContent).append(mystring);
