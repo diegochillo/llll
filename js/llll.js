@@ -6,8 +6,11 @@ $(function(){$("#topBar").load("components/topbar2.html"); });
 $(function(){$("#footerBar").load("components/footer.html"); });
 
 
+
 /* Loads the articles inside the columns using JQuery*/
-$(document).ready(function(){
+//$(document).ready(function(){
+
+function loadArticles() {
 
    const urlParams = new URLSearchParams(window.location.search);
    const issueNumber = urlParams.get('number');
@@ -19,7 +22,9 @@ $(document).ready(function(){
    }
    //console.log(issueNumber);
 
-});
+}
+
+//});
 
 
 
@@ -174,7 +179,8 @@ function getMetadataNew(nArticle,metaList) {
     mystring = '<div class="tab-pane ' + tabactive + '" id="analysis' + suffix + '" role="tabpanel" aria-labelledby="analysis' + '-tab' + suffix+'">';
     // mystring += "Text Analysis:<br/>";
 
-    var analysisRes=compendium.analyse($(elementReadId).text());
+    var elementReadTextOnly = $(elementReadId).text();
+    var analysisRes=compendium.analyse(elementReadTextOnly);
     console.log( analysisRes );
 
     var quanti = analysisRes.length;
@@ -201,6 +207,56 @@ function getMetadataNew(nArticle,metaList) {
     mystring += "<div><span class='analisysLabel'>Sentiment amplitude:</span> <span class='analysisValue'>" + (totAmplitude/quanti).toFixed(5) + "</span>";
     mystring += "<div><span class='analisysLabel'>Politeness:</span> <span class='analysisValue'>" + (totPoliteness/quanti).toFixed(5) + "</span>";
     mystring += "<div><span class='analisysLabel'>Dirtiness:</span> <span class='analysisValue'>" + (totDirtiness/quanti).toFixed(5) + "</span>";
+
+    // Word Count
+    var noStopText = remove_stopwords(elementReadTextOnly.toLowerCase());
+    var wordCounter = {};
+    var wordArray = noStopText.split(/[\s,.()\[\]?!;“”:’]/);
+
+    //for(var i = 0; i < wordArray.length; i++)
+    //    wordCounter["_" + wordArray[i].toLowerCase()] = (wordCounter["_" + wordArray[i].toLowerCase()] || 0) + 1;
+
+    for (var i = 0; i < wordArray.length; i++) {
+      if (wordArray[i]!="") {
+        if (wordCounter[wordArray[i]]) {
+          wordCounter[wordArray[i]] += 1;
+        } else {
+          wordCounter[wordArray[i]] = 1;
+        }
+      }
+    }
+
+    // console.log(wordCounter);
+
+    // Word frequency list sorting
+    var wordArraySortFunction = function(word1, word2){
+        if (word1!=word2){
+          if(wordCounter[word1] < wordCounter[word2]){
+              return 1;
+          }else if(wordCounter[word1] == wordCounter[word2]){
+              return 0;
+          }else if(wordCounter[word1] > wordCounter[word2]){
+              return -1;
+          }
+        }
+    }
+    wordArray.sort(wordArraySortFunction);
+
+    //console.log(wordArray)
+
+    mystring += "<div><span class='analisysLabel'>Most frequent words:</span> <span class='analysisValue'><br/>";
+
+    i=0;
+    i_fnd=0;
+    while (i_fnd<10) {
+      if (((i==0) || (wordArray[i]!=wordArray[i-1])) && wordArray[i]!="" && wordArray[i].length>1) {
+        mystring += wordArray[i] + ' (' + wordCounter[wordArray[i]] + ")<br/>";
+        i_fnd++;
+      }
+      i++;
+    }
+    mystring += "</span>";
+
     mystring+='</div>';
 
     $(elementTabContent).append(mystring);
@@ -215,4 +271,19 @@ function getMetadataNew(nArticle,metaList) {
 // Gets a random number between min and max (included)
 function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+
+// Removes stop words from a string
+function remove_stopwords(str) {
+  stopwords = ['i','me','my','myself','we','our','ours','ourselves','you','your','yours','yourself','yourselves','he','him','his','himself','she','her','hers','herself','it','its','itself','they','them','their','theirs','themselves','what','which','who','whom','this','that','these','those','am','is','are','was','were','be','been','being','have','has','had','having','do','does','did','doing','a','an','the','and','but','if','or','because','as','until','while','of','at','by','for','with','about','against','between','into','through','during','before','after','above','below','to','from','up','down','in','out','on','off','over','under','again','further','then','once','here','there','when','where','why','how','all','any','both','each','few','more','most','other','some','such','no','nor','not','only','own','same','so','than','too','very','s','t','can','will','just','don','should','now']
+  res = []
+  words = str.split(' ')
+  for(i=0;i<words.length;i++) {
+     word_clean = words[i].split(".").join("")
+     if(!stopwords.includes(word_clean)) {
+         res.push(word_clean)
+     }
+  }
+  return(res.join(' '))
 }
