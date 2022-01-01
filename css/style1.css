@@ -104,8 +104,10 @@ hr {
   opacity: 80%;
 }
 
-#metaData1 {
-
+.metaCol {
+  height: 36vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /*scrollbar */
@@ -167,6 +169,7 @@ hr {
 }
 #metaData2::-webkit-scrollbar {
   width: 35px;
+  display: none;
 }
 #metaData2::-webkit-scrollbar-thumb {
   background-color: #B63323;
@@ -180,6 +183,7 @@ hr {
 }
 #metaData3::-webkit-scrollbar {
   width: 35px;
+  display: none; 
 }
 #metaData3::-webkit-scrollbar-thumb {
   background-color: #B63323;
