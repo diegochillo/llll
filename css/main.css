@@ -165,6 +165,12 @@ aside { /* Side notes in the text of the articles */
     }
 }
 
+/* Custom classes, mainly used for issue cover pages */
 .container-small, .container-large {
     max-width: 100%;
+}
+
+/* Format of labels into analysis tabs into metadata selectors */
+.analisysLabel {
+    font-weight: 600;
 }

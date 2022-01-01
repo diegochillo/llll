@@ -6,8 +6,11 @@ $(function(){$("#topBar").load("components/topbar2.html"); });
 $(function(){$("#footerBar").load("components/footer.html"); });
 
 
+
 /* Loads the articles inside the columns using JQuery*/
-$(document).ready(function(){
+//$(document).ready(function(){
+
+function loadArticles() {
 
    const urlParams = new URLSearchParams(window.location.search);
    const issueNumber = urlParams.get('number');
@@ -19,7 +22,9 @@ $(document).ready(function(){
    }
    //console.log(issueNumber);
 
-});
+}
+
+//});
 
 
 
@@ -114,7 +119,7 @@ function getMetadataNew(nArticle,metaList) {
           return [[$(this).data("label"), $(this).data("sort")]];
       }).get();
 
-      console.log(dataList);
+      // console.log(dataList);
 
       var dataListS=dataList.sort(function(a, b) {
         if ((a[1]==null) || (b[1]==null)) {
@@ -127,7 +132,7 @@ function getMetadataNew(nArticle,metaList) {
           return 0;
         }
       });
-      console.log(dataListS);
+      // console.log(dataListS);
 
       // var dataListU=[... new Set(dataListS)];
 
@@ -135,7 +140,7 @@ function getMetadataNew(nArticle,metaList) {
       var dataListU = Array.from(dataListA).map(JSON.parse);    // Back from Set to Array
 
 
-        console.log(dataListU);
+      // console.log(dataListU);
 
       // Creates the tab only if there are metadata to show
       if (dataListU.length>0) {
@@ -169,10 +174,94 @@ function getMetadataNew(nArticle,metaList) {
 
     }
 
+    // Adds ANALYSIS tab and calculates statistics
+    $(elementMetaTabs).append('<li class="nav-item waves-effect waves-light" role="presentation"><a class="nav-link" id="analysis-tab' + suffix + '" data-toggle="tab" href="#analysis' + suffix + '" type="button" role="tab" aria-controls="analysis" aria-selected="false">analysis</a></li>');
+    mystring = '<div class="tab-pane ' + tabactive + '" id="analysis' + suffix + '" role="tabpanel" aria-labelledby="analysis' + '-tab' + suffix+'">';
+    // mystring += "Text Analysis:<br/>";
+
+    var elementReadTextOnly = $(elementReadId).text();
+    var analysisRes=compendium.analyse(elementReadTextOnly);
+    console.log( analysisRes );
+
+    var quanti = analysisRes.length;
+    var totWords = 0;
+    var totSentiment = 0;
+    var totAmplitude = 0;
+    var totPoliteness = 0;
+    var totAvgLength = 0;
+    var totDirtiness = 0;
+
+    for (let i = 0; i < quanti; i++) {
+      totSentiment+=analysisRes[i].profile.sentiment;
+      totWords+=analysisRes[i].stats.words;
+      totAmplitude+=analysisRes[i].profile.amplitude;
+      totPoliteness+=analysisRes[i].profile.politeness;
+      totAvgLength+=analysisRes[i].stats.avg_length;
+      totDirtiness+=analysisRes[i].profile.dirtiness;
+    }
+
+    mystring += "<div><span class='analisysLabel'>Total words:</span> <span class='analysisValue'>" + totWords + "</span></div>";
+    mystring += "<div><span class='analisysLabel'>Words avg. length:</span> <span class='analysisValue'>" + (totAvgLength/quanti).toFixed(5) + "</span>";
+    mystring += "<div><span class='analisysLabel'>Sentences:</span> <span class='analysisValue'>" + quanti + "</span>";
+    mystring += "<div><span class='analisysLabel'>Sentiment:</span> <span class='analysisValue'>" + (totSentiment/quanti).toFixed(5) + "</span>";
+    mystring += "<div><span class='analisysLabel'>Sentiment amplitude:</span> <span class='analysisValue'>" + (totAmplitude/quanti).toFixed(5) + "</span>";
+    mystring += "<div><span class='analisysLabel'>Politeness:</span> <span class='analysisValue'>" + (totPoliteness/quanti).toFixed(5) + "</span>";
+    mystring += "<div><span class='analisysLabel'>Dirtiness:</span> <span class='analysisValue'>" + (totDirtiness/quanti).toFixed(5) + "</span>";
+
+    // Word Count
+    var noStopText = remove_stopwords(elementReadTextOnly.toLowerCase());
+    var wordCounter = {};
+    var wordArray = noStopText.split(/[\s,.()\[\]?!;“”:’]/);
+
+    //for(var i = 0; i < wordArray.length; i++)
+    //    wordCounter["_" + wordArray[i].toLowerCase()] = (wordCounter["_" + wordArray[i].toLowerCase()] || 0) + 1;
+
+    for (var i = 0; i < wordArray.length; i++) {
+      if (wordArray[i]!="") {
+        if (wordCounter[wordArray[i]]) {
+          wordCounter[wordArray[i]] += 1;
+        } else {
+          wordCounter[wordArray[i]] = 1;
+        }
+      }
+    }
+
+    // console.log(wordCounter);
+
+    // Word frequency list sorting
+    var wordArraySortFunction = function(word1, word2){
+        if (word1!=word2){
+          if(wordCounter[word1] < wordCounter[word2]){
+              return 1;
+          }else if(wordCounter[word1] == wordCounter[word2]){
+              return 0;
+          }else if(wordCounter[word1] > wordCounter[word2]){
+              return -1;
+          }
+        }
+    }
+    wordArray.sort(wordArraySortFunction);
+
+    //console.log(wordArray)
+
+    mystring += "<div><span class='analisysLabel'>Most frequent words:</span> <span class='analysisValue'><br/>";
+
+    i=0;
+    i_fnd=0;
+    while (i_fnd<10) {
+      if (((i==0) || (wordArray[i]!=wordArray[i-1])) && wordArray[i]!="" && wordArray[i].length>1) {
+        mystring += wordArray[i] + ' (' + wordCounter[wordArray[i]] + ")<br/>";
+        i_fnd++;
+      }
+      i++;
+    }
+    mystring += "</span>";
+
+    mystring+='</div>';
+
+    $(elementTabContent).append(mystring);
+
 }
-
-// wikipediaPreview.js
-
 
 
 
@@ -185,63 +274,16 @@ function randomIntFromInterval(min, max) {
 }
 
 
-
-
-
-
-
-
-
-// Gets the list of metadata and shows it in the metaData box tabs
-// OLD VERSION with separated issue[n].html files
-/*
-function getMetadata(nIssue,nArticle,metaList) {
-
-    var suffix = nIssue + "_" + nArticle;
-    var elementReadId = "#article" + suffix;
-    var elementMetaTabs = "#tabs" +  suffix;
-    var elementTabContent = "#content" + suffix;
-    // var elementMetaData = "#metaData" + suffix;
-
-    // Creates the tab menu inside the metadata selector box
-    var ariasel=true;
-    var tabactive='active';
-    for (const metaType of metaList) {
-      $(elementMetaTabs).append('<li class="nav-item waves-effect waves-light" role="presentation"><a class="nav-link ' + tabactive + '" id="' + metaType + '-tab' + suffix + '" data-toggle="tab" href="#' + metaType + suffix + '" type="button" role="tab" aria-controls="' + metaType + '" aria-selected="' + ariasel + '">' + metaType + 's</a></li>');
-      ariasel='false';
-      tabactive='';
-    }
-
-    var tabactive='active';
-    var mystring='';
-    for (const metaType of metaList) {  // For each type of metadata
-
-      mystring='<div class="tab-pane ' + tabactive + '" id="' + metaType + suffix + '" role="tabpanel" aria-labelledby="' + metaType + '-tab' + suffix+'">';
-      // console.log(mystring);
-
-      elementMetaId="#" + metaType + "s" + nIssue + "_" + nArticle;
-      var dataList = $(elementReadId + " ." + metaType).map(function() {
-          return $(this).data("label");
-      }).get();
-
-      var dataListU=[... new Set(dataList)];
-
-      // Cycles over found elements and shows checkboxes
-      cntr=1;
-      for (let md of dataListU) {
-        // $(elementMetaId).append('<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"> ' + md + '<br/>');
-        mystring+='<input type="checkbox" class="metaCheck" id="metaCheck-' + cntr + '" value="1" onclick="showMeta(\''+elementReadId+'\',\'' + md + '\',this,\'' + metaType + '\')"><label for="metaCheck-' + cntr + '">&nbsp;' + md + '</label><br/>';
-        cntr=cntr+1;
-      }
-
-      mystring+='</div>';
-
-      $(elementTabContent).append(mystring);
-      tabactive='fade';
-
-      // console.log($("#metaData2_1").html());
-
-    }
-
+// Removes stop words from a string
+function remove_stopwords(str) {
+  stopwords = ['i','me','my','myself','we','our','ours','ourselves','you','your','yours','yourself','yourselves','he','him','his','himself','she','her','hers','herself','it','its','itself','they','them','their','theirs','themselves','what','which','who','whom','this','that','these','those','am','is','are','was','were','be','been','being','have','has','had','having','do','does','did','doing','a','an','the','and','but','if','or','because','as','until','while','of','at','by','for','with','about','against','between','into','through','during','before','after','above','below','to','from','up','down','in','out','on','off','over','under','again','further','then','once','here','there','when','where','why','how','all','any','both','each','few','more','most','other','some','such','no','nor','not','only','own','same','so','than','too','very','s','t','can','will','just','don','should','now']
+  res = []
+  words = str.split(' ')
+  for(i=0;i<words.length;i++) {
+     word_clean = words[i].split(".").join("")
+     if(!stopwords.includes(word_clean)) {
+         res.push(word_clean)
+     }
+  }
+  return(res.join(' '))
 }
-*/
