@@ -139,7 +139,7 @@ aside { /* Side notes in the text of the articles */
 
 
 
-
+/* Custom containers, mainly used for issue cover pages */
 @media (min-width: 768px) {
     .container-small {
         width: 300px;
@@ -165,7 +165,6 @@ aside { /* Side notes in the text of the articles */
     }
 }
 
-/* Custom classes, mainly used for issue cover pages */
 .container-small, .container-large {
     max-width: 100%;
 }
@@ -173,4 +172,10 @@ aside { /* Side notes in the text of the articles */
 /* Format of labels into analysis tabs into metadata selectors */
 .analisysLabel {
     font-weight: 600;
+}
+
+blockquote {
+  background-color: lightgray;
+  padding: 4% ;
+  font-style: italic;
 }
