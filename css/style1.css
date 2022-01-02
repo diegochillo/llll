@@ -87,6 +87,7 @@ hr {
   cursor: url(pointer2.png), pointer;
 }
 
+/*
 #space {
   content: url(decoration.png);
   height: auto;
@@ -94,6 +95,7 @@ hr {
   margin-left: auto;
   margin-right: auto;
 }
+
 
 #frame1, #frame2, #frame3 {
   content: url(framestyle1.png);
@@ -103,11 +105,24 @@ hr {
   margin-right: auto;
   opacity: 80%;
 }
+*/
+
+#metaData1, #metaData2, #metaData3 {
+ shape-outside: url(frame1style1.png) border-box;
+ 
+}
+
+#frameData1 {
+  background-image: url(frame1style1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  shape-margin: 5%;
+  shape-image-threshold: 0.2;
+}
 
 .metaCol {
   height: 36vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 /*scrollbar */
