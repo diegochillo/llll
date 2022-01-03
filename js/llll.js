@@ -1,6 +1,6 @@
 
 /* Loads topbar.html in topBar div */
-$(function(){$("#topBar").load("components/topbar2.html"); });
+$(function(){$("#topBar").load("components/topbar.html"); });
 
 /* Loads footer.html in footerBar div */
 $(function(){$("#footerBar").load("components/footer.html"); });

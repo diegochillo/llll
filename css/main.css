@@ -185,3 +185,12 @@ blockquote {
 .tableCaption {
   margin-top: 50px;
 }
+
+
+/* These classes to avoid NAVBARS to wrap elements on multiple lines */
+.navbar-header {
+    float:left;
+}
+.navbar-nav {
+    float:right;
+}
