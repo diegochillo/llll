@@ -107,22 +107,25 @@ hr {
 }
 */
 
-#metaData1, #metaData2, #metaData3 {
- shape-outside: url(frame1style1.png) border-box;
- 
-}
 
-#frameData1 {
+#metaData1, #metaData2, #metaData3 {
   background-image: url(frame1style1.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   shape-margin: 5%;
+  height: 36vh;
   shape-image-threshold: 0.2;
 }
 
-.metaCol {
-  height: 36vh;
+#frameData1, #frameData2, #frameData3 {
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 60px;
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /*scrollbar */
