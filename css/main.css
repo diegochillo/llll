@@ -165,9 +165,11 @@ aside { /* Side notes in the text of the articles */
     }
 }
 
+/*
 .container-small, .container-large {
     max-width: 100%;
 }
+/*
 
 /* Format of labels into analysis tabs into metadata selectors */
 .analisysLabel {

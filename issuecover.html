@@ -36,11 +36,14 @@
 
 
       <!-- HOMEPAGE ROW -->
-      <div class="container container-small"> <!-- container-small is a CUSTOM class defined in main.css -->
+      <main class="container"> <!-- container-small is a CUSTOM class defined in main.css -->
+       <!-- align-items-start-->
+        <div class="row g-5 justify-content-md-center">
+          <div class="col col-md-auto">
 
-        <div class="row align-items-start">
-          <div class="col">
-            <div align="center">
+          </div>
+          <div class="col col-md-8">
+            <!--<div align="center">-->
               <div id="cover1">
               <div id="issueMeta">
               <p><span class="metaTitle">Number: </span><span id="issueN"></span></p>
@@ -50,6 +53,8 @@
                </div>
               </div>
               <br/>
+
+              <div id="issueArticles">
               <div>In this number:</div>
               <br/>
               <ol class="list-group-numbered text-left" align="left">
@@ -76,12 +81,15 @@
                 </li>
               </ol>
               <div id="openIssue"></div>
+              </div>
               <br/><br/>
             </div>
-          </div>
+          <!--</div>-->
+          <div class="col col-md-auto"></div>
         </div>
+        
 
-      </div> <!-- End container -->
+      </main> <!-- End container -->
 
       <!-- FOOTER -->
       <div id="footerBar"></div>

@@ -22,23 +22,28 @@ body {
 }
 
 #cover1 {
-  background: url(cornice2.png);
-  margin-right: auto;
-  margin-left: auto;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  height: 600px;
-  width: 600px;
-}
-
-#issueMeta {
-  width: 200px;
-  height: 400px;
+  width: 550px;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
   overflow: auto;
+  border: 20px solid;
+  border-image: url(cornice2.png) 30 fill / 8px / 30px space;
+  border-image-outset: 0;
+  border-image-repeat: round;
+  border-width: 100px;
+  padding: 20px;
+}
+
+#issueMeta {
+  text-align: center;
+  height: auto;
+}
+
+#issueArticles {
+  text-align: center;
+  height: auto;
 }
 
 h1 {
