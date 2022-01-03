@@ -23,11 +23,10 @@ body {
 
 #cover1 {
   width: 550px;
-  height: auto;
+  height: 18vh;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  overflow: auto;
   border: 20px solid;
   border-image: url(cornice2.png) 30 fill / 8px / 30px space;
   border-image-outset: 0;
@@ -38,12 +37,28 @@ body {
 
 #issueMeta {
   text-align: center;
-  height: auto;
+  height: 18vh;
+  overflow-y: scroll;
 }
 
 #issueArticles {
   text-align: center;
   height: auto;
+}
+
+/* nav-tabs */
+
+.nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
+  border: 0;
+  border-bottom: 1px solid black;
+  color: #B63323;
+}
+
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: #B63323;
+  border-radius: 0;
+  border-bottom: 2px solid #B63323;
 }
 
 h1 {
