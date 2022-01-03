@@ -179,3 +179,7 @@ blockquote {
   padding: 4% ;
   font-style: italic;
 }
+
+.tableCaption {
+  margin-top: 50px;
+}
