@@ -14,11 +14,32 @@
  src: url("./fonts/style1/ArabesqueInitialen.ttf");
 }
 
+@font-face{
+  font-family: "Flanker Reg";
+  src: url("./fonts/style1/flanker-griffo.regular.otf");
+ }
+
+ @font-face{
+  font-family: "Flanker Italic";
+  src: url("./fonts/style1/flanker-griffo.italic.ttf");
+ }
+
+ @font-face{
+  font-family: "Flanker Bold";
+  src: url("./fonts/style1/flanker-griffo.bold.ttf");
+ }
+
+ @font-face{
+  font-family: "Flanker BoldIt";
+  src: url("./fonts/style1/flanker-griffo.bold-italic.ttf");
+ }
+
 body {
   background-color: #f6f1e8;
   color: #1D1A13;
-  font-family: Bembo;
+  font-family: Flanker Reg;
   font-size: 18px;
+  text-align: justify;
 }
 
 #cover1 {
@@ -61,10 +82,18 @@ body {
   border-bottom: 2px solid #B63323;
 }
 
+/* articles */
+
 h1 {
   color: #B63323;
-  font-family: Bembo;
+  font-family: Flanker Bold;
   font-size: 30px;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #B63323;
+  text-transform: uppercase;
 }
 
 .big-first-letter {
@@ -74,10 +103,41 @@ h1 {
 }
 
 .subtitle {
-  color: #B63323;
-  font-family: Bembo;
+  color: black;
+  font-family: Flanker BoldIt;
   font-size: 30px;
 }
+
+.imgSource {
+font-family: Flanker Italic;
+font-size: 11px;
+text-transform: uppercase;
+}
+
+.description-img 
+
+.byline {
+  color: #B63323;
+  font-family: Flanker BoldIt;
+}
+
+.publicationDate {
+  font-family: Flanker Italic;
+  font-size: 11px;
+}
+
+a {
+  color: #B63323;
+}
+a:hover {
+  color: black;
+}
+
+
+
+
+
+
 
 img {
 filter: grayscale(90%);
@@ -223,3 +283,5 @@ hr {
   border-radius: 100px;
   
 }
+
+
