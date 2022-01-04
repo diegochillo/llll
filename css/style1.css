@@ -36,24 +36,36 @@
 
 body {
   background-color: #f6f1e8;
+  background-size: cover;
+  background-position: center;
   color: #1D1A13;
   font-family: Flanker Reg;
   font-size: 18px;
   text-align: justify;
 }
 
-#cover1 {
-  width: 550px;
+#coverstyle1 {
+background-image: url(coverframe1style1.png);
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+}
+/*
+border-image: url(cornice2.png) 30 fill / 8px / 30px space;
+width: 550px;
   height: 18vh;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
   border: 20px solid;
-  border-image: url(cornice2.png) 30 fill / 8px / 30px space;
+  
   border-image-outset: 0;
   border-image-repeat: round;
   border-width: 100px;
   padding: 20px;
+*/
+#cover1 {
+  
 }
 
 #issueMeta {
@@ -89,6 +101,7 @@ h1 {
   font-family: Flanker Bold;
   font-size: 30px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 h2 {
@@ -101,7 +114,6 @@ h3
 .big-first-letter {
   font-family: ArabesqueInitialen;
   font-size: 80px;
-  opacity: 70%;
 }
 
 .subtitle {
@@ -114,13 +126,24 @@ h3
 font-family: Flanker Italic;
 font-size: 11px;
 text-transform: uppercase;
+text-align: center;
 }
 
 .imgCaption{
   font-family: Flanker Italic;
   font-size: 16px;
+ 
 }
 
+.imgFrame {
+  background: url(basestyle1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+  background-clip: border-box;
+  background-position: center bottom;
+  height: 245px;
+}
 .byline {
   font-family: Flanker BoldIt;
 }
@@ -147,14 +170,13 @@ li.artiCol {
  list-style: square !important;
 }
 
-img {
+.articleImg {
 filter: grayscale(90%);
 // Browser Specific
 -webkit-filter: grayscale(90%);
 -moz-filter: grayscale(90%);
 -o-filter: grayscale(90%);
 -ms-filter: grayscale(90%);
-width: auto; 
 }
 
 .author {
@@ -168,6 +190,40 @@ width: auto;
   background-color: gray;
 }
 
+.lastPar{
+  height: 180vh !important;
+}
+
+#rl1_1,#rr1_1 {
+  width: 45% !important;
+  height: 180vh !important;
+}
+
+#rl1_2,#rr1_2 {
+  width: 45% !important;
+  height: 150vh !important;
+}
+
+#rl1_3, #rr1_3 {
+  width: 45% !important;
+  height: 120vh !important;
+}
+.endSx {
+  -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
+  shape-outside: polygon(0 0, 100% 100%, 0 100%);
+  float: left;
+  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.endDx {
+  -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+    shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+    float: right;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
 hr {
     border:0;
     margin:5px;
@@ -176,7 +232,7 @@ hr {
 }
 
 #endArt {
-  content: url(ulogo_manuzio.png);
+  content: url(u_manuzio.png);
   height: auto;
   width: auto;
   margin: 5px;
@@ -208,22 +264,26 @@ hr {
 
 #metaData1, #metaData2, #metaData3 {
   height: 36vh;
+  width: auto;
+  border: 30px solid;
+  border-image: url(metaFrame1.png);
+  border-image-slice: 37% 17% 2% 14% fill;
+  border-image-width: 40% 20% 20% 20%; 
+  border-image-outset: 0px 0px 8px 0px; 
+  border-image-repeat: round round;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0;
 }
 
 
 #frameData1, #frameData2, #frameData3 {
-    width: auto;
-    border: 30px solid;
-    border-image: url(frame1style1.png) 130;
-    border-image-repeat: round;
-    padding: 10px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+   padding: 20px;
 }
 
 /*scrollbar */
 #article1::-webkit-scrollbar-track {
-  background-image: url(latosx.png);
+  background-image: url(scrollstyle1.png);
   background-size: contain;
 }
 #article1::-webkit-scrollbar {
@@ -236,7 +296,7 @@ hr {
 }
 
 #article2::-webkit-scrollbar-track {
-  background-image: url(latosx.png);
+  background-image: url(scrollstyle1.png);
   background-size: contain;
 }
 #article2::-webkit-scrollbar {
@@ -249,7 +309,7 @@ hr {
 }
 
 #article3::-webkit-scrollbar-track {
-  background-image: url(latosx.png);
+  background-image: url(scrollstyle1.png);
   background-size: contain;
 }
 #article3::-webkit-scrollbar {
@@ -262,7 +322,7 @@ hr {
 }
 
 #metaData1::-webkit-scrollbar-track {
-  background-image: url(latosx.png);
+  background-image: url(scrollstyle1.png);
   background-size: contain;
 }
 #metaData1::-webkit-scrollbar {
@@ -275,7 +335,7 @@ hr {
   border-radius: 100px;
 }
 #metaData2::-webkit-scrollbar-track {
-  background-image: url(latosx.png);
+  background-image: url(scrollstyle1.png);
   background-size: contain;
 }
 #metaData2::-webkit-scrollbar {
@@ -289,7 +349,7 @@ hr {
 }
 
 #metaData3::-webkit-scrollbar-track {
-  background-image: url(latosx.png);
+  background-image: url(scrollstyle1.png);
   background-size: contain;
 }
 #metaData3::-webkit-scrollbar {
