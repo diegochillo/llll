@@ -84,7 +84,11 @@ body {
   transition:all ease .3s; /* When it shrinks on scroll*/
 }
 
-.mainMenu {
+#mainMenu {
+  transition:all ease .3s;  /* When it shrinks on scroll*/
+}
+
+#reviewName {
   transition:all ease .3s;  /* When it shrinks on scroll*/
 }
 
