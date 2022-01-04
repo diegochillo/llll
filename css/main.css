@@ -101,6 +101,10 @@ body {
   padding-right: 10px;
 }
 
+header div.d-flex { /* Because on issue.html Bootstrap 4 adds this padding */
+  padding-left:0px;
+}
+
 
 /* Slim scrollbar */
 ::-webkit-scrollbar {
