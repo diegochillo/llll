@@ -96,6 +96,8 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 
+
 .big-first-letter {
   font-family: ArabesqueInitialen;
   font-size: 80px;
@@ -114,10 +116,12 @@ font-size: 11px;
 text-transform: uppercase;
 }
 
-.description-img 
+.imgCaption{
+  font-family: Flanker Italic;
+  font-size: 16px;
+}
 
 .byline {
-  color: #B63323;
   font-family: Flanker BoldIt;
 }
 
@@ -133,11 +137,15 @@ a:hover {
   color: black;
 }
 
+.wmf-wp-with-preview {
+  color: #B63323 !important;
+  font-family: Flanker Reg !important;
+  border-bottom: 1px dashed #B63323 !important;
+}
 
-
-
-
-
+li.artiCol {
+ list-style: square !important;
+}
 
 img {
 filter: grayscale(90%);
@@ -146,8 +154,19 @@ filter: grayscale(90%);
 -moz-filter: grayscale(90%);
 -o-filter: grayscale(90%);
 -ms-filter: grayscale(90%);
+width: auto; 
 }
 
+.author {
+  color: #f6f1e8;
+  background-color: gray;
+  font-family: Flanker Italic;
+}
+
+.endTags {
+  color: #f6f1e8;
+  background-color: gray;
+}
 
 hr {
     border:0;
