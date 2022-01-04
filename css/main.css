@@ -81,6 +81,11 @@ body {
 
 .navbar {
   height: 80pt;
+  transition:all ease .3s;
+}
+
+.mainMenu {
+  transition:all ease .3s;
 }
 
 .issueCoverContainer {

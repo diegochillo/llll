@@ -17,20 +17,20 @@
 
 </style>
 
-<div class="selectorBar shadow mb-5 bg-white rounded">
+<!-- <div class="selectorBar shadow mb-5 bg-white rounded"> -->
 
-  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between px-4">
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between px-4 selectorBar shadow mb-5 bg-white rounded">
     <!-- <div class="row g-5"> -->
 
       <div class="d-flex flex-row col-3 align-items-center"> <!-- la classe era: col -->
-        <div>
+        <div id="logo">
           <a href="index.html" class="">
           <img src="img/btns/logo_u.png" style="width:60px; margin:-3px 0px 0px 0px;"/>
           </a>
         </div>
 
         <div>
-          <nav class="navbar-light">
+          <nav id="mainMenu" class="navbar-light">
 
             <ul class="nav col-md-auto mb-2 mb-md-0 mt-2">
               <li class="nav-item dropdown">
@@ -58,7 +58,7 @@
       <!-- STYLE MENU -->
       <div>
         <div>
-          <nav class="navbar navbar-light justify-content-center">
+          <nav id="styleSelector" class="navbar navbar-light justify-content-center">
             <a class="nav-item nav-link active " href="#"onclick="switchToSS (document.getElementById('cssstyle1'),document.getElementById('cssstyle2'),document.getElementById('cssstyle3'),document.getElementById('cssstyle4'))">
               <img class="itemIcon" src="img/btns/one.png" width="60" height="60" alt="onefinger">
             </a>
@@ -77,7 +77,7 @@
           </nav>
         </div>
         <div class="text-center">
-          <h1>hUmagazine</h1>
+          <h1 id="reviewName">hUmagazine</h1>
         </div>
       </div>
 
@@ -93,7 +93,7 @@
 
 </header>
 
-</div>
+<!-- </div> -->
 
 <script type="text/javascript">
   //var issuesDet = JSON.parse(fs.readFileSync("issuesDb.json"));
@@ -108,5 +108,27 @@
             }
           }).fail(function(){
             console.log("An error has occurredz.");
-          });
-        </script>
+    });
+
+
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("mainMenu").style.padding = "30px 10px";
+      document.getElementById("mainMenu").style.height = "60px";
+      document.getElementById("reviewName").style.fontSize = "30px";
+      document.getElementById("styleSelector").style.padding = "0px";
+      document.getElementById("styleSelector").style.height = "60px";
+    } else {
+      document.getElementById("mainMenu").style.padding = ""; //80px 10px
+      document.getElementById("mainMenu").style.height = "";
+      document.getElementById("reviewName").style.fontSize = "";
+      document.getElementById("styleSelector").style.padding = "";
+      document.getElementById("styleSelector").style.height = "";
+    }
+  }
+
+
+</script>
