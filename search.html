@@ -18,12 +18,6 @@
     <link rel="stylesheet" href="css/style3.css" media="none" id="cssstyle3">
     <link rel="stylesheet" href="css/style4.css" media="none" id="cssstyle4">
 
-    <!-- Search by Algolia -->
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@docsearch/css@alpha"/>
-
-
     <!-- Load jQuery -->
     <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -47,6 +41,9 @@
       }
     </style>
 
+    <script src="js/lunr.js"></script>
+    <script src="js/search.js"></script>
+
   </head>
 
 
@@ -65,16 +62,14 @@
         <h1>Search results:</h1>
 
         <ol id="search-results"></ol>
-        <script src="js/lunr.js"></script>
-        <script src="js/search.js"></script>
 
         <script>
           // resultPages from previous example
           resultsString = "";
           resultPages.forEach(function (r) {
-              resultsString += "<li>";
+              resultsString += "<li class='searchResult'>";
               //resultsString +=   "<a class='result' href='" + r.url + "?q=" + searchTerm + "'><h3>" + r.title + "</h3></a>";
-              resultsString +=   "<a class='result' href='" + r.url + "'><h3>hUmagazine Issue #" + r.issue + ", Article #" + r.article + "</h3></a>";
+              resultsString +=   "<a class='result' href='" + r.url + "'><h5>hUmagazine Issue #" + r.issue + ", Article #" + r.article + "</h5></a>";
               resultsString +=   "<div class='snippet'>" + r.content.substring(0, 150) + "...</div>";
               resultsString += "</li>"
           });
