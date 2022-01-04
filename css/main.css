@@ -81,15 +81,15 @@ body {
 
 .navbar {
   height: 80pt;
-  transition:all ease .3s; /* When it shrinks on scroll*/
+  transition: .3s; /* When it shrinks on scroll*/
 }
 
 #mainMenu {
-  transition:all ease .3s;  /* When it shrinks on scroll*/
+  transition: .3s;  /* When it shrinks on scroll*/
 }
 
 #reviewName {
-  transition:all ease .3s;  /* When it shrinks on scroll*/
+  transition: .3s;  /* When it shrinks on scroll*/
 }
 
 .issueCoverContainer {
