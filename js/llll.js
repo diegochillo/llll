@@ -1,6 +1,6 @@
 
 /* Loads topbar.html in topBar div */
-$(function(){$("#topBar").load("components/topbar2.html"); });
+$(function(){$("#topBar").load("components/topbar.html"); });
 
 /* Loads footer.html in footerBar div */
 $(function(){$("#footerBar").load("components/footer.html"); });
@@ -181,7 +181,7 @@ function getMetadataNew(nArticle,metaList) {
 
     var elementReadTextOnly = $(elementReadId).text();
     var analysisRes=compendium.analyse(elementReadTextOnly);
-    console.log( analysisRes );
+    // console.log( analysisRes );
 
     var quanti = analysisRes.length;
     var totWords = 0;
@@ -274,7 +274,7 @@ function randomIntFromInterval(min, max) {
 }
 
 
-// Removes stop words from a string
+// Removes stop words from a string (used for most frequent words analysis)
 function remove_stopwords(str) {
   stopwords = ['i','me','my','myself','we','our','ours','ourselves','you','your','yours','yourself','yourselves','he','him','his','himself','she','her','hers','herself','it','its','itself','they','them','their','theirs','themselves','what','which','who','whom','this','that','these','those','am','is','are','was','were','be','been','being','have','has','had','having','do','does','did','doing','a','an','the','and','but','if','or','because','as','until','while','of','at','by','for','with','about','against','between','into','through','during','before','after','above','below','to','from','up','down','in','out','on','off','over','under','again','further','then','once','here','there','when','where','why','how','all','any','both','each','few','more','most','other','some','such','no','nor','not','only','own','same','so','than','too','very','s','t','can','will','just','don','should','now']
   res = []

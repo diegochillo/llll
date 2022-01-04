@@ -1,0 +1,80 @@
+<div class="row selectorBar border-bottom">
+  <div class="col-6">
+
+    <!-- MAIN MENU -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo_manuzio_gender_small_trasp.png" width="100" height="100" class="d-inline-block align-center" alt="IMWT Project">
+          IMWT Project
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Our Issues
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="issuesList">
+                <li><a class="dropdown-item" href="issue1.html">Issue 1</a></li>
+                <li><a class="dropdown-item" href="issue2.html">Issue 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Disclaimer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Team</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+
+  <!-- STYLE MENU -->
+  <div class="col-5">
+    <nav class="navbar navbar-light">
+      <a class="nav-item nav-link active" href="#"  onclick="switchToSS (document.getElementById('cssstyle1'),document.getElementById('cssstyle2'),document.getElementById('cssstyle3'),document.getElementById('cssstyle4'))" alt="Woman 1">
+        <img class="itemIcon" src="img\noun_Woman_3826709.png" width="60" height="60" alt="Woman 1">
+      </a>
+      <a class="nav-item nav-link active" href="#" onclick="switchToSS (document.getElementById('cssstyle2'),document.getElementById('cssstyle1'),document.getElementById('cssstyle3'),document.getElementById('cssstyle4'))">
+        <img class="itemIcon" src="img\noun_Woman_3826715.png" width="60" height="60" alt="Woman 2">
+      </a>
+      <a class="nav-item nav-link active" href="#" onclick="switchToSS (document.getElementById('cssstyle3'),document.getElementById('cssstyle1'),document.getElementById('cssstyle2'),document.getElementById('cssstyle4'))">
+        <img class="itemIcon" src="img\noun_Woman_3826719.png" width="60" height="60" alt="Woman 3">
+      </a>
+      <a class="nav-item nav-link active" href="#" onclick="switchToSS (document.getElementById('cssstyle4'),document.getElementById('cssstyle1'),document.getElementById('cssstyle2'),document.getElementById('cssstyle3'))">
+        <img class="itemIcon" src="img\noun_Woman_3826724.png" width="60" height="60" alt="Woman 4">
+      </a>
+      <a class="nav-item nav-link active" href="#"  onclick="cleanUpSS()" alt="Clean Up">
+        <img class="itemIcon" src="img\cleanup.png" height="60" alt="Clean Up">
+      </a>
+    </nav>
+  </div>
+
+</div> <!-- END of menu row -->
+
+
+<script type="text/javascript">
+  //var issuesDet = JSON.parse(fs.readFileSync("issuesDb.json"));
+
+  // Adds one link to the menu for each issue contained in the issuesDb.json file
+  $.getJSON('./issuesDb.json', function(objson){
+            //console.log(objson.topic);
+            for (const jsonissue of objson.issues) {
+              $("#issuesList").append('<li><a class="dropdown-item" href="issuecover.html?number=' + jsonissue.number + '">Issue ' + jsonissue.number + ': ' + jsonissue.topic + ' (with cover from JSON file)</a></li>');
+              //console.log(jsonissue.number);
+              console.log(jsonissue.topic);
+            }
+        }).fail(function(){
+            console.log("An error has occurredz.");
+        });
+</script>

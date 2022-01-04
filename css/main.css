@@ -185,3 +185,17 @@ blockquote {
 .tableCaption {
   margin-top: 50px;
 }
+
+
+/* These classes to avoid NAVBARS to wrap elements on multiple lines */
+.navbar-header {
+    float:left;
+}
+.navbar-nav {
+    float:right;
+}
+
+/* This is a Bootstrap 5 class, but we need to make it important in issue.html page, where we use Bootrstrap 4 */
+a.link-dark {
+  color:#212529!important;
+}
