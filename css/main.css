@@ -208,3 +208,7 @@ blockquote {
 a.link-dark {
   color:#212529!important;
 }
+
+.searchResult {
+  margin-bottom: 20px;
+}
