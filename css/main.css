@@ -96,6 +96,11 @@ body {
   width: 35%;
 }
 
+#styleSelector a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 
 /* Slim scrollbar */
 ::-webkit-scrollbar {
