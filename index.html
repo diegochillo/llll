@@ -111,11 +111,11 @@
     </a>
   </nav>
         <nav class="navbar navbar-light justify-content-between">
-          <img id="" class="" src="css/aldusarrow.png" width="80" height="80" alt="style 1 arrow"> 
-         <img id="" class="" src="css/aldusarrow.png" width="50" height="50" alt="style 1 arrow"> 
-         <img id="" class="" src="css/aldusarrow.png" width="50" height="50" alt="style 1 arrow"> 
-         <img id="arrow4" class="" src="css/futarrow.png" width="50" height="50" alt="style 1 arrow"> 
-         <img id="" class="" src="css/aldusarrow.png" width="50" height="50" alt="style 1 arrow"> 
+          <img id="" class="" src="css/aldusarrow.png" width="80" height="80" alt="style 1 arrow">
+         <img id="" class="" src="css/aldusarrow.png" width="50" height="50" alt="style 1 arrow">
+         <img id="" class="" src="css/aldusarrow.png" width="50" height="50" alt="style 1 arrow">
+         <img id="arrow4" class="" src="css/futarrow.png" width="50" height="50" alt="style 1 arrow">
+         <img id="" class="" src="css/aldusarrow.png" width="50" height="50" alt="style 1 arrow">
         </nav>
         <nav class="navbar navbar-light justify-content-between">
           <p>1500</p>
@@ -124,7 +124,7 @@
           <p>2030</p>
           <p>refresh</p>
         </nav>
-          
+
           <h1 class="display-4 fst-italic">Welcome to this mf magazine</h1>
           <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
           <button type="button" class="btn btn-outline-light me-2">Continua a leggere...</button>
@@ -193,10 +193,19 @@
 <!-- Js for current date and time -->
 <script>
  var today = new Date();
- var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
- var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
- var dateTime = date+' '+time;
- document.getElementById("currentDateTime").value = dateTime;
+ var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+ var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+ var day = days[ today.getDay() ];
+ var month = months[ today.getMonth() ];
+
+ //var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+ //var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+ //var dateTime = date+' '+time;
+
+ var currentDate = day + ", " + month + " " + today.getDate() + ", " + today.getFullYear();
+
+ document.getElementById("currentDateTime").value = currentDate;
 
 
   // Random glossary definitions into lateral box
