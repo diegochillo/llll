@@ -49,17 +49,18 @@ body {
 
 
 #content1, #content2, #content3 {
-  border:solid 1px #f1e8c7;
+  border: solid 1px #FAF8F9;
+  border-radius: 0 10px 10px 10px ;
   padding: 0 5px 5px 5px;
   border-top: 0;
   margin-top: 0;
   background-color: #c32e28;
-  color:#f1e8c7;
+  color:#FAF8F9;
 }
 
 #tabs1 li a, #tabs2 li a, #tabs3 li a { 
-   border-color: #f1e8c7;
-   color:#f1e8c7;
+   border-color: #FAF8F9;
+   color: #FAF8F9;
    border-radius: 10px 10px 0 0;
    background-color: #db5550;
   }
@@ -85,6 +86,12 @@ filter: grayscale(6%) brightness(85%) saturate(216%) contrast(55%);
 -moz-filter: grayscale(6%) brightness(85%) saturate(216%) contrast(55%);
 -ms-filter: grayscale(6%) brightness(85%) saturate(216%) contrast(55%);
 -o-filter: grayscale(6%) brightness(85%) saturate(216%) contrast(55%);
+}
+
+iframe {
+  border-image: url(VideoPlayer.png);
+  border-image-repeat: round;
+
 }
 /*
 .article {
@@ -121,7 +128,7 @@ img.itemIcon {
 #article1::-webkit-scrollbar-thumb {  
   border-radius: 10px;
   min-height: 60px;
-  background-color: #a80e0e;
+  background-color: #c32e28;
   background-image: -webkit-linear-gradient(45deg,
                                             rgb(255,255,255) 25%,
                                             transparent 25%,
@@ -143,7 +150,7 @@ img.itemIcon {
 #article2::-webkit-scrollbar-thumb {  
   border-radius: 10px;
   min-height: 60px;
-  background-color: #a80e0e;
+  background-color: #c32e28;
   background-image: -webkit-linear-gradient(45deg,
                                             rgb(255,255,255) 25%,
                                             transparent 25%,
@@ -165,7 +172,7 @@ img.itemIcon {
 #article3::-webkit-scrollbar-thumb {  
   border-radius: 10px;
   min-height: 60px;
-  background-color: #a80e0e;
+  background-color: #c32e28;
   background-image: -webkit-linear-gradient(45deg,
                                             rgb(255,255,255) 25%,
                                             transparent 25%,
