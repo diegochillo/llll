@@ -25,15 +25,36 @@
   src: url("./fonts/style2/rockb.ttf");
 }
 
+@font-face {
+  font-family: "Rocket";
+  src: url("./fonts/style2/RocketScript.ttf");
+}
+
 /* topbar */
+#mainMenu li {
+  background-image: url(button.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
+#mainMenu .nav-link{
+  color: #FAF8F9 !important;
+  padding: 0 10px 10px 10px;
+}
 
+#issuesList li {
+  background: none;
+}
 
+/* text */ 
 
 h1 {
-  font-family: Maddison;
+  font-family: Rocket;
   color: black;
+  text-transform: uppercase;
+  text-align: center;
 }
+
 
 body {
   background-color: #FAF8F9;
@@ -42,16 +63,14 @@ body {
   cursor: url(50hand.png), auto;
 }
 
+button {
+  background-image: url(btn.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color:#FAF8F9;
+}
+
 /* nav-tabs */
-
-.nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
-
-}
-
-.nav-tabs .nav-link.active {
-
-}
-
 
 #content1, #content2, #content3 {
   border: solid 1px #FAF8F9;
@@ -59,7 +78,7 @@ body {
   padding: 0 5px 5px 5px;
   border-top: 0;
   margin-top: 0;
-  background-color: #c32e28;
+  background-color: #d4121a;
   color:#FAF8F9;
 }
 
@@ -72,12 +91,12 @@ body {
 
 #tabs1 a:active, #tabs2 a:active, #tabs3 a:active {
   border-bottom-color: transparent !important;
-  background-color: #c32e28 !important; 
+  background-color: #d4121a !important; 
 }
 
 #tabs1 a:hover, #tabs2 a:hover, #tabs3 a:hover {
     border-bottom-color: transparent;
-    background-color:#c32e28; 
+    background-color: #d4121a; 
 }
 
 #tabs1, #tabs2, #tabs3 {
@@ -128,6 +147,24 @@ img.itemIcon {
 
 }
 
+.artiCol {
+  text-align: justify;
+}
+
+.artiCol a {
+  color:#d4121a;
+}
+.artiCol a:hover {
+  color: black;
+}
+
+
+.wmf-wp-with-preview {
+  color: #d4121a !important;
+  font-family: Rockwell !important;
+  border-bottom: 1px dashed #d4121a !important;
+}
+
 #article1::-webkit-scrollbar { 
   width: 10px;
 }
@@ -139,7 +176,7 @@ img.itemIcon {
 #article1::-webkit-scrollbar-thumb {  
   border-radius: 10px;
   min-height: 60px;
-  background-color: #c32e28;
+  background-color: #d4121a;
   background-image: -webkit-linear-gradient(45deg,
                                             rgb(255,255,255) 25%,
                                             transparent 25%,
@@ -161,7 +198,7 @@ img.itemIcon {
 #article2::-webkit-scrollbar-thumb {  
   border-radius: 10px;
   min-height: 60px;
-  background-color: #c32e28;
+  background-color: #d4121a;
   background-image: -webkit-linear-gradient(45deg,
                                             rgb(255,255,255) 25%,
                                             transparent 25%,
@@ -183,7 +220,7 @@ img.itemIcon {
 #article3::-webkit-scrollbar-thumb {  
   border-radius: 10px;
   min-height: 60px;
-  background-color: #c32e28;
+  background-color: #d4121a;
   background-image: -webkit-linear-gradient(45deg,
                                             rgb(255,255,255) 25%,
                                             transparent 25%,
