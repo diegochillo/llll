@@ -160,7 +160,9 @@ aside { /* Side notes in the text of the articles */
   border-style: solid none;
 }
 
-
+iframe {
+  width: 100%;
+}
 
 /* Custom containers, mainly used for issue cover pages */
 @media (min-width: 768px) {
