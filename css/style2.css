@@ -1,8 +1,13 @@
 /* Style 2 */
 
 @font-face {
-  font-family: "MilestoneFreeVersion-Script";
+  font-family: "Milestone";
   src: url("./fonts/style2/MilestoneFreeVersion-Script.otf");
+}
+
+@font-face {
+  font-family: "Maddison";
+  src: url("./fonts/style2/Maddison.ttf");
 }
 
 @font-face {
@@ -10,16 +15,67 @@
   src: url("./fonts/style2/Roots.ttf");
 }
 
+@font-face {
+  font-family: "Rockwell";
+  src: url("./fonts/style2/ROCK.TTF");
+}
+
+@font-face {
+  font-family: "Rockwell B";
+  src: url("./fonts/style2/rockb.ttf");
+}
+
 h1 {
-  font-family: MilestoneFreeVersion-Script;
+  font-family: Maddison;
   color: black;
 }
 
 body {
   background-color: #FAF8F9;
   color: black;
-  font-family: Roots;
+  font-family: Rockwell;
   cursor: url(50hand.png), auto;
+}
+
+/* nav-tabs */
+
+.nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
+
+}
+
+.nav-tabs .nav-link.active {
+
+}
+
+
+#content1, #content2, #content3 {
+  border:solid 1px #f1e8c7;
+  padding: 0 5px 5px 5px;
+  border-top: 0;
+  margin-top: 0;
+  background-color: #c32e28;
+  color:#f1e8c7;
+}
+
+#tabs1 li a, #tabs2 li a, #tabs3 li a { 
+   border-color: #f1e8c7;
+   color:#f1e8c7;
+   border-radius: 10px 10px 0 0;
+   background-color: #db5550;
+  }
+
+#tabs1 a:active, #tabs2 a:active, #tabs3 a:active {
+  border-bottom-color: transparent !important;
+  background-color: #c32e28 !important; 
+}
+
+#tabs1 a:hover, #tabs2 a:hover, #tabs3 a:hover {
+    border-bottom-color: transparent;
+    background-color:#c32e28; 
+}
+
+#tabs1, #tabs2, #tabs3 {
+  justify-content: start !important;
 }
 
 
@@ -48,6 +104,11 @@ img.itemIcon {
 }
 
 */
+
+
+#space{
+
+}
 
 #article1::-webkit-scrollbar { 
   width: 10px;
@@ -117,6 +178,7 @@ img.itemIcon {
 
 #metaData1::-webkit-scrollbar { 
   width: 10px;
+  display: none;
 }
 
 #metaData1::-webkit-scrollbar-track {
@@ -139,6 +201,7 @@ img.itemIcon {
 
 #metaData2::-webkit-scrollbar { 
   width: 10px;
+  display: none;
 }
 
 #metaData2::-webkit-scrollbar-track {
@@ -161,6 +224,7 @@ img.itemIcon {
 
 #metaData3::-webkit-scrollbar { 
   width: 10px;
+  display: none;
 }
 
 #metaData3::-webkit-scrollbar-track {
