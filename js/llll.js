@@ -226,23 +226,43 @@ function getMetadataNew(nArticle,metaList) {
       }
     }
 
-    // console.log(wordCounter);
+    if (nArticle==2) {
+      //console.log(noStopText);
+      //console.log(wordArray);
+      console.log(wordCounter);
+    }
+
+    var len = wordArray.length, i;
+    for(i = 0; i < len; i++ )
+        wordArray[i] && wordArray.push(wordArray[i]);  // copy non-empty values to the end of the array
+
+    wordArray.splice(0 , len);
+
+    //let wordSet=let unique = [...new Set(wordArray)];
+    var wordSet  = new Set(wordArray.map(JSON.stringify));  // Passage to Set to keep only unique values
+    wordArray = Array.from(wordSet).map(JSON.parse);    // Back from Set to Array
 
     // Word frequency list sorting
     var wordArraySortFunction = function(word1, word2){
-        if (word1!=word2){
-          if(wordCounter[word1] < wordCounter[word2]){
+        //if (word1!=word2){
+          if (wordCounter[word1] < wordCounter[word2]) {
               return 1;
-          }else if(wordCounter[word1] == wordCounter[word2]){
+          } else if(wordCounter[word1] == wordCounter[word2]) {
               return 0;
-          }else if(wordCounter[word1] > wordCounter[word2]){
+          } else if(wordCounter[word1] > wordCounter[word2]) {
               return -1;
+          } else {
+            return 0;
           }
-        }
+        //}
     }
     wordArray.sort(wordArraySortFunction);
 
     //console.log(wordArray)
+
+    if (nArticle==2) {
+      console.log(wordArray);
+    }
 
     mystring += "<div><span class='analisysLabel'>Most frequent words:</span> <span class='analysisValue'><br/>";
 
@@ -278,7 +298,7 @@ function randomIntFromInterval(min, max) {
 function remove_stopwords(str) {
   stopwords = ['i','me','my','myself','we','our','ours','ourselves','you','your','yours','yourself','yourselves','he','him','his','himself','she','her','hers','herself','it','its','itself','they','them','their','theirs','themselves','what','which','who','whom','this','that','these','those','am','is','are','was','were','be','been','being','have','has','had','having','do','does','did','doing','a','an','the','and','but','if','or','because','as','until','while','of','at','by','for','with','about','against','between','into','through','during','before','after','above','below','to','from','up','down','in','out','on','off','over','under','again','further','then','once','here','there','when','where','why','how','all','any','both','each','few','more','most','other','some','such','no','nor','not','only','own','same','so','than','too','very','s','t','can','will','just','don','should','now']
   res = []
-  words = str.split(' ')
+  words = str.split(/[\s,.()\[\]?!;“”:’]/)
   for(i=0;i<words.length;i++) {
      word_clean = words[i].split(".").join("")
      if(!stopwords.includes(word_clean)) {
