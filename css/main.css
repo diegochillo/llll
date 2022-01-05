@@ -12,7 +12,8 @@
 };
 
 body {
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /*
@@ -103,6 +104,10 @@ body {
 
 header div.d-flex { /* Because on issue.html Bootstrap 4 adds this padding */
   padding-left:0px;
+}
+
+.tab-pane label {
+  padding-right:4px;
 }
 
 
