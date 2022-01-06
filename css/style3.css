@@ -1,23 +1,27 @@
 /* Style 3 */
 
 @font-face {
-  font-family: "White on Black";
-  src: url("./fonts/style3/White On Black.ttf");
+  font-family: "ZineTime";
+  src: url("./fonts/style3/ZineTime.otf");
 }
 
 @font-face {
-  font-family: "Sixty";
-  src: url("./fonts/style3/SIXTY.TTF");
+  font-family: "Pool Riders";
+  src: url("./fonts/style3/Pool\ Riders\ Regular.otf");
+}
+@font-face {
+  font-family: "Simple Things";
+  src: url("./fonts/style3/SimpleThings-Regular.woff");
 }
 
 h1 {
-  font-family: "White on Black";
+  font-family: ZineTime;
 }
 
 body {
   background-color: black;
   color: white;
-  font-family: "Sixty";
+  font-family: Simple Things;
   cursor: url(middlefinger.png), auto;
 }
 
