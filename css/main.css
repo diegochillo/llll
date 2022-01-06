@@ -1,6 +1,7 @@
 /* Main CSS file */
 
-@import docsearch from '@docsearch/js';
+/* Questa riga andava in errore su tutte le pagine: */
+/* @import docsearch from '@docsearch/js'; */
 
 @import '@docsearch/css';
 
