@@ -1,8 +1,8 @@
 /* Main CSS file */
 
-@import docsearch from '@docsearch/js';
-
-@import '@docsearch/css';
+/* Queste righe andavano in errore su tutte le pagine: */
+/* @import docsearch from '@docsearch/js'; */
+/* @import '@docsearch/css'; */
 
 #docsearch{
   container: '#docsearch',

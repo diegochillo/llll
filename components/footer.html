@@ -24,20 +24,21 @@
       <div class="col-4 offset-1">
         <form>
           <div class="mb-3">
-          <h5>yUor opinion matters!</h5>
-          <p>Na cosa tipo questo è il tuo magazine, dicci cosa ti piace e cosa no, la tua opione conta blablabla</p>
+            <h5>yUor opinion matters!</h5>
+            <p>Na cosa tipo questo è il tuo magazine, dicci cosa ti piace e cosa no, la tua opione conta blablabla</p>
           </div>
           <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating mb-3">
-         <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
-         <label for="floatingTextarea2">Comments</label>
+           <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+           <label for="floatingTextarea2">Comments</label>
           </div>
-          <button id="submit" class="btn btn-outline-dark" type="submit">Submit</button>
-          </div>
+          <button id="submit" class="btn btn-outline-dark" type="submit" onclick="sendEmail()">Submit</button>
         </form>
+      </div>
+
 
 
 
@@ -53,3 +54,21 @@
     </div>
   </footer>
 </div>
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+
+<script>
+  function sendEmail() {
+  	Email.send({
+    SecureToken : "882f8c5b-27cb-4776-9a5d-451d39534f75",
+  	To : 'diego.chillo@outlook.it',
+  	From : "humagazine@elasticemail.com",
+  	Subject : "Richiesta informazioni dal sito hUmagazine",
+  	Body : "Questa è una mail inviata da javascript",
+  	}).then(
+				alert("Thank you! Your opinion has been sent successfully.")
+  	);
+  }
+</script>
