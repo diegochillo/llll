@@ -22,20 +22,20 @@
 
 
       <div class="col-4 offset-1">
-        <form>
+        <form method="post">
           <div class="mb-3">
             <h5>yUor opinion matters!</h5>
             <p>Na cosa tipo questo è il tuo magazine, dicci cosa ti piace e cosa no, la tua opione conta blablabla</p>
           </div>
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input type="email" class="form-control" id="emailAddress" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating mb-3">
-           <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+           <textarea class="form-control" placeholder="Leave a comment here" id="comment"></textarea>
            <label for="floatingTextarea2">Comments</label>
           </div>
-          <button id="submit" class="btn btn-outline-dark" type="submit" onclick="sendEmail()">Submit</button>
+          <button id="submit" class="btn btn-outline-dark" onclick="sendEmail()">Submit</button> <!-- type="submit" -->
         </form>
       </div>
 
@@ -61,14 +61,20 @@
 
 <script>
   function sendEmail() {
+
+    var useremail=document.getElementById("emailAddress").value;
+    var commentcontent=document.getElementById("comment").value;
+
   	Email.send({
-    SecureToken : "882f8c5b-27cb-4776-9a5d-451d39534f75",
-  	To : 'diego.chillo@outlook.it',
-  	From : "humagazine@elasticemail.com",
-  	Subject : "Richiesta informazioni dal sito hUmagazine",
-  	Body : "Questa è una mail inviata da javascript",
+    Host : "smtp.gmail.com",
+    Username : "humagazine22@gmail.com",
+    Password : "hUm46421n3",
+  	To : "diego.chillo@outlook.it, laura.travaglini@icloud.com",
+  	From : "humagazine22@gmail.com",
+  	Subject : "A message from hUmagazine website",
+  	Body : "<div>This is an email sent from hUmagazine's contact form.<br/></div><div>The user " + useremail + " says: <br/></div><div>" + commentcontent+"<br/></div>",
   	}).then(
-				alert("Thank you! Your opinion has been sent successfully.")
+				alert("Thank you! Your message has been sent successfully.")
   	);
   }
 </script>
