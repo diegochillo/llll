@@ -58,6 +58,9 @@ h1 {
 
 body {
   background-color: #FAF8F9;
+  background-image: url(bgstyle2.jpg);
+  background-size: contain;
+  background-blend-mode: color-burn;
   color: black;
   font-family: Rockwell;
   cursor: url(50hand.png), auto;
@@ -142,10 +145,43 @@ img.itemIcon {
 
 */
 
+/* spacee */ 
 
 #space{
 
 }
+
+.tech-slideshow {
+  height: 81px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.tech-slideshow > div {
+  height: 200px;
+  width: 2526px;
+  background: url(bannerstyle2.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+}
+.tech-slideshow .mover-1 {
+  animation: moveSlideshow 20s linear infinite;
+}
+
+@keyframes moveSlideshow {
+  100% { 
+    transform: translateX(-66.6666%);  
+  }
+}
+
+
+/* articles */
 
 .artiCol {
   text-align: justify;

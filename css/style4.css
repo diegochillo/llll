@@ -6,9 +6,17 @@
 }
 
 body {
- background-image: url('gradient.jpg');
+ background-image: url("graphic3.jpg");
  font-family: CharlevoixPro;
+ background-size: contain;
 }
+
+/*
+main {
+  background-image: url("graphic.jpg");
+  background-size: contain;
+}
+*/
 
 button {
 border-radius: 50px;
