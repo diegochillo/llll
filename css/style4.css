@@ -1,13 +1,24 @@
 /* Style 4 */
 
 @font-face{
- font-family: "CharlevoixPro";
- src: url("./fonts/style4/CharlevoixPro-Light.otf");
-}
+  font-family: "Ankitor Reg";
+  src: url("./fonts/style4/Taner\ Ardali\ \ Antikor\ Mono\ Regular.ttf");
+ }
+
+@font-face{
+  font-family: "Ankitor BI";
+  src: url("./fonts/style4/Taner\ Ardali\ \ Antikor\ Mono\ Bold\ Italic.ttf");
+ }
+
+ @font-face{
+  font-family: "Britanica";
+  src: url("./fonts/style4/britanica-heavy-expanded.ttf");
+ }
+
 
 body {
  background-image: url("graphic3.jpg");
- font-family: CharlevoixPro;
+ font-family: Ankitor Reg;
  background-size: contain;
 }
 
@@ -33,7 +44,7 @@ input, label {
 }
 
 h1, h2, h3 {
-  font-family: ivypresto-display, serif;
+  font-family: Britanica;
   font-style: italic;
   font-weight: 100;
 }
