@@ -82,7 +82,7 @@
       </div>
 
       <div class="col-1"> </div>
-      
+
       <div class="col-3">
 
       <form class="d-flex" action="search.html" method="GET">
@@ -106,10 +106,10 @@
             for (const jsonissue of objson.issues) {
               $("#issuesList").append('<li><a class="dropdown-item" href="issuecover.html?number=' + jsonissue.number + '">Issue ' + jsonissue.number + ': ' + jsonissue.topic + '</a></li>');
               //console.log(jsonissue.number);
-              console.log(jsonissue.topic);
+              //console.log(jsonissue.topic);
             }
           }).fail(function(){
-            console.log("An error has occurredz.");
+            console.log("An error has occurred.");
     });
 
 

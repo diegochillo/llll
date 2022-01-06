@@ -213,9 +213,7 @@ function getMetadataNew(nArticle,metaList) {
     var wordCounter = {};
     var wordArray = noStopText.split(/[\s,.()\[\]?!;“”:’]/);
 
-    //for(var i = 0; i < wordArray.length; i++)
-    //    wordCounter["_" + wordArray[i].toLowerCase()] = (wordCounter["_" + wordArray[i].toLowerCase()] || 0) + 1;
-
+    // Increment word counters in wordCounter object
     for (var i = 0; i < wordArray.length; i++) {
       if (wordArray[i]!="") {
         if (wordCounter[wordArray[i]]) {
@@ -226,25 +224,24 @@ function getMetadataNew(nArticle,metaList) {
       }
     }
 
-    if (nArticle==2) {
+    if (nArticle==2) { // DEBUG single article
       //console.log(noStopText);
       //console.log(wordArray);
-      console.log(wordCounter);
+      // console.log(wordCounter);
     }
 
+    // Removes emèty values from wordArray
     var len = wordArray.length, i;
     for(i = 0; i < len; i++ )
         wordArray[i] && wordArray.push(wordArray[i]);  // copy non-empty values to the end of the array
 
-    wordArray.splice(0 , len);
+    wordArray.splice(0, len);
 
-    //let wordSet=let unique = [...new Set(wordArray)];
     var wordSet  = new Set(wordArray.map(JSON.stringify));  // Passage to Set to keep only unique values
-    wordArray = Array.from(wordSet).map(JSON.parse);    // Back from Set to Array
+    wordArray = Array.from(wordSet).map(JSON.parse);        // Back from Set to sortable Array
 
     // Word frequency list sorting
     var wordArraySortFunction = function(word1, word2){
-        //if (word1!=word2){
           if (wordCounter[word1] < wordCounter[word2]) {
               return 1;
           } else if(wordCounter[word1] == wordCounter[word2]) {
@@ -254,14 +251,13 @@ function getMetadataNew(nArticle,metaList) {
           } else {
             return 0;
           }
-        //}
     }
     wordArray.sort(wordArraySortFunction);
 
     //console.log(wordArray)
 
-    if (nArticle==2) {
-      console.log(wordArray);
+    if (nArticle==2) { // DEBUG single article
+      // console.log(wordArray);
     }
 
     mystring += "<div><span class='analisysLabel'>Most frequent words:</span> <span class='analysisValue'><br/>";
