@@ -43,12 +43,19 @@ input, label {
     -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
 }
 
-h1, h2, h3 {
+h2, h3, .subtitle {
   font-family: Britanica;
   font-style: italic;
   font-weight: 100;
 }
 
+h1 {
+  font-family: Britanica;
+   text-transform: uppercase;
+   font-style: italic;
+  font-weight: 100;
+}
+}
 
 /* Navbar doesn't have to change
 .navbar-light .navbar-nav .nav-link.active {
