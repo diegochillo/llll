@@ -1,12 +1,17 @@
 var searchObj = [];
 var getHtml;
 
-const issues=[1,2];
+// Get the number of issues defined in issuesDb.json
+$.getJSON('./issuesDb.json', function(objson){
+    //console.log(objson.topic);
+    const issues=objson.issues.length;
+}
+
 const articles=[1,2,3];
 
 // Reads every article and puts the content into the array (that is the search object)
-for (let i of issues) {
-  for(let a of articles) {
+for (i=1;i<=issues;i++) {
+  for (let a of articles) {
     getHtml = $.ajax({type: "GET", url: "articles/article" + i + "_" + a + ".html", async: false}).responseText;
     getHtml = extractContent(getHtml);
     getHtml = getHtml.replace("\n"," ");
