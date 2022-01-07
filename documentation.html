@@ -8,6 +8,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -85,12 +87,41 @@
         <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <div class="position-relative top-0 start-50 translate-middle-x">
         <h2>The hUmagazine Documentation</h2></div>
-          <h3 id="list-item-1">The LLLL framwork</h3>
 
+          <h3 id="list-item-1">LLLL The Framework</h3>
+          <p>Il sito humagazine.github.io  </p>
+          <p>Il framework consente la gestione di un numero a piacere di riviste, ciascuna contenente 3 articoli visualizzati contemporaneamente in tre colonne affiancate.</p>
+          <p>La presenza di determinati markup all'interno degli articoli abilita il funzionamento di Metadata Selectors, mentre l'analisi testuale viene sempre elaborata automaticamente a prescindere dai tag inseriti.</p>
+          <p>Ogni numero della rivista prevede:</p>
+          <ul style="list-style-type:circle;">
+            <li>una copertina contenente il nome del curatore, la data di uscita e il sommario dei contenuti con i dettagli della provenienza degli articoli, oltre ad alcune parole chiave identificative;</li>
+            <li>la rivista vera e propria, sempre composta da 3 articoli affiancati verticalmente e dai rispettivi selettori dei metadati.</li>
+          </ul>
+
+          <h4 id="list-item-2">Content Management</h4>
+          <p>La gestione dei contenuti delle riviste si basa su questi elementi che devono sempre essere presenti nello spazio di hosting del sito:</p>
+          <ul style="list-style-type:circle;">
+            <li>il file <code>issuesDb.json</code> nella directory radice: contiene un oggetto principale avente chiave "issues", il cui valore è a sua volta un array di oggetti, ciascuno con i dettagli dei singoli numeri della rivista (numero, edtor, data di uscita, dettagli sulla provenienza dei tre articoli e 3 parole chiave per ciascuno);</li>
+            <li>i file dei singoli articoli, memorizzati nella sottocartella <code>/articles</code>, i cui nomi devono seguire questa sintassi standard:<br/>
+            <code>article[n_rivista]_[n_articolo].html</code><br/>
+            Per convenzione, le immagini e altri contenuti multimediali vengono memorizzati nella sottocartella <code>/img</code> e organizzate in sottocartelle distinte per ciascun articolo. E' sempre possibile memorizzarli altrove o caricarli da URL esterni.</li>
+          </ul>
+          <p>Il sistema legge il file issuesDb.json per determinare quanti issues sono presenti, e crea dinamicamente le voci corrispondenti nel menu principale, le copertine e i contenuti durante la navigazione.</p>
+
+          <h4 id="list-item-3">Markup</h4>
+          Gli articoli sono stati markuppati con i metadati ritenuti significativi per la successiva selezione. Sono stati utilizzati
+
+          <h4 id="list-item-3">Metadata Selection</h4>
+
+          <h4 id="list-item-3">Text Analysis</h4>
+
+          <h4 id="list-item-3">Wikipedia Previews</h4>
+          <p>Parti di testo opportunamente taggate possono visualizzare l'anteprima della pagina di Wikipedia corrispondente quando ci si passa sopra con il mouse. I nomi su cui è stata attivata questa funzione visualizzano la W del logo Wikipedia in fondo a destra e parzialmente sovrapposta al testo in trasparenza.</p>
+          <p>Questa funzione è stata realizzata tramite il componente JavaScript <a href="https://github.com/wikimedia/wikipedia-preview" target="_blank">Wikipedia Preview</a>. Gli elementi su cui è attiva la funzione hanno l'attributo booleano <code>data-wikipedia-preview</code> e la classe <code>wmf-wp-with-preview</code>.</p>
+
+          <h3 id="list-item-4">hUmagazine</h3>
           <p>...</p>
-          <h3 id="list-item-2">hUmagazine</h3>
-          <p>...</p>
-          <h3 id="list-item-3">Theme 1</h3>
+          <h3 id="list-item-5">Theme 1</h3>
           <h4>artistic and historical background</h4>
           <p>...</p>
           <h4>colours</h4>
@@ -103,7 +134,7 @@
           <li>Sito 3: <a></a></li>
         </ul>
           <p>...</p>
-          <h3 id="list-item-4">Theme 2</h3>
+          <h3 id="list-item-6">Theme 2</h3>
           <h4>artistic and historical background</h4>
           <p>...</p>
           <h4>colours</h4>
@@ -116,22 +147,7 @@
           <li>Sito 2: <a></a></li>
           <li>Sito 3: <a></a></li>
         </ul>
-          <h3 id="list-item-5">Theme 3</h3>
-          <h4>artistic and historical background</h4>
-          <p>...</p>
-          <h4>colours</h4>
-          <p>...</p>
-          <h4>sources/inspirations</h4>
-          <p>...</p>
-          <p>...</p>
-          <p>Sitography:</p>
-          <ul style="list-style-type:circle;">
-          <li>Sito 1: <a></a></li>
-          <li>Sito 2: <a></a></li>
-          <li>Sito 3: <a></a></li>
-        </ul>
-        </ul>
-          <h3 id="list-item-6">Theme 4</h3>
+          <h3 id="list-item-7">Theme 3</h3>
           <h4>artistic and historical background</h4>
           <p>...</p>
           <h4>colours</h4>
@@ -145,7 +161,22 @@
           <li>Sito 2: <a></a></li>
           <li>Sito 3: <a></a></li>
         </ul>
-          <h3 id="list-item-7">Article Markup</h4>
+        </ul>
+          <h3 id="list-item-8">Theme 4</h3>
+          <h4>artistic and historical background</h4>
+          <p>...</p>
+          <h4>colours</h4>
+          <p>...</p>
+          <h4>sources/inspirations</h4>
+          <p>...</p>
+          <p>...</p>
+          <p>Sitography:</p>
+          <ul style="list-style-type:circle;">
+          <li>Sito 1: <a></a></li>
+          <li>Sito 2: <a></a></li>
+          <li>Sito 3: <a></a></li>
+        </ul>
+          <h3 id="list-item-9">Article Markup</h4>
             <p>...</p>
           </div>
         </div>
