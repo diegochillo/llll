@@ -88,10 +88,15 @@
         <div class="position-relative top-0 start-50 translate-middle-x">
         <h2>The hUmagazine Documentation</h2></div>
 
+          <p>Il sito humagazine.github.io è stato pensato per la divulgazione di articoli relativi a femminismo e studi di genere, organizzati in riviste tematiche e taggati con metadati </p>
+          <p>I contenuti possono essere visualizzati secondo 4 stili tipografici (5 considerando lo stile neutro iniziale) che rimandano ad altrettante epoche come descritto in home page.</p>
+          <p>Ciascuna rivista mostra gli articoli affiancati e permette l'analisi comparata di metadati relativi ai testi.</p>
+
           <h3 id="list-item-1">LLLL The Framework</h3>
-          <p>Il sito humagazine.github.io  </p>
-          <p>Il framework consente la gestione di un numero a piacere di riviste, ciascuna contenente 3 articoli visualizzati contemporaneamente in tre colonne affiancate.</p>
-          <p>La presenza di determinati markup all'interno degli articoli abilita il funzionamento di Metadata Selectors, mentre l'analisi testuale viene sempre elaborata automaticamente a prescindere dai tag inseriti.</p>
+
+          <p>Il nostro framework LLLL consente la gestione di un numero a piacere di riviste, ciascuna contenente 3 articoli visualizzati contemporaneamente in tre colonne affiancate.</p>
+          <p>La presenza di determinati markup all'interno degli articoli abilita il funzionamento di Metadata Selectors, mentre un'analisi testuale viene sempre elaborata automaticamente a prescindere dai tag inseriti.</p>
+          <p>Tutte le pagine del sito contengono due elementi comuni, l'header e il footer, che vengono caricati dai rispettivi file HTML presenti nella cartella <code>/components</code>.
           <p>Ogni numero della rivista prevede:</p>
           <ul style="list-style-type:circle;">
             <li>una copertina contenente il nome del curatore, la data di uscita e il sommario dei contenuti con i dettagli della provenienza degli articoli, oltre ad alcune parole chiave identificative;</li>
@@ -108,8 +113,9 @@
           </ul>
           <p>Il sistema legge il file issuesDb.json per determinare quanti issues sono presenti, e crea dinamicamente le voci corrispondenti nel menu principale, le copertine e i contenuti durante la navigazione.</p>
 
+
           <h4 id="list-item-3">Markup</h4>
-          Gli articoli sono stati markuppati con i metadati ritenuti significativi per la successiva selezione. Sono stati utilizzati
+          Gli articoli sono stati taggati con i metadati ritenuti significativi per la successiva consultazione. Sono stati utilizzati gli attributi
 
           <h4 id="list-item-3">Metadata Selection</h4>
 
@@ -118,6 +124,11 @@
           <h4 id="list-item-3">Wikipedia Previews</h4>
           <p>Parti di testo opportunamente taggate possono visualizzare l'anteprima della pagina di Wikipedia corrispondente quando ci si passa sopra con il mouse. I nomi su cui è stata attivata questa funzione visualizzano la W del logo Wikipedia in fondo a destra e parzialmente sovrapposta al testo in trasparenza.</p>
           <p>Questa funzione è stata realizzata tramite il componente JavaScript <a href="https://github.com/wikimedia/wikipedia-preview" target="_blank">Wikipedia Preview</a>. Gli elementi su cui è attiva la funzione hanno l'attributo booleano <code>data-wikipedia-preview</code> e la classe <code>wmf-wp-with-preview</code>.</p>
+
+          <h4>Internal Search Engine</h4>
+
+          <h4>Message Form</h4>
+          <p>Nel footer, in basso a destra di ogni pagina, è presente un form di contatto per l'invio di idee, proposte, considerazioni di ogni genere su hUmagazine. By submitting the form, viene inviata una mail ai webmaster contenente l'indirizzo e-mail del mittente e il suo messaggio.</p>
 
           <h3 id="list-item-4">hUmagazine</h3>
           <p>...</p>
