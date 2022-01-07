@@ -88,7 +88,7 @@
         <div class="position-relative top-0 start-50 translate-middle-x">
         <h2>The hUmagazine Documentation</h2></div>
 
-          <p>Il sito humagazine.github.io è stato pensato per la divulgazione di articoli relativi a femminismo e studi di genere, organizzati in riviste tematiche e taggati con metadati </p>
+          <p>Il sito humagazine.github.io è stato pensato per la divulgazione di articoli relativi a femminismo e studi di genere, organizzati in riviste tematiche e taggati con metadati che ne consentano l'accesso a sistemi di elaborazione. </p>
           <p>I contenuti possono essere visualizzati secondo 4 stili tipografici (5 considerando lo stile neutro iniziale) che rimandano ad altrettante epoche come descritto in home page.</p>
           <p>Ciascuna rivista mostra gli articoli affiancati e permette l'analisi comparata di metadati relativi ai testi.</p>
 
@@ -109,15 +109,23 @@
             <li>il file <code>issuesDb.json</code> nella directory radice: contiene un oggetto principale avente chiave "issues", il cui valore è a sua volta un array di oggetti, ciascuno con i dettagli dei singoli numeri della rivista (numero, edtor, data di uscita, dettagli sulla provenienza dei tre articoli e 3 parole chiave per ciascuno);</li>
             <li>i file dei singoli articoli, memorizzati nella sottocartella <code>/articles</code>, i cui nomi devono seguire questa sintassi standard:<br/>
             <code>article[n_rivista]_[n_articolo].html</code><br/>
-            Per convenzione, le immagini e altri contenuti multimediali vengono memorizzati nella sottocartella <code>/img</code> e organizzate in sottocartelle distinte per ciascun articolo. E' sempre possibile memorizzarli altrove o caricarli da URL esterni.</li>
+            Per convenzione, le immagini e altri contenuti multimediali vengono memorizzati nella sottocartella <code>/img</code> e organizzate in sottocartelle distinte per ciascun articolo. E' comunque possibile memorizzarli altrove o caricarli da URL esterni.</li>
           </ul>
           <p>Il sistema legge il file issuesDb.json per determinare quanti issues sono presenti, e crea dinamicamente le voci corrispondenti nel menu principale, le copertine e i contenuti durante la navigazione.</p>
 
 
           <h4 id="list-item-3">Markup</h4>
-          Gli articoli sono stati taggati con i metadati ritenuti significativi per la successiva consultazione. Sono stati utilizzati gli attributi
+          <p>Gli articoli sono stati taggati con i metadati ritenuti significativi per la successiva consultazione. Sono stati utilizzati gli attributi HTML <code>data-*</code></p>
+          <p>In particolare, ciascun tag contiene i seguenti attributi:</p>
+          <ul>
+            <li><code>data-label</code>: è l'etichetta utilizzata nel Metadata Selector;</li>
+            <li><code>data-sort</code>: è la stringa utilizzata per ordinare il dato negli elenchi (es. con il cognome prima del nome);</li>
+            <li><code>about</code>: è l'indicatore normalizzato del topic (es. il testo "social" può essere taggato con attributo <code>about="society"</about>)</li>
+          </ul>
 
           <h4 id="list-item-3">Metadata Selection</h4>
+          <p>Sopra ogni articolo compare il corrispondente Metadata Selector con le categorie di metadati identificate nel contenuto organizzate in tab. Ogni tab contiene l'elenco delle voci taggate nel corpo dell'articolo per quella categoria, ordinate secondo il contenuto dell'attributo <code>data-sort</code>.</p>
+          <p>A prescindere dalle categorie di metadati presenti, in fondo a ogni Metadata Selector è presente un tab intitolato "Analysis" che contiene i dati descritti nella sezione seguente.</p>
 
           <h4 id="list-item-3">Text Analysis</h4>
 
