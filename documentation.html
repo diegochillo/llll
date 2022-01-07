@@ -132,8 +132,10 @@
           <p>Al caricamento di ciascun articolo inserito nel framework viene eseguita un'analisi statistica del testo che restituisce le seguenti informazioni:</p>
           <ul>
             <li>Total words, words average length and number of sentences identified;</li>
-            <li>Sentiment: the global sentiment score, that is the arithmetic mean of the sentiment score of each sentence;</li>
-            <li>Sentiment amplitude: the arithmetic mean of the differences between the lowest and the highest sentiment value for each sentence;</li>
+            <li>Sentiment: The global sentiment score, that is the arithmetic mean of the sentiment score of each sentence;</li>
+            <li>Sentiment amplitude: The arithmetic mean of the differences between the lowest and the highest sentiment value for each sentence (single word scores range from -5 to +5);</li>
+            <li>Politeness: The arithmetic mean of the politeness of each sentence, evaluated on many different features of natural language;</li>
+            <li>Dirtiness: The arithmetic mean of the dirtiness of each sentencs, evaluated on many different features of natural language.</li>
             <li>L'elenco delle prime 10 parole più presenti nel testo in ordine decrescente di frequenza e al netto delle stopwords più comuni.</li>
           </ul>
           <p>Gli score sintetici sentiment, politeness e dirtiness vengono calcolati utilizzando il componente JavaScript di terze parti <a href="https://github.com/Ulflander/compendium-js" target:"_blank">Compendium JS</a>. La procedura per il calcolo della frequenza delle parole e la visualizzazione delle prime dieci posizioni in ordine discendente è stata invece interamente scritta from scratch. L'elenco delle stopwords utilizzato è quello standard della <a href="https://gist.github.com/sebleier/554280" target="_blank">NLTK Library</a>.</p>
