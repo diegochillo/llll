@@ -180,7 +180,7 @@ function getMetadataNew(nArticle,metaList) {
     // mystring += "Text Analysis:<br/>";
 
     var elementReadTextOnly = $(elementReadId).text();
-    var analysisRes=compendium.analyse(elementReadTextOnly);
+    var analysisRes=compendium.analyse(elementReadTextOnly,null, ['entities','negation','type','numbers']);
     // console.log( analysisRes );
 
     var quanti = analysisRes.length;

@@ -88,9 +88,9 @@
         <div class="position-relative top-0 start-50 translate-middle-x">
         <h2>The hUmagazine Documentation</h2></div>
 
-          <p>Il sito humagazine.github.io è stato pensato per la divulgazione di articoli relativi a femminismo e studi di genere, organizzati in riviste tematiche e taggati con metadati che ne consentano l'accesso a sistemi di elaborazione. </p>
+          <p>Il sito humagazine.github.io è stato creato per la divulgazione di articoli riguardanti femminismo e identità di genere, organizzati in riviste tematiche e arricchiti con metadati significativi per una fruizione attiva dei contenuti.</p>
           <p>I contenuti possono essere visualizzati secondo 4 stili tipografici (5 considerando lo stile neutro iniziale) che rimandano ad altrettante epoche come descritto in home page.</p>
-          <p>Ciascuna rivista mostra gli articoli affiancati e permette l'analisi comparata di metadati relativi ai testi.</p>
+          <p>Ciascuna rivista mostra in un'unica pagina web gli articoli affiancati e permette l'analisi comparata dei metadati disponibili.</p>
 
           <h3 id="list-item-1">LLLL The Framework</h3>
 
@@ -111,26 +111,35 @@
             <code>article[n_rivista]_[n_articolo].html</code><br/>
             Per convenzione, le immagini e altri contenuti multimediali vengono memorizzati nella sottocartella <code>/img</code> e organizzate in sottocartelle distinte per ciascun articolo. E' comunque possibile memorizzarli altrove o caricarli da URL esterni.</li>
           </ul>
-          <p>Il sistema legge il file issuesDb.json per determinare quanti issues sono presenti, e crea dinamicamente le voci corrispondenti nel menu principale, le copertine e i contenuti durante la navigazione.</p>
+          <p>Il sistema legge il file issuesDb.json per determinare quanti issues sono presenti, e dispone dinamicamente durante la navigazione le voci corrispondenti nel menu principale, le copertine e i contenuti.</p>
 
 
           <h4 id="list-item-3">Markup</h4>
           <p>Gli articoli sono stati taggati con i metadati ritenuti significativi per la successiva consultazione. Sono stati utilizzati gli attributi HTML <code>data-*</code></p>
-          <p>In particolare, ciascun tag contiene i seguenti attributi:</p>
+          <p>In particolare, ciascun tag contiene i seguenti attributi (che sono richiesti per il corretto funzionamento del selettore):</p>
           <ul>
             <li><code>data-label</code>: è l'etichetta utilizzata nel Metadata Selector;</li>
             <li><code>data-sort</code>: è la stringa utilizzata per ordinare il dato negli elenchi (es. con il cognome prima del nome);</li>
-            <li><code>about</code>: è l'indicatore normalizzato del topic (es. il testo "social" può essere taggato con attributo <code>about="society"</about>)</li>
+            <li><code>about</code>: è l'indicatore normalizzato del topic (es. i testi "social group" e "community" possono essere taggati entrambi con attributo <code>about="society"</code>)</li>
           </ul>
 
           <h4 id="list-item-3">Metadata Selection</h4>
-          <p>Sopra ogni articolo compare il corrispondente Metadata Selector con le categorie di metadati identificate nel contenuto organizzate in tab. Ogni tab contiene l'elenco delle voci taggate nel corpo dell'articolo per quella categoria, ordinate secondo il contenuto dell'attributo <code>data-sort</code>.</p>
+          <p>Sopra ogni articolo compare il corrispondente Metadata Selector, che organizza in tab distinti le categorie di metadati identificate nel contenuto. Ogni tab contiene l'elenco delle voci taggate nel corpo dell'articolo per quella categoria, ordinate secondo il contenuto dell'attributo <code>data-sort</code>.</p>
+          <p>Cliccando sul checkbox corrispondente a un valore, gli articoli scrollano fino a visualizzare la prima occorrenza del dato, e ne evidenziano ogni altra occorrenza con un colore di sfondo casuale. L'etichetta del checkbox selezionato viene evidenziata con lo stesso colore. Deselezionando il checkbox, gli sfondi dei testi tornano trasparenti.</p>
           <p>A prescindere dalle categorie di metadati presenti, in fondo a ogni Metadata Selector è presente un tab intitolato "Analysis" che contiene i dati descritti nella sezione seguente.</p>
 
           <h4 id="list-item-3">Text Analysis</h4>
+          <p>Al caricamento di ciascun articolo inserito nel framework viene eseguita un'analisi statistica del testo che restituisce le seguenti informazioni:</p>
+          <ul>
+            <li>Total words, words average length and number of sentences identified;</li>
+            <li>Sentiment: the global sentiment score, that is the arithmetic mean of the sentiment score of each sentence;</li>
+            <li>Sentiment amplitude: the arithmetic mean of the differences between the lowest and the highest sentiment value for each sentence;</li>
+            <li>L'elenco delle prime 10 parole più presenti nel testo in ordine decrescente di frequenza e al netto delle stopwords più comuni.</li>
+          </ul>
+          <p>Gli score sintetici sentiment, politeness e dirtiness vengono calcolati utilizzando il componente JavaScript di terze parti <a href="https://github.com/Ulflander/compendium-js" target:"_blank">Compendium JS</a>. La procedura per il calcolo della frequenza delle parole e la visualizzazione delle prime dieci posizioni in ordine discendente è stata invece interamente scritta from scratch. L'elenco delle stopwords utilizzato è quello standard della <a href="https://gist.github.com/sebleier/554280" target="_blank">NLTK Library</a>.</p>
 
           <h4 id="list-item-3">Wikipedia Previews</h4>
-          <p>Parti di testo opportunamente taggate possono visualizzare l'anteprima della pagina di Wikipedia corrispondente quando ci si passa sopra con il mouse. I nomi su cui è stata attivata questa funzione visualizzano la W del logo Wikipedia in fondo a destra e parzialmente sovrapposta al testo in trasparenza.</p>
+          <p>Parti di testo opportunamente taggate possono visualizzare l'anteprima della pagina di Wikipedia corrispondente quando ci si passa sopra con il mouse. I nomi per cui è stata attivata questa funzione visualizzano la W del logo Wikipedia in fondo a destra parzialmente sovrapposta al testo come watermark.</p>
           <p>Questa funzione è stata realizzata tramite il componente JavaScript <a href="https://github.com/wikimedia/wikipedia-preview" target="_blank">Wikipedia Preview</a>. Gli elementi su cui è attiva la funzione hanno l'attributo booleano <code>data-wikipedia-preview</code> e la classe <code>wmf-wp-with-preview</code>.</p>
 
           <h4>Internal Search Engine</h4>
