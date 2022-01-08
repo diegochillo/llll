@@ -94,22 +94,22 @@
 
           <h3 id="list-item-1">LLLL The Framework</h3>
 
-          <p>Our LLLL framework allows the management of any number of magazine issues, each containing 3 articles displayed simultaneously in three columns side by side.</p>
-          <p>Specific markups within articles enable the use of Metadata Selectors, while a basic textual analysis is always processed automatically regardless of the inserted tags.</p>
-          <p>Tutte le pagine del sito contengono due elementi comuni, l'header e il footer, che vengono caricati dai rispettivi file HTML presenti nella cartella <code>/components</code>.
-          <p>Ogni numero della rivista prevede:</p>
+          <p>Our LLLL framework allows the management of any number of magazine issues, each containing 3 articles displayed simultaneously in 3 columns side by side.</p>
+          <p>Specific markups within articles enable the use of Metadata Selectors, while a basic textual analysis is always automatically processed regardless of the inserted tags.</p>
+          <p>All the pages of the site contain two common elements - the header and the footer - which are loaded from the respective HTML files contained in the <code>/components</code> folder.</p>
+          <p>Each issue of the magazine provides:</p>
           <ul style="list-style-type:circle;">
-            <li>una copertina contenente il nome del curatore, la data di uscita e il sommario dei contenuti con i dettagli della provenienza degli articoli, oltre ad alcune parole chiave identificative;</li>
-            <li>la rivista vera e propria, sempre composta da 3 articoli affiancati verticalmente e dai rispettivi selettori dei metadati.</li>
+            <li>a cover containing the name of the editor, the release date and a summary of the contents with complete details about the source of the articles, as well as some identifying keywords;</li>
+            <li>the actual magazine, always made up of 3 articles displayed side by side, and their respective metadata selectors.</li>
           </ul>
 
           <h4 id="list-item-2">Content Management</h4>
-          <p>La gestione dei contenuti delle riviste si basa su questi elementi che devono sempre essere presenti nello spazio di hosting del sito:</p>
+          <p>The contents of the magazines are stored inside these elements, that must always be present in the hosting space of the website:</p>
           <ul style="list-style-type:circle;">
-            <li>il file <code>issuesDb.json</code> nella directory radice: contiene un oggetto principale avente chiave "issues", il cui valore è a sua volta un array di oggetti, ciascuno con i dettagli dei singoli numeri della rivista (numero, edtor, data di uscita, dettagli sulla provenienza dei tre articoli e 3 parole chiave per ciascuno);</li>
-            <li>i file dei singoli articoli, memorizzati nella sottocartella <code>/articles</code>, i cui nomi devono seguire questa sintassi standard:<br/>
-            <code>article[n_rivista]_[n_articolo].html</code><br/>
-            Per convenzione, le immagini e altri contenuti multimediali vengono memorizzati nella sottocartella <code>/img</code> e organizzate in sottocartelle distinte per ciascun articolo. E' comunque possibile memorizzarli altrove o caricarli da URL esterni.</li>
+            <li>The file <code>issuesDb.json</code> in the root directory: it contains a main object having the key "issues", whose value is an array of objects, each with the details of the single issues of the magazine (number, publisher, release date, details on the source of the three articles and 3 keywords each)</li>
+            <li>The files of the individual articles, stored in the <code>/articles</code> folder, whose names must have this standard syntax:<br/>
+            <code>article[n_rivista]_[n_articolo].html</code> (e.g. "article1_3.html" for the third article of the first issue).<br/>
+            <li>Images and other multimedia contents can be stored in the <code>/img</code> folder and organized into separate subfolders for each article. However, they can be also stored elsewhere or loaded from external URLs.</li>
           </ul>
           <p>Il sistema legge il file issuesDb.json per determinare quanti issues sono presenti, e dispone dinamicamente durante la navigazione le voci corrispondenti nel menu principale, le copertine e i contenuti.</p>
 
