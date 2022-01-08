@@ -95,9 +95,6 @@ width: 550px;
   background-origin: content-box, content-box;
 }
 
-#openIssue {
-
-}
 
 #issueArticles {
   text-align: center;
@@ -105,13 +102,15 @@ width: 550px;
 }
 
 .metaTitle {
-  color: #B63323;
   font-family: Flanker Bold;
 }
 
-#issueArticles li {
-
+#artN1, #artN2, #artN3 {
+  font-family: Flanker Bold;
+  color: black;
 }
+
+
 
 /* nav-tabs */
 
