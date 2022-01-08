@@ -302,6 +302,7 @@ hr {
 }
 */
 
+/* questo era con il border image
 #metaData1, #metaData2, #metaData3 {
   height: 36vh;
   width: auto;
@@ -315,10 +316,25 @@ hr {
   overflow-x: hidden;
   padding: 0;
 }
+*/
 
+#metaData1, #metaData2, #metaData3 {
+  background-image: url(metaFrame1.png);
+  height: 48vh;
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
 
 #frameData1, #frameData2, #frameData3 {
-   padding: 50px 40px 40px 0px;
+   margin: 120px 40px 0px 45px;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   height: 36vh;
+}
+
+#metaData1::-webkit-scrollbar, #metaData2::-webkit-scrollbar, #metaData3::-webkit-scrollbar, #frameData1::-webkit-scrollbar, #frameData2::-webkit-scrollbar, #frameData3::-webkit-scrollbar {
+  display: none;
 }
 
 /*scrollbar */
@@ -360,47 +376,3 @@ hr {
   height: 10px;
   border-radius: 100px;
 }
-
-#metaData1::-webkit-scrollbar-track {
-  background-image: url(scrollstyle1.png);
-  background-size: contain;
-}
-#metaData1::-webkit-scrollbar {
-  width: 35px;
-  display: none;
-}
-#metaData1::-webkit-scrollbar-thumb {
-  background-color: #B63323;
-  height: 10px;
-  border-radius: 100px;
-}
-#metaData2::-webkit-scrollbar-track {
-  background-image: url(scrollstyle1.png);
-  background-size: contain;
-}
-#metaData2::-webkit-scrollbar {
-  width: 35px;
-  display: none;
-}
-#metaData2::-webkit-scrollbar-thumb {
-  background-color: #B63323;
-  height: 10px;
-  border-radius: 100px;
-}
-
-#metaData3::-webkit-scrollbar-track {
-  background-image: url(scrollstyle1.png);
-  background-size: contain;
-}
-#metaData3::-webkit-scrollbar {
-  width: 35px;
-  display: none; 
-}
-#metaData3::-webkit-scrollbar-thumb {
-  background-color: #B63323;
-  height: 10px;
-  border-radius: 100px;
-  
-}
-
-
