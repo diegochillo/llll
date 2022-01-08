@@ -35,9 +35,9 @@
  }
 
 body {
-  background-color: #f6f1e8;
-  background-size: cover;
+  background: #f6f1e8;
   background-position: center;
+  background-origin: margin-box;
   color: #1D1A13;
   font-family: Flanker Reg;
   font-size: 18px;
@@ -45,10 +45,10 @@ body {
 }
 
 #coverstyle1 {
-background-image: 
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
+ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: left, right;
 }
 /*
 border-image: url(cornice2.png) 30 fill / 8px / 30px space;
@@ -63,7 +63,7 @@ width: 550px;
   border-image-repeat: round;
   border-width: 100px;
   padding: 20px;
-*/
+
 #coversx {
   background-image: url(framesxstyle1.png);
   background-size: cover;
@@ -79,10 +79,11 @@ width: 550px;
   background-position: center;
 }
 
+*/
+
 #issueMeta {
   text-align: center;
   height: 18vh;
-  overflow-y: scroll;
 }
 
 #issueArticles {
