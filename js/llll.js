@@ -1,15 +1,16 @@
 
-/* Loads topbar.html in topBar div */
+// Loads topbar.html in topBar div
 $(function(){$("#topBar").load("components/topbar.html"); });
 
-/* Loads footer.html in footerBar div */
+//Loads footer.html in footerBar div
 $(function(){$("#footerBar").load("components/footer.html"); });
 
+// Applies the theme status written inside the cookie
+applyCookie();
 
 
-/* Loads the articles inside the columns using JQuery*/
 //$(document).ready(function(){
-
+/* Loads the articles inside the columns using JQuery*/
 function loadArticles() {
 
    const urlParams = new URLSearchParams(window.location.search);
@@ -21,11 +22,9 @@ function loadArticles() {
      $('#article3').load("articles/article" + issueNumber + "_3.html", function() { getMetadataNew(3,["person","language","place","date","organization","keyword"]); } );
    }
    //console.log(issueNumber);
-
 }
 
 //});
-
 
 
 /* Enables the stylesheet with ID nodeE and disables the three others */
@@ -34,6 +33,7 @@ function switchToSS (nodeE,nodeD1,nodeD2,nodeD3) {
   nodeD1.media = 'none';
   nodeD2.media = 'none';
   nodeD3.media = 'none';
+  document.cookie = "themestatus=" + nodeE.id + "," + nodeD1.id +"," + nodeD2.id + "," + nodeD3.id;
 }
 
 // Reverts all to the original style
@@ -42,8 +42,24 @@ function cleanUpSS() {
   $('#cssstyle2').attr('media', 'none');
   $('#cssstyle3').attr('media', 'none');
   $('#cssstyle4').attr('media', 'none');
+  document.cookie = "themestatus=''";
 }
 
+
+// Reads the theme status from the cookie and applies it
+function applyCookie() {
+  var parts = document.cookie.split('=');
+  parts = parts[1].split(';');
+  var cookieValue=parts[0];
+  console.log(cookieValue);
+  if (cookieValue!='') {
+    var eachVal=cookieValue.split(',');
+    console.log(eachVal);
+    switchToSS (document.getElementById(eachVal[0]),document.getElementById(eachVal[1]),document.getElementById(eachVal[2]),document.getElementById(eachVal[3]));
+  } else {
+    cleanUpSS();
+  }
+}
 
 
 // Highlights the text corresponding to the selected checkbox with a random color
@@ -278,7 +294,6 @@ function getMetadataNew(nArticle,metaList) {
     $(elementTabContent).append(mystring);
 
 }
-
 
 
 
