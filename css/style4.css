@@ -16,6 +16,7 @@
  }
 
 
+
 body {
  background-image: url("graphic3.jpg");
  font-family: Ankitor Reg;
@@ -74,13 +75,13 @@ img.itemIcon {
 }
 */
 
-#article1, #article2, #article3, #metaData1, #metaData2, #metaData3, #tabs1, #tabs2, #tabs3, #footerBar {
-background: rgba( 255, 255, 255, 0.15 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 6.5px );
--webkit-backdrop-filter: blur( 6.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+.artiCol, .metaCol, #tabs1, #tabs2, #tabs3, #footerBar, #topBar {
+  background: rgba( 248, 188, 87, 0.45 ) !important;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ) !important;
+  backdrop-filter: blur( 13px ) !important;
+  -webkit-backdrop-filter: blur( 13px ) !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba( 255, 255, 255, 0.18 ) !important;
 }
 
 /* metadata nav tablist style */
