@@ -180,8 +180,8 @@ function getMetadataNew(nArticle,metaList) {
     // mystring += "Text Analysis:<br/>";
 
     var elementReadTextOnly = $(elementReadId).text();
-    var analysisRes=compendium.analyse(elementReadTextOnly);
-    // console.log( analysisRes );
+    var analysisRes=compendium.analyse(elementReadTextOnly,null, ['entities','negation','type','numbers']);
+    console.log( analysisRes );
 
     var quanti = analysisRes.length;
     var totWords = 0;
@@ -230,7 +230,7 @@ function getMetadataNew(nArticle,metaList) {
       // console.log(wordCounter);
     }
 
-    // Removes emèty values from wordArray
+    // Removes empty values from wordArray
     var len = wordArray.length, i;
     for(i = 0; i < len; i++ )
         wordArray[i] && wordArray.push(wordArray[i]);  // copy non-empty values to the end of the array

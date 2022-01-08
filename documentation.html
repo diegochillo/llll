@@ -2,11 +2,13 @@
   <html lang="en">
 
   <head>
-    <title>IMWT Tests</title>
+    <title>hUmagazine</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -66,7 +68,7 @@
         </div>
 
       </div>-->
-      
+
       <div class="col-md-auto">
         <div class="position-sticky" style="top: 2rem;">
         <div id="list-example" class="list-group list-group-flush sticky">
@@ -85,12 +87,74 @@
         <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <div class="position-relative top-0 start-50 translate-middle-x">
         <h2>The hUmagazine Documentation</h2></div>
-          <h3 id="list-item-1">The LLLL framwork</h3>
 
+          <p>hUmagazine è una raccolta di articoli su femminismo e identità di genere, organizzati in riviste tematiche e arricchiti con metadati significativi per una fruizione attiva dei contenuti.</p>
+          <p>Le pagine possono essere visualizzate secondo 4 stili tipografici (5 considerando lo stile neutro iniziale) che rimandano ad altrettante epoche come descritto in home page.</p>
+          <p>Ciascuna rivista mostra in un'unica pagina web gli articoli affiancati e permette l'analisi comparata dei metadati disponibili.</p>
+
+          <h3 id="list-item-1">LLLL The Framework</h3>
+
+          <p>Il nostro framework LLLL consente la gestione di un numero a piacere di riviste, ciascuna contenente 3 articoli visualizzati contemporaneamente in tre colonne affiancate.</p>
+          <p>La presenza di determinati markup all'interno degli articoli abilita il funzionamento di Metadata Selectors, mentre un'analisi testuale viene sempre elaborata automaticamente a prescindere dai tag inseriti.</p>
+          <p>Tutte le pagine del sito contengono due elementi comuni, l'header e il footer, che vengono caricati dai rispettivi file HTML presenti nella cartella <code>/components</code>.
+          <p>Ogni numero della rivista prevede:</p>
+          <ul style="list-style-type:circle;">
+            <li>una copertina contenente il nome del curatore, la data di uscita e il sommario dei contenuti con i dettagli della provenienza degli articoli, oltre ad alcune parole chiave identificative;</li>
+            <li>la rivista vera e propria, sempre composta da 3 articoli affiancati verticalmente e dai rispettivi selettori dei metadati.</li>
+          </ul>
+
+          <h4 id="list-item-2">Content Management</h4>
+          <p>La gestione dei contenuti delle riviste si basa su questi elementi che devono sempre essere presenti nello spazio di hosting del sito:</p>
+          <ul style="list-style-type:circle;">
+            <li>il file <code>issuesDb.json</code> nella directory radice: contiene un oggetto principale avente chiave "issues", il cui valore è a sua volta un array di oggetti, ciascuno con i dettagli dei singoli numeri della rivista (numero, edtor, data di uscita, dettagli sulla provenienza dei tre articoli e 3 parole chiave per ciascuno);</li>
+            <li>i file dei singoli articoli, memorizzati nella sottocartella <code>/articles</code>, i cui nomi devono seguire questa sintassi standard:<br/>
+            <code>article[n_rivista]_[n_articolo].html</code><br/>
+            Per convenzione, le immagini e altri contenuti multimediali vengono memorizzati nella sottocartella <code>/img</code> e organizzate in sottocartelle distinte per ciascun articolo. E' comunque possibile memorizzarli altrove o caricarli da URL esterni.</li>
+          </ul>
+          <p>Il sistema legge il file issuesDb.json per determinare quanti issues sono presenti, e dispone dinamicamente durante la navigazione le voci corrispondenti nel menu principale, le copertine e i contenuti.</p>
+
+
+          <h4 id="list-item-3">Markup</h4>
+          <p>Gli articoli sono stati taggati con i metadati ritenuti significativi per la successiva consultazione. Sono stati utilizzati gli attributi HTML <code>data-*</code></p>
+          <p>In particolare, ciascun tag contiene i seguenti attributi (che sono richiesti per il corretto funzionamento del selettore):</p>
+          <ul>
+            <li><code>data-label</code>: è l'etichetta utilizzata nel Metadata Selector;</li>
+            <li><code>data-sort</code>: è la stringa utilizzata per ordinare il dato negli elenchi (es. con il cognome prima del nome);</li>
+            <li><code>about</code>: è l'indicatore normalizzato del topic (es. i testi "social group" e "community" possono essere taggati entrambi con attributo <code>about="society"</code>)</li>
+          </ul>
+
+          <h4 id="list-item-3">Metadata Selection</h4>
+          <p>Sopra ogni articolo compare il corrispondente Metadata Selector, che organizza in tab distinti le categorie di metadati identificate nel contenuto. Ogni tab contiene l'elenco delle voci taggate nel corpo dell'articolo per quella categoria, ordinate secondo il contenuto dell'attributo <code>data-sort</code>.</p>
+          <p>Cliccando sul checkbox corrispondente a un valore, gli articoli scrollano fino a visualizzare la prima occorrenza del dato, e ne evidenziano ogni altra occorrenza con un colore di sfondo casuale. L'etichetta del checkbox selezionato viene evidenziata con lo stesso colore. Deselezionando il checkbox, gli sfondi dei testi tornano trasparenti.</p>
+          <p>A prescindere dalle categorie di metadati presenti, in fondo a ogni Metadata Selector è presente un tab intitolato "Analysis" che contiene i dati descritti nella sezione seguente.</p>
+
+          <h4 id="list-item-3">Text Analysis</h4>
+          <p>Al caricamento di ciascun articolo inserito nel framework viene eseguita un'analisi statistica del testo che restituisce le seguenti informazioni:</p>
+          <ul>
+            <li>Total words, words average length and number of sentences identified;</li>
+            <li>Sentiment: The global sentiment score, that is the arithmetic mean of the sentiment score of each sentence;</li>
+            <li>Sentiment amplitude: The arithmetic mean of the differences between the lowest and the highest sentiment value for each sentence (single word scores range from -5 to +5);</li>
+            <li>Politeness: The arithmetic mean of the politeness of each sentence, evaluated on many different features of natural language;</li>
+            <li>Dirtiness: The arithmetic mean of the dirtiness of each sentencs, evaluated on many different features of natural language.</li>
+            <li>L'elenco delle prime 10 parole più presenti nel testo in ordine decrescente di frequenza e al netto delle stopwords più comuni.</li>
+          </ul>
+          <p>Gli score sintetici sentiment, politeness e dirtiness vengono calcolati utilizzando il componente JavaScript di terze parti <a href="https://github.com/Ulflander/compendium-js" target:"_blank">Compendium JS</a>. La procedura per il calcolo della frequenza delle parole e la visualizzazione delle prime dieci posizioni in ordine discendente è stata invece interamente scritta from scratch. L'elenco delle stopwords utilizzato è quello standard della <a href="https://gist.github.com/sebleier/554280" target="_blank">NLTK Library</a>.</p>
+
+          <h4 id="list-item-3">Wikipedia Previews</h4>
+          <p>Parti di testo opportunamente taggate possono visualizzare l'anteprima della pagina di Wikipedia corrispondente quando ci si passa sopra con il mouse. I nomi per cui è stata attivata questa funzione visualizzano la W del logo Wikipedia in fondo a destra parzialmente sovrapposta al testo come watermark.</p>
+          <p>Questa funzione è stata realizzata tramite il componente JavaScript <a href="https://github.com/wikimedia/wikipedia-preview" target="_blank">Wikipedia Preview</a>. Gli elementi su cui è attiva la funzione hanno l'attributo booleano <code>data-wikipedia-preview</code> e la classe <code>wmf-wp-with-preview</code>.</p>
+
+          <h4>Internal Search Engine</h4>
+          <p>Our framework has an internal JavaScript search engine based on <a href="http://lunrjs.com" target="_blank">lunr</a>.</p>
+          <p>Being it part of the header, the search field is available on every page of the website. After inserting the words to be found, it looks for them inside the articles, then it returns the list and a short preview of the articles where the words have been found. Clicking on a result, it opens the issue containing that article.</p>
+
+          <h4>Message Form</h4>
+          <p>Nel footer, in basso a destra di ogni pagina, è presente un form di contatto per l'invio di idee, proposte, considerazioni di ogni genere su hUmagazine. By submitting the form, viene inviata una mail ai webmaster contenente l'indirizzo e-mail del mittente e il messaggio.</p>
+          <p>Questa funzione si basa sul componente JavaScript <a href="https://smtpjs.com/" target="_blank">SmtpJS.com</a>. L'invio viene effettuato tramite il server smtp.gmail.com utilizzando un account ad hoc.</p>
+
+          <h3 id="list-item-4">hUmagazine</h3>
           <p>...</p>
-          <h3 id="list-item-2">hUmagazine</h3>
-          <p>...</p>
-          <h3 id="list-item-3">Theme 1</h3>
+          <h3 id="list-item-5">Theme 1</h3>
           <h4>artistic and historical background</h4>
           <p>...</p>
           <h4>colours</h4>
@@ -101,9 +165,9 @@
           <li>Sito 1: <a></a></li>
           <li>Sito 2: <a></a></li>
           <li>Sito 3: <a></a></li>
-        </ul> 
+        </ul>
           <p>...</p>
-          <h3 id="list-item-4">Theme 2</h3>
+          <h3 id="list-item-6">Theme 2</h3>
           <h4>artistic and historical background</h4>
           <p>...</p>
           <h4>colours</h4>
@@ -115,23 +179,8 @@
           <li>Sito 1: <a></a></li>
           <li>Sito 2: <a></a></li>
           <li>Sito 3: <a></a></li>
-        </ul> 
-          <h3 id="list-item-5">Theme 3</h3>
-          <h4>artistic and historical background</h4>
-          <p>...</p>
-          <h4>colours</h4>
-          <p>...</p>
-          <h4>sources/inspirations</h4>
-          <p>...</p>
-          <p>...</p>
-          <p>Sitography:</p>
-          <ul style="list-style-type:circle;">
-          <li>Sito 1: <a></a></li>
-          <li>Sito 2: <a></a></li>
-          <li>Sito 3: <a></a></li>
-        </ul> 
-        </ul> 
-          <h3 id="list-item-6">Theme 4</h3>
+        </ul>
+          <h3 id="list-item-7">Theme 3</h3>
           <h4>artistic and historical background</h4>
           <p>...</p>
           <h4>colours</h4>
@@ -144,8 +193,23 @@
           <li>Sito 1: <a></a></li>
           <li>Sito 2: <a></a></li>
           <li>Sito 3: <a></a></li>
-        </ul> 
-          <h3 id="list-item-7">Article Markup</h4>
+        </ul>
+        </ul>
+          <h3 id="list-item-8">Theme 4</h3>
+          <h4>artistic and historical background</h4>
+          <p>...</p>
+          <h4>colours</h4>
+          <p>...</p>
+          <h4>sources/inspirations</h4>
+          <p>...</p>
+          <p>...</p>
+          <p>Sitography:</p>
+          <ul style="list-style-type:circle;">
+          <li>Sito 1: <a></a></li>
+          <li>Sito 2: <a></a></li>
+          <li>Sito 3: <a></a></li>
+        </ul>
+          <h3 id="list-item-9">Article Markup</h4>
             <p>...</p>
           </div>
         </div>
