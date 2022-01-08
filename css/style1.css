@@ -95,7 +95,6 @@ width: 550px;
   background-origin: content-box, content-box;
 }
 
-
 #issueArticles {
   text-align: center;
   height: auto;
@@ -103,6 +102,7 @@ width: 550px;
 
 .metaTitle {
   font-family: Flanker Bold;
+  text-transform: uppercase;
 }
 
 #artN1, #artN2, #artN3 {
@@ -110,6 +110,11 @@ width: 550px;
   color: black;
 }
 
+#btnIssue {
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 18px;
+}
 
 
 /* nav-tabs */
