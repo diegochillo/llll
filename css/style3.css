@@ -24,14 +24,10 @@ h1 {
 }
 
 body {
-  background-color: black;
+  background-color: gray;
   color: white;
   font-family: Simple Things;
   cursor: url(middlefinger.png), auto;
-}
-
-.article {
-  color: green;
 }
 
 img {
@@ -62,6 +58,12 @@ img.itemIcon {
 /* Slim scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
-    background-color: ghostwhite;
+    background-color: transparent;
 }
 /* END of slim scrollbar */
+
+
+#article1, #article2, #article3 {
+  background-image: url(bgstyle3.png);
+  background-size: cover;
+}
