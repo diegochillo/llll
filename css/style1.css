@@ -45,7 +45,7 @@ body {
 }
 
 #coverstyle1 {
-background-image: url(coverframe1style1.png);
+background-image: 
 background-size: contain;
 background-position: center;
 background-repeat: no-repeat;
@@ -64,8 +64,19 @@ width: 550px;
   border-width: 100px;
   padding: 20px;
 */
-#cover1 {
+#coversx {
+  background-image: url(framesxstyle1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   
+}
+
+#coverdx {
+  background-image: url(framedxstyle1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #issueMeta {
