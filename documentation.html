@@ -36,10 +36,11 @@
     <div id="topBar" class="sticky-top"></div> <!-- A jQuery function loads content inside this div -->
 
     <!-- body -->
+    
+    <div id="documentationMain">
+    <main class="container justify-content-md-center" data-bs-spy="scroll" data-bs-target="#navbar-example">
 
-    <main id="mainDocumentation" class="container justify-content-md-center" data-bs-spy="scroll" data-bs-target="#navbar-example">
-
-      <div class="row g-5 justify-content-md-center">
+      <div class="row g-5">
 
         <!--<div class="col-md-auto">
           <li>
@@ -69,7 +70,7 @@
 
       </div>-->
 
-      <div class="col-md-auto">
+      <div id="docSx" class="col-md-auto">
         <div class="position-sticky" style="top: 2rem;">
         <div id="list-example" class="list-group list-group-flush sticky">
           <a class="list-group-item list-group-item-action" href="#list-item-1">The LLLL framwork</a>
@@ -83,16 +84,16 @@
       </div>
       </div>
 
-      <div class="col col-md-6">
+      <div id="docCenter" class="col col-md-6">
         <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <div class="position-relative top-0 start-50 translate-middle-x">
-        <h2>The hUmagazine Documentation</h2></div>
+        <h1>The hUmagazine Documentation</h1></div>
 
           <p>hUmagazine è una raccolta di articoli su femminismo e identità di genere, organizzati in riviste tematiche e arricchiti con metadati significativi per una fruizione attiva dei contenuti.</p>
           <p>Le pagine possono essere visualizzate secondo 4 stili tipografici (5 considerando lo stile neutro iniziale) che rimandano ad altrettante epoche come descritto in home page.</p>
           <p>Ciascuna rivista mostra in un'unica pagina web gli articoli affiancati e permette l'analisi comparata dei metadati disponibili.</p>
 
-          <h3 id="list-item-1">LLLL The Framework</h3>
+          <h2 id="list-item-1">LLLL The Framework</h2>
 
           <p>Our LLLL framework allows the management of any number of magazine issues, each containing 3 articles displayed simultaneously in 3 columns side by side.</p>
           <p>Specific markups within articles enable the use of Metadata Selectors, while a basic textual analysis is always automatically processed regardless of the inserted tags.</p>
@@ -103,7 +104,7 @@
             <li>the actual magazine, always made up of 3 articles displayed side by side, and their respective metadata selectors.</li>
           </ul>
 
-          <h4 id="list-item-2">Content Management</h4>
+          <h3 id="list-item-2">Content Management</h3>
           <p>The contents of the magazines are stored inside these elements, that must always be present in the hosting space of the website:</p>
           <ul style="list-style-type:circle;">
             <li>The file <code>issuesDb.json</code> in the root directory: it contains a main object having the key "issues", whose value is an array of objects, each with the details of the single issues of the magazine (number, publisher, release date, details on the source of the three articles and 3 keywords each)</li>
@@ -114,7 +115,7 @@
           <p>The system reads the issuesDb.json file to determine how many magazine issues have been defined, then dynamically arranges the corresponding items in the main menu, along with the covers and the contents while browsing.</p>
 
 
-          <h4 id="list-item-3">Markup</h4>
+          <h3 id="list-item-3">Markup</h3>
           <p>Gli articoli sono stati taggati con i metadati ritenuti significativi per la successiva consultazione. Sono stati utilizzati gli attributi HTML <code>data-*</code></p>
           <p>In particolare, ciascun tag contiene i seguenti attributi (che sono richiesti per il corretto funzionamento del selettore):</p>
           <ul>
@@ -123,12 +124,12 @@
             <li><code>about</code>: è l'indicatore normalizzato del topic (es. i testi "social group" e "community" possono essere taggati entrambi con attributo <code>about="society"</code>)</li>
           </ul>
 
-          <h4 id="list-item-3">Metadata Selection</h4>
+          <h3 id="list-item-3">Metadata Selection</h3>
           <p>Sopra ogni articolo compare il corrispondente Metadata Selector, che organizza in tab distinti le categorie di metadati identificate nel contenuto. Ogni tab contiene l'elenco delle voci taggate nel corpo dell'articolo per quella categoria, ordinate secondo il contenuto dell'attributo <code>data-sort</code>.</p>
           <p>Cliccando sul checkbox corrispondente a un valore, gli articoli scrollano fino a visualizzare la prima occorrenza del dato, e ne evidenziano ogni altra occorrenza con un colore di sfondo casuale. L'etichetta del checkbox selezionato viene evidenziata con lo stesso colore. Deselezionando il checkbox, gli sfondi dei testi tornano trasparenti.</p>
           <p>A prescindere dalle categorie di metadati presenti, in fondo a ogni Metadata Selector è presente un tab intitolato "Analysis" che contiene i dati descritti nella sezione seguente.</p>
 
-          <h4 id="list-item-3">Text Analysis</h4>
+          <h3 id="list-item-3">Text Analysis</h3>
           <p>Al caricamento di ciascun articolo inserito nel framework viene eseguita un'analisi statistica del testo che restituisce le seguenti informazioni:</p>
           <ul>
             <li>Total words, words average length and number of sentences identified;</li>
@@ -140,26 +141,26 @@
           </ul>
           <p>Gli score sintetici sentiment, politeness e dirtiness vengono calcolati utilizzando il componente JavaScript di terze parti <a href="https://github.com/Ulflander/compendium-js" target:"_blank">Compendium JS</a>. La procedura per il calcolo della frequenza delle parole e la visualizzazione delle prime dieci posizioni in ordine discendente è stata invece interamente scritta from scratch. L'elenco delle stopwords utilizzato è quello standard della <a href="https://gist.github.com/sebleier/554280" target="_blank">NLTK Library</a>.</p>
 
-          <h4 id="list-item-3">Wikipedia Previews</h4>
+          <h3 id="list-item-3">Wikipedia Previews</h3>
           <p>Parti di testo opportunamente taggate possono visualizzare l'anteprima della pagina di Wikipedia corrispondente quando ci si passa sopra con il mouse. I nomi per cui è stata attivata questa funzione visualizzano la W del logo Wikipedia in fondo a destra parzialmente sovrapposta al testo come watermark.</p>
           <p>Questa funzione è stata realizzata tramite il componente JavaScript <a href="https://github.com/wikimedia/wikipedia-preview" target="_blank">Wikipedia Preview</a>. Gli elementi su cui è attiva la funzione hanno l'attributo booleano <code>data-wikipedia-preview</code> e la classe <code>wmf-wp-with-preview</code>.</p>
 
-          <h4>Internal Search Engine</h4>
+          <h3>Internal Search Engine</h3>
           <p>Our framework has an internal JavaScript search engine based on <a href="http://lunrjs.com" target="_blank">lunr</a>.</p>
           <p>Being it part of the header, the search field is available on every page of the website. After inserting the words to be found, it looks for them inside the articles, then it returns the list and a short preview of the articles where the words have been found. Clicking on a result, it opens the issue containing that article.</p>
 
-          <h4>Message Form</h4>
+          <h3>Message Form</h3>
           <p>Nel footer, in basso a destra di ogni pagina, è presente un form di contatto per l'invio di idee, proposte, considerazioni di ogni genere su hUmagazine. By submitting the form, viene inviata una mail ai webmaster contenente l'indirizzo e-mail del mittente e il messaggio.</p>
           <p>Questa funzione si basa sul componente JavaScript <a href="https://smtpjs.com/" target="_blank">SmtpJS.com</a>. L'invio viene effettuato tramite il server smtp.gmail.com utilizzando un account ad hoc.</p>
 
-          <h3 id="list-item-4">hUmagazine</h3>
+          <h2 id="list-item-4">hUmagazine</h2>
           <p>...</p>
-          <h3 id="list-item-5">Theme 1</h3>
-          <h4>artistic and historical background</h4>
+          <h2 id="list-item-5">Theme 1</h2>
+          <h3>artistic and historical background</h3>
           <p>...</p>
-          <h4>colours</h4>
+          <h3>colours</h3>
           <p>...</p>
-          <h4>sources/inspirations</h4>
+          <h3>sources/inspirations</h3>
           <p>Sitography:</p>
           <ul style="list-style-type:circle;">
           <li>Sito 1: <a></a></li>
@@ -167,26 +168,12 @@
           <li>Sito 3: <a></a></li>
         </ul>
           <p>...</p>
-          <h3 id="list-item-6">Theme 2</h3>
-          <h4>artistic and historical background</h4>
+          <h2 id="list-item-6">Theme 2</h2>
+          <h3>artistic and historical background</h3>
           <p>...</p>
-          <h4>colours</h4>
+          <h3>colours</h3>
           <p>...</p>
-          <h4>sources/inspirations</h4>
-          <p>...</p>
-          <p>Sitography:</p>
-          <ul style="list-style-type:circle;">
-          <li>Sito 1: <a></a></li>
-          <li>Sito 2: <a></a></li>
-          <li>Sito 3: <a></a></li>
-        </ul>
-          <h3 id="list-item-7">Theme 3</h3>
-          <h4>artistic and historical background</h4>
-          <p>...</p>
-          <h4>colours</h4>
-          <p>...</p>
-          <h4>sources/inspirations</h4>
-          <p>...</p>
+          <h3>sources/inspirations</h3>
           <p>...</p>
           <p>Sitography:</p>
           <ul style="list-style-type:circle;">
@@ -194,13 +181,12 @@
           <li>Sito 2: <a></a></li>
           <li>Sito 3: <a></a></li>
         </ul>
-        </ul>
-          <h3 id="list-item-8">Theme 4</h3>
-          <h4>artistic and historical background</h4>
+          <h2 id="list-item-7">Theme 3</h2>
+          <h3>artistic and historical background</h3>
           <p>...</p>
-          <h4>colours</h4>
+          <h3>colours</h3>
           <p>...</p>
-          <h4>sources/inspirations</h4>
+          <h3>sources/inspirations</h3>
           <p>...</p>
           <p>...</p>
           <p>Sitography:</p>
@@ -209,13 +195,28 @@
           <li>Sito 2: <a></a></li>
           <li>Sito 3: <a></a></li>
         </ul>
-          <h3 id="list-item-9">Article Markup</h4>
+        </ul>
+          <h2 id="list-item-8">Theme 4</h2>
+          <h3>artistic and historical background</h3>
+          <p>...</p>
+          <h3>colours</h3>
+          <p>...</p>
+          <h3>sources/inspirations</h3>
+          <p>...</p>
+          <p>...</p>
+          <p>Sitography:</p>
+          <ul style="list-style-type:circle;">
+          <li>Sito 1: <a></a></li>
+          <li>Sito 2: <a></a></li>
+          <li>Sito 3: <a></a></li>
+        </ul>
+          <h2 id="list-item-9">Article Markup</h2>
             <p>...</p>
           </div>
         </div>
 
 
-      <div class="col col-lg-2">
+      <div id="docDx" class="col col-lg-2">
         <div class="position-sticky" style="top: 2rem;">
         <div id="list-example" class="list-group list-group-flush">
           <a class="list-group-item list-group-item-action" href="#list-item-1"><img src="img/btns/refresh.png" width="50px" height="50px"></a>
@@ -230,6 +231,7 @@
       </div>
 
     </main>
+  </div>
 
       <!-- FOOTER -->
     <div id="footerBar"></div>

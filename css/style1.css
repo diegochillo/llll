@@ -38,9 +38,7 @@
 
  header {
    background-color: black !important;
- }
-
-
+}
 
 body {
   background: #f6f1e8;
@@ -52,18 +50,55 @@ body {
   text-align: justify;
 }
 
-#coverstyle1 {
- background-image: url(framesxstyle1.png), url(framedxstyle1.png);
+/* documentatin pg */ 
+
+/* 
+#docSx {
+  background-image: url(framesxstyle1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#docDx {
+  background-image: url(framedxstyle1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+*/
+
+#documentationMain {
+background-image: url(framesxstyle1.png), url(framedxstyle1.png);
  background-size: contain;
  background-repeat: no-repeat;
  background-position: left, right;
 }
 
-#artMetaDiv {
-
-
+#docCenter{
+ height: 72vh;
+ overflow-y: scroll;
+}
+#docCenter::-webkit-scrollbar {
+  display: none;
 }
 
+#coverstyle1 {
+ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: left, right;
+ background-origin: border-box;
+}
+
+#artMetaDiv {
+  height: 54vh;
+  background-image: url(spacestyle1.png), url(space2style1.png);
+  background-size: 400px, 400px;
+  background-repeat: no-repeat;
+  background-position: bottom, top;
+  background-origin: content-box, content-box;
+}
 
 /*
 border-image: url(cornice2.png) 30 fill / 8px / 30px space;
@@ -266,10 +301,10 @@ filter: grayscale(90%);
 }
 
 hr {
-    border:0;
-    margin:5px;
-    height:40px;
-    background:url(decor.png);
+  border:0;
+  margin:5px;
+  height:40px;
+  background:url(decor.png);
 }
 
 #endArt {
@@ -284,6 +319,7 @@ hr {
 #metaData1, #metaData2, #metaData3 {
   background-image: url(metaFrame1.png);
   height: 48vh;
+  width: 100%;
   background-size: 350px;
   background-repeat: no-repeat;
   background-position: top;
