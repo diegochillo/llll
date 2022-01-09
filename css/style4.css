@@ -86,12 +86,12 @@ h1 {
   border: 0;
   color: #48eefc;
   border-radius: 20px;
- border-style: none;
-background: rgba(31, 38, 135, 0.199);
-box-shadow:  26px 26px 55px rgba(31, 38, 135, 0.199),
+  border-style: none;
+  background: rgba(31, 38, 135, 0.199);
+  box-shadow:  26px 26px 55px rgba(31, 38, 135, 0.199),
              -26px -26px 55px rgba(113, 115, 139, 0.199);
-    margin-right: 5px;
-    margin-bottom: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .nav-tabs .nav-link.active {
