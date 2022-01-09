@@ -406,3 +406,8 @@ hr {
   height: 10px;
   border-radius: 100px;
 }
+
+
+.list-group-item {
+  background-color: #f6f1e8;
+}
