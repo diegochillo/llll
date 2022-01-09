@@ -58,6 +58,7 @@ body {
  background-repeat: no-repeat;
  background-position: left, right;
 }
+
 /*
 border-image: url(cornice2.png) 30 fill / 8px / 30px space;
 width: 550px;
@@ -91,7 +92,7 @@ width: 550px;
 
 #issueMeta {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 110px;
 }
 
 #cover1 {
