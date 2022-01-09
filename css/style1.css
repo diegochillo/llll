@@ -59,6 +59,12 @@ body {
  background-position: left, right;
 }
 
+#artMetaDiv {
+
+
+}
+
+
 /*
 border-image: url(cornice2.png) 30 fill / 8px / 30px space;
 width: 550px;
@@ -123,6 +129,7 @@ width: 550px;
   border-radius: 50%;
   border: 1px solid black;
   padding: 18px;
+  text-transform: uppercase;
 }
 
 
@@ -311,6 +318,7 @@ hr {
 
 #tabs1, #tabs2, #tabs3 {
   justify-content: center !important;
+  border-bottom: transparent;
 }
 
 

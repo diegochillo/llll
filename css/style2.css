@@ -133,7 +133,10 @@ button {
   background-color: #d4121a;
   color:#FAF8F9;
 }
-
+#tabs1, #tabs2, #tabs3 {
+border-bottom: transparent;
+justify-content: start !important;
+}
 #tabs1 li a, #tabs2 li a, #tabs3 li a { 
    border-color: #FAF8F9;
    color: #FAF8F9;
