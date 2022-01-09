@@ -31,12 +31,12 @@ main {
 */
 
 button {
-border-radius: 50px;
-border-color: transparent !important;
-background: #ebebeb;
-box-shadow:  20px 20px 60px #c8c8c8,
-             -20px -20px 60px #ffffff;
-}
+  border-radius: 50px;
+  border-color: transparent !important;
+  background: #ebebeb;
+  box-shadow:  20px 20px 60px #c8c8c8,
+               -20px -20px 60px #ffffff;
+  }
 
 input, label {
   box-shadow: 
@@ -57,6 +57,34 @@ h1 {
    text-align: center;
   font-weight: 100;
 }
+
+/* cover issue */
+
+
+#issueMeta {
+  text-align: center;
+}
+
+#cover1 {
+ 
+}
+
+#issueArticles {
+  text-align: center;
+  height: auto;
+}
+
+.metaTitle {
+
+}
+
+#artN1, #artN2, #artN3 {
+
+}
+
+
+
+/* articles */
 
 .artiCol, .metaCol, #tabs1, #tabs2, #tabs3, #footerBar, #topBar {
   background: rgba(238, 207, 155, 0.45) !important;
@@ -290,15 +318,6 @@ box-shadow:  26px 26px 55px rgba(31, 38, 135, 0.199),
 
 .form {
 
-}
-
-button {
-  color: #61677C;
-  font-weight: bold;
-  box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  font-weight: 600;
 }
 
 button:hover {
