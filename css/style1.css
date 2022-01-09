@@ -37,7 +37,15 @@
  /* topbar */
 
  header {
-   background-color: black !important;
+   /* background-color: black !important; */
+}
+
+.headerCustom {
+  background-color: #f6f1e8 !important;
+}
+
+.footerCustom {
+  background-color: #f6f1e8 !important;
 }
 
 body {
@@ -50,9 +58,9 @@ body {
   text-align: justify;
 }
 
-/* documentatin pg */ 
+/* documentatin pg */
 
-/* 
+/*
 #docSx {
   background-image: url(framesxstyle1.png);
   background-size: contain;
@@ -108,7 +116,7 @@ width: 550px;
   margin-right: auto;
   margin-top: 50px;
   border: 20px solid;
-  
+
   border-image-outset: 0;
   border-image-repeat: round;
   border-width: 100px;
@@ -119,7 +127,7 @@ width: 550px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  
+
 }
 
 #coverdx {
@@ -183,7 +191,7 @@ h2 {
   text-transform: uppercase;
 }
 
-h3 
+h3
 
 .big-first-letter {
   font-family: ArabesqueInitialen;
@@ -213,9 +221,9 @@ height: 36vh;
 width: auto;
 border: 30px solid;
 border-image: url(basestyle1.png);
-border-image-slice: 0% 9% 100% 11%; 
-border-image-width: 20% 20% 20% 20%; 
-border-image-outset: 600px 0px 0px 0px; 
+border-image-slice: 0% 9% 100% 11%;
+border-image-width: 20% 20% 20% 20%;
+border-image-outset: 600px 0px 0px 0px;
 border-image-repeat: round round;
 padding: 0;
 }
