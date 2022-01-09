@@ -42,7 +42,7 @@ function cleanUpSS() {
   $('#cssstyle2').attr('media', 'none');
   $('#cssstyle3').attr('media', 'none');
   $('#cssstyle4').attr('media', 'none');
-  document.cookie = "themestatus=''";
+  document.cookie = "themestatus=";
 }
 
 
@@ -51,8 +51,7 @@ function applyCookie() {
   var parts = document.cookie.split('=');
   parts = parts[1].split(';');
   var cookieValue=parts[0];
-  // console.log(cookieValue);
-  if (cookieValue!='') {
+  if (cookieValue) {
     var eachVal=cookieValue.split(',');
     // console.log(eachVal);
     switchToSS (document.getElementById(eachVal[0]),document.getElementById(eachVal[1]),document.getElementById(eachVal[2]),document.getElementById(eachVal[3]));
