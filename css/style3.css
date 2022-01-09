@@ -44,6 +44,19 @@ body {
   font-family: Simple Things;
 }
 
+a {
+  color: fuchsia;
+}
+a:hover {
+  color: black;
+}
+
+.wmf-wp-with-preview {
+  color: fuchsia !important;
+  font-family: Zine Time !important;
+  border-bottom: 1px dashed fuchsia !important;
+}
+
 /* coverissue */
 
 #issueMeta {
@@ -81,19 +94,21 @@ body {
 .mention {
  background-image: url(mention.png);
  background-size: contain;
-
+ color: fuchsia;
 }
 
 /* nav-tabs */
 
 .nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
   justify-content: start !important;
-  border-bottom: transparent;
+  border-color: transparent !important;
   font-family: Doctor Punk;
 }
 
 .nav-tabs .nav-link.active {
- 
+  border-color: transparent !important;
+  background-color: transparent !important;
+  color: black;
 }
 
 #tabs1, #tabs2, #tabs3 {

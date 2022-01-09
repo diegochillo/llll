@@ -353,7 +353,7 @@ hr {
 }
 
 #tabs1, #tabs2, #tabs3 {
-  justify-content: center !important;
+  justify-content: space-evenly !important;
   border-bottom: transparent;
 }
 
