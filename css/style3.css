@@ -6,8 +6,13 @@
 }
 
 @font-face {
-  font-family: "Pool Riders";
-  src: url("./fonts/style3/Pool\ Riders\ Regular.otf");
+  font-family: "Black Casper";
+  src: url("./fonts/style3/BlackCasper.ttf");
+}
+
+@font-face {
+  font-family: "Doctor Punk";
+  src: url("./fonts/style3/doctor\ punk.otf");
 }
 @font-face {
   font-family: "Simple Things";
@@ -15,24 +20,30 @@
 }
 
 h1 {
+  font-family: Doctor Punk;
+  color: black;
+}
+
+h2, h3, .subtitle {
   font-family: ZineTime;
 }
 
+/*
 .subtitle {
   text-transform: uppercase;
   text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
+*/
 
 body {
-  background-color: gray;
+  background-color: white;
   background-image: url(zine.png);
   background-size: contain;
-  color: white;
+  color: black;
   font-family: Simple Things;
 }
 
 /* coverissue */
-
 
 #issueMeta {
   text-align: center;
@@ -66,11 +77,18 @@ body {
 
 /* articles */
 
+.mention {
+ background-image: url(mention.png);
+ background-size: contain;
+
+}
 
 /* nav-tabs */
 
 .nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
- 
+  justify-content: start !important;
+  border-bottom: transparent;
+  font-family: Doctor Punk;
 }
 
 .nav-tabs .nav-link.active {
@@ -78,8 +96,7 @@ body {
 }
 
 #tabs1, #tabs2, #tabs3 {
-  justify-content: start !important;
-  border-bottom: transparent;
+  
 }
 
 
@@ -93,7 +110,6 @@ body {
 
 
 .imgFrame {
- content: url(filterstyle3.png);
  width: 100%;
  height: 100%;
  position: relative;
