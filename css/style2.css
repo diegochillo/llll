@@ -63,7 +63,6 @@ body {
   background-blend-mode: color-burn;
   color: black;
   font-family: Rockwell;
-  cursor: url(50hand.png), auto;
 }
 
 button {
@@ -71,6 +70,56 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
   color:#FAF8F9;
+}
+
+/* homepage */
+
+
+
+
+/* cover issue */
+
+#cover1 {
+  height: 54vh;
+  background-image: url(bubble.png), url(bubble2.png);
+  background-size: 280px, 200px;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-origin: content-box, content-box;
+}
+
+#coverstyle1 {
+  background-image: url(pinup.png);
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-origin: content-box;
+ }
+
+#issueMeta {
+  text-align: center;
+  padding-top: 100px;
+  color: #FAF8F9;
+}
+
+#issueArticles {
+  text-align: center;
+  height: auto;
+}
+
+.metaTitle {
+  
+  text-transform: uppercase;
+}
+
+#artN1, #artN2, #artN3 {
+ 
+}
+
+#btnIssue {
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 18px;
 }
 
 /* nav-tabs */
@@ -147,9 +196,6 @@ img.itemIcon {
 
 /* spacee */ 
 
-#space{
-
-}
 
 .tech-slideshow {
   height: 81px;

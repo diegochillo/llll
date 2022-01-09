@@ -25,9 +25,10 @@ h1 {
 
 body {
   background-color: gray;
+  background-image: url(zine.png);
+  background-size: contain;
   color: white;
   font-family: Simple Things;
-  cursor: url(middlefinger.png), auto;
 }
 
 .articleImg {
@@ -74,6 +75,5 @@ img.itemIcon {
 
 
 #article1, #article2, #article3 {
-  background-image: url(bgstyle3.png);
-  background-size: cover;
+
 }
