@@ -137,17 +137,19 @@ button {
 border-bottom: transparent;
 justify-content: start !important;
 }
-#tabs1 li a, #tabs2 li a, #tabs3 li a { 
-   border-color: #FAF8F9;
-   color: #FAF8F9;
-   border-radius: 10px 10px 0 0;
-   background-color: #db5550;
-  }
 
-#tabs1 a:active, #tabs2 a:active, #tabs3 a:active {
+.nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
+  border-color: #FAF8F9;
+  color: #FAF8F9;
+  border-radius: 10px 10px 0 0;
+  background-color: #db5550;
+}
+
+.nav-tabs .nav-link.active {
   border-bottom-color: transparent !important;
   background-color: #d4121a !important; 
 }
+ 
 
 #tabs1 a:hover, #tabs2 a:hover, #tabs3 a:hover {
     border-bottom-color: transparent;
