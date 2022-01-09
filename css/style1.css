@@ -34,6 +34,14 @@
   src: url("./fonts/style1/flanker-griffo.bold-italic.ttf");
  }
 
+ /* topbar */
+
+ header {
+   background-color: black !important;
+ }
+
+
+
 body {
   background: #f6f1e8;
   background-position: center;
@@ -116,21 +124,6 @@ width: 550px;
   padding: 18px;
 }
 
-
-/* nav-tabs */
-
-.nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
-  border: 0;
-  border-bottom: 1px solid black;
-  color: #B63323;
-}
-
-.nav-tabs .nav-link.active {
-  color: white;
-  background-color: #B63323;
-  border-radius: 0;
-  border-bottom: 2px solid #B63323;
-}
 
 /* articles */
 
@@ -278,45 +271,7 @@ hr {
   margin: 5px;
 }
 
-.artiCol {
-  cursor: url(pointer2.png), pointer;
-}
-
-/*
-#space {
-  content: url(decoration.png);
-  height: auto;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-#frame1, #frame2, #frame3 {
-  content: url(framestyle1.png);
-  height: 150px;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 80%;
-}
-*/
-
-/* questo era con il border image
-#metaData1, #metaData2, #metaData3 {
-  height: 36vh;
-  width: auto;
-  border: 30px solid;
-  border-image: url(metaFrame1.png);
-  border-image-slice: 37% 17% 2% 14% fill;
-  border-image-width: 40% 20% 20% 20%; 
-  border-image-outset: 0px 0px 8px 0px; 
-  border-image-repeat: round round;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  padding: 0;
-}
-*/
+/* article page: metadata */
 
 #metaData1, #metaData2, #metaData3 {
   background-image: url(metaFrame1.png);
@@ -337,7 +292,29 @@ hr {
   display: none;
 }
 
-/*scrollbar */
+
+/* nav-tabs */
+
+.nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
+  border: 0;
+  border-bottom: 1px solid black;
+  color: #B63323;
+}
+
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: #B63323;
+  border-radius: 0;
+  border-bottom: 2px solid #B63323;
+}
+
+#tabs1, #tabs2, #tabs3 {
+  justify-content: center !important;
+}
+
+
+/* scrollbar */
+
 #article1::-webkit-scrollbar-track {
   background-image: url(scrollstyle1.png);
   background-size: contain;
