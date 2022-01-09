@@ -90,6 +90,8 @@ h1 {
 background: rgba(31, 38, 135, 0.199);
 box-shadow:  26px 26px 55px rgba(31, 38, 135, 0.199),
              -26px -26px 55px rgba(113, 115, 139, 0.199);
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .nav-tabs .nav-link.active {
