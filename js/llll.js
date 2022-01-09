@@ -51,10 +51,10 @@ function applyCookie() {
   var parts = document.cookie.split('=');
   parts = parts[1].split(';');
   var cookieValue=parts[0];
-  console.log(cookieValue);
+  // console.log(cookieValue);
   if (cookieValue!='') {
     var eachVal=cookieValue.split(',');
-    console.log(eachVal);
+    // console.log(eachVal);
     switchToSS (document.getElementById(eachVal[0]),document.getElementById(eachVal[1]),document.getElementById(eachVal[2]),document.getElementById(eachVal[3]));
   } else {
     cleanUpSS();
@@ -197,7 +197,7 @@ function getMetadataNew(nArticle,metaList) {
 
     var elementReadTextOnly = $(elementReadId).text();
     var analysisRes=compendium.analyse(elementReadTextOnly,null, ['entities','negation','type','numbers']);
-    console.log( analysisRes );
+    // console.log( analysisRes );
 
     var quanti = analysisRes.length;
     var totWords = 0;

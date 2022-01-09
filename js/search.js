@@ -1,16 +1,19 @@
 var searchObj = [];
 var getHtml;
+var issuesqt=0;
 
-// Get the number of issues defined in issuesDb.json
-$.getJSON('./issuesDb.json', function(objson){
-    //console.log(objson.topic);
-    const issues=objson.issues.length;
-}
+// Get the number of articles from issuesDb.json
+var value= $.ajax({
+      url: './issuesDb.json',
+      async: false
+   }).responseText;
+var objson=JSON.parse(value);
+issuesqt=objson.issues.length;
 
 const articles=[1,2,3];
 
 // Reads every article and puts the content into the array (that is the search object)
-for (i=1;i<=issues;i++) {
+for (i=1;i<=issuesqt;i++) {
   for (let a of articles) {
     getHtml = $.ajax({type: "GET", url: "articles/article" + i + "_" + a + ".html", async: false}).responseText;
     getHtml = extractContent(getHtml);
@@ -23,7 +26,7 @@ for (i=1;i<=issues;i++) {
 
 //console.log(searchObj);
 window.pages=searchObj;
-console.log(window.pages);
+//console.log(window.pages);
 
 var searchIndex = lunr(function() {
     this.ref("id");
