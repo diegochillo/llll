@@ -69,10 +69,9 @@ h1 {
 
 }
 
-
 /* articles */
 
-.artiCol, .metaCol, #tabs1, #tabs2, #tabs3, #footerBar, #topBar {
+.artiCol, .metaCol, #footerBar, #topBar {
   background: rgba(238, 207, 155, 0.45) !important;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ) !important;
   backdrop-filter: blur( 13px ) !important;
@@ -83,24 +82,25 @@ h1 {
 
 /* metadata nav tablist style */
 
-#tabs1, #tabs2, #tabs3 {
-border-radius: 20px;
-border-style: none;
+.nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
+  border: 0;
+  color: #48eefc;
+  border-radius: 20px;
+ border-style: none;
 background: rgba(31, 38, 135, 0.199);
 box-shadow:  26px 26px 55px rgba(31, 38, 135, 0.199),
              -26px -26px 55px rgba(113, 115, 139, 0.199);
 }
 
-.nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
-  border: 0;
-  border-bottom: 1px solid grey;
-  color: gray;
+.nav-tabs .nav-link.active {
+  color: black;
+  border-bottom: 2px solid #48eefc;
+  background-color: #48eefc;
 }
 
-.nav-tabs .nav-link.active {
-  color: #000000;
-  border-radius: 0;
-  border-bottom: 2px solid #48eefc;
+#tabs1, #tabs2, #tabs3 {
+  justify-content: start !important;
+  border-bottom: transparent;
 }
 
 
