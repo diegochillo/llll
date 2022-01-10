@@ -115,12 +115,17 @@ a:hover {
   justify-content: start !important;
   border-color: transparent !important;
   font-family: Doctor Punk;
+  background-image: url(circle4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+  font-size: 18px;
 }
 
 .nav-tabs .nav-link.active {
   border-color: transparent !important;
   background-color: transparent !important;
-  color: black;
+  color: rgb(255, 0, 255);
 }
 
 #tabs1, #tabs2, #tabs3 {
@@ -128,6 +133,23 @@ a:hover {
   border-bottom: transparent;
 }
 
+#metaRow {
+}
+
+#metaData1, #metaData2, #metaData3 {
+  background-image: url(tornpaper.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 38vh;
+}
+
+#frameData1, #frameData2, #frameData3 {
+  height: 24vh;
+  overflow-y: scroll;
+  margin-top: 60px;
+}
 
 .articleImg {
   filter: brightness(80%) saturate(139%) contrast(198%);

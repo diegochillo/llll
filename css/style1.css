@@ -36,18 +36,18 @@
 
  /* topbar */
 
- header {
-   /* background-color: black !important; */
-}
-
 .headerCustom {
   background-color: #f6f1e8 !important;
+  border-bottom: 2px solid black;
 }
 
+/* footer */ 
 .footerCustom {
   background-color: #f6f1e8 !important;
+  border-top: 2px solid black;
 }
 
+/* text */ 
 body {
   background: #f6f1e8;
   background-position: center;
@@ -60,22 +60,6 @@ body {
 
 /* documentatin pg */
 
-/*
-#docSx {
-  background-image: url(framesxstyle1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-}
-
-#docDx {
-  background-image: url(framedxstyle1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-}
-*/
-
 #documentationMain {
 background-image: url(framesxstyle1.png), url(framedxstyle1.png);
  background-size: contain;
@@ -83,12 +67,12 @@ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
  background-position: left, right;
 }
 
-#docCenter{
- height: 72vh;
- overflow-y: scroll;
+.list-group-item {
+  border-bottom: 1px solid black;
 }
-#docCenter::-webkit-scrollbar {
-  display: none;
+
+#list-example {
+  box-shadow: black;
 }
 
 #coverstyle1 {
@@ -107,37 +91,6 @@ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
   background-position: bottom, top;
   background-origin: content-box, content-box;
 }
-
-/*
-border-image: url(cornice2.png) 30 fill / 8px / 30px space;
-width: 550px;
-  height: 18vh;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  border: 20px solid;
-
-  border-image-outset: 0;
-  border-image-repeat: round;
-  border-width: 100px;
-  padding: 20px;
-
-#coversx {
-  background-image: url(framesxstyle1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-
-#coverdx {
-  background-image: url(framedxstyle1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-*/
 
 #issueMeta {
   text-align: center;
