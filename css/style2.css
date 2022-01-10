@@ -31,6 +31,11 @@
 }
 
 /* topbar */
+
+.headerCustom {
+  background-color: transparent !important;
+}
+
 #mainMenu li {
   background-image: url(button.png);
   background-size: cover;
@@ -44,6 +49,12 @@
 
 #issuesList li {
   background: none;
+}
+
+/* footer */ 
+
+.footerCustom {
+  background-color: transparent!important;
 }
 
 /* text */ 

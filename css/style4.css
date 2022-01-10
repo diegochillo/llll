@@ -15,21 +15,17 @@
   src: url("./fonts/style4/britanica-heavy-expanded.ttf");
  }
 
+ /* topbar (background and glass effect specified with the articles and the footer) */
+
+
+
+/* text */
 
 body {
  background-image: url("graphic3.jpg");
  font-family: Ankitor Reg;
  background-size: contain;
 }
-
-/*
-main {
-  background-image: url("graphic.jpg");
-  background-size: contain;
-}
-*/
-
-
 
 h2, h3, .subtitle {
   font-family: Britanica;
@@ -45,8 +41,12 @@ h1 {
   font-weight: 100;
 }
 
-/* cover issue */
+/* homepage */ 
 
+
+
+
+/* cover issue */
 
 #issueMeta {
   text-align: center;
@@ -71,7 +71,7 @@ h1 {
 
 /* articles */
 
-.artiCol, .metaCol, #footerBar, #topBar {
+.artiCol, .metaCol, #footerBar, .headerCustom {
   background: rgba(238, 207, 155, 0.45) !important;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ) !important;
   backdrop-filter: blur( 13px ) !important;
@@ -296,13 +296,13 @@ h1 {
  clip-path: ellipse(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
 }
 
-/* footer */
 
-#footer {
-  background-color: #EBECF0;
-  color: #BABECC;
-  text-shadow: 1px 1px 1px #FFF;
+/* footer */ 
+
+.footerCustom {
+  background-color: transparent!important;
 }
+
 
 .form {
 
