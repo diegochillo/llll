@@ -9,7 +9,6 @@ $(function(){$("#footerBar").load("components/footer.html"); });
 applyCookie();
 
 
-//$(document).ready(function(){
 /* Loads the articles inside the columns using JQuery*/
 function loadArticles() {
 
@@ -24,7 +23,6 @@ function loadArticles() {
    //console.log(issueNumber);
 }
 
-//});
 
 
 /* Enables the stylesheet with ID nodeE and disables the three others */
@@ -68,7 +66,6 @@ function showMeta(elementReadId,label,chkbx,metaType) {
     // var thisTimeColor = "#" + Math.floor((Math.random() * 15000000) + 777215).toString(16);
     var thisTimeColor = "hsl(" + 360 * Math.random() + ',' + (25 + 70 * Math.random()) + '%,' + (75 + 10 * Math.random()) + '%)';
 
-
     var numArticles = [1,2,3];
     for (let nA of numArticles) { // This is to cycle all the articles
 
@@ -84,7 +81,7 @@ function showMeta(elementReadId,label,chkbx,metaType) {
             $(this).css("background-color", thisTimeColor);
               if (!found) {
                 $(elementReadId).animate({
-                    scrollTop: $(elementReadId).scrollTop() + $(this).offset().top - 500
+                    scrollTop: $(elementReadId).scrollTop() + $(this).offset().top - 700
                 }, 1000);
                 found=true;
               }
