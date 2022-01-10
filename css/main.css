@@ -51,6 +51,15 @@ body {
   transform: translateY(-10px);
 }
 
+/* documentation */ 
+
+#docCenter{
+  height: 72vh;
+  overflow-y: scroll;
+ }
+ #docCenter::-webkit-scrollbar {
+   display: none;
+ }
 
 /* Article columns */
 .artiCol {
