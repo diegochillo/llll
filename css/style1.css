@@ -209,7 +209,6 @@ li.artiCol {
 
 .articleImg {
 filter: grayscale(90%);
-// Browser Specific
 -webkit-filter: grayscale(90%);
 -moz-filter: grayscale(90%);
 -o-filter: grayscale(90%);
