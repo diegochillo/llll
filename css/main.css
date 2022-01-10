@@ -17,6 +17,18 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  text-align: justify;
+}
+
+button {
+  position: center;
+}
+
 /* homepage */
 
 #itemIcon1:hover {
@@ -49,6 +61,10 @@ body {
 
 #arrow4:hover {
   transform: translateY(-10px);
+}
+
+#harvardTest h3, #learnANewWord h3{
+ text-align: center;
 }
 
 /* documentation */ 
