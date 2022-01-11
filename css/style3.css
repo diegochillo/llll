@@ -139,7 +139,6 @@ a:hover {
   background-repeat: no-repeat;
   background-origin: border-box;
   height: 40vh;
-  
 }
 
 #issueArticles {
@@ -204,7 +203,7 @@ a:hover {
 #metaData1, #metaData2, #metaData3 {
   background-image: url(tornpaper.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
   height: 38vh;
