@@ -116,33 +116,33 @@
 
 
           <h3 id="list-item-3">Markup</h3>
-          <p>The articles were tagged with significant metadata using <code>data-*</code> attributes, that gives us the ability to embed custom data inside HTML elements and avoid Ajax calls or server-side database queries.</p>
+          <p>The articles were tagged with significant metadata using <code>data-*</code> attributes, that give us the ability to embed custom data inside HTML elements and avoid Ajax calls or server-side database queries.</p>
           <p>Each tag contains the following attributes (required for the selector to work properly):</p>
           <ul>
-            <li><code>data-label</code>: It's the label that will be used in the Metadata Selector;</li>
+            <li><code>data-label</code>: It's the label that will be shown in the Metadata Selector;</li>
             <li><code>data-sort</code>: It's the string that will be used for sorting (e.g. for persons, with the last name before the first name);</li>
             <li><code>about</code>: Is the normalized topic indicator (e.g. both "social group" and "community" could be tagged with the <code>about="society"</code> attribute)</li>
           </ul>
 
           <h3 id="list-item-3">Metadata Selection</h3>
-          <p>Each article has a related Metadata Selector on top. It organizes into distinct tabs the metadata categories as identified inside the content. Each tab contains the list of words marked in the article body for that category, ordered by the content of the <code>data-sort</code> attribute.</p>
-          <p>Cliccando sul checkbox corrispondente a un valore, gli articoli scrollano fino a visualizzare la prima occorrenza del dato, e ne evidenziano ogni altra occorrenza con un colore di sfondo casuale. L'etichetta del checkbox selezionato viene evidenziata con lo stesso colore. Deselezionando il checkbox, gli sfondi dei testi tornano trasparenti.</p>
-          <p>A prescindere dalle categorie di metadati presenti, in fondo a ogni Metadata Selector è presente un tab intitolato "Analysis" che contiene i dati descritti nella sezione seguente.</p>
+          <p>Each article has a related Metadata Selector on top. It organizes into distinct tabs the metadata categories as identified inside the content. Each tab lists the words marked in the article body with that category, ordered by the content of the <code>data-sort</code> attribute.</p>
+          <p>By selecting a checkbox, the articles scroll to the first occurrence of the selected data, while every occurrence is highlighted with a random background color. The label of the selected checkbox gets highlighted in the same color. By clearing the checkbox, the text backgrounds become transparent again.</p>
+          <p>Regardless of the metadata categories used, at the bottom of each Metadata Selector there's a tab called "Analysis" which contains the data described in the next section.</p>
 
           <h3 id="list-item-3">Text Analysis</h3>
-          <p>Al caricamento di ciascun articolo inserito nel framework viene eseguita un'analisi statistica del testo che restituisce le seguenti informazioni:</p>
+          <p>When each article is loaded into the framework, a statistical analysis of the text is performed which returns the following information:</p>
           <ul>
             <li>Total words, words average length and number of sentences identified;</li>
-            <li>Sentiment: The global sentiment score, that is the arithmetic mean of the sentiment score of each sentence;</li>
+            <li>Sentiment: The global sentiment score, that is the arithmetic mean of the sentiment score of each sentence. Single words are given a sentiment score from -5 to +5.</li>
             <li>Sentiment amplitude: The arithmetic mean of the differences between the lowest and the highest sentiment value for each sentence (single word scores range from -5 to +5);</li>
             <li>Politeness: The arithmetic mean of the politeness of each sentence, evaluated on many different features of natural language;</li>
             <li>Dirtiness: The arithmetic mean of the dirtiness of each sentencs, evaluated on many different features of natural language.</li>
-            <li>L'elenco delle prime 10 parole più presenti nel testo in ordine decrescente di frequenza e al netto delle stopwords più comuni.</li>
+            <li>The list of the first 10 most frequently used words in descending order, and net of the most common stopwords.</li>
           </ul>
-          <p>Gli score sintetici sentiment, politeness e dirtiness vengono calcolati utilizzando il componente JavaScript di terze parti <a href="https://github.com/Ulflander/compendium-js" target:"_blank">Compendium JS</a>. La procedura per il calcolo della frequenza delle parole e la visualizzazione delle prime dieci posizioni in ordine discendente è stata invece interamente scritta from scratch. L'elenco delle stopwords utilizzato è quello standard della <a href="https://gist.github.com/sebleier/554280" target="_blank">NLTK Library</a>.</p>
+          <p>The synthetic sentiment, politeness and dirtiness scores are calculated using a third party JavaScript component named <a href="https://github.com/Ulflander/compendium-js" target:"_blank">Compendium JS</a>. The procedure for calculating words frequency and displaying the first ten positions in descending order was entirely written from scratch. The stopwords list is the standard one from the <a href="https://gist.github.com/sebleier/554280" target="_blank">NLTK Library</a>.</p>
 
           <h3 id="list-item-3">Wikipedia Previews</h3>
-          <p>Parti di testo opportunamente taggate possono visualizzare l'anteprima della pagina di Wikipedia corrispondente quando ci si passa sopra con il mouse. I nomi per cui è stata attivata questa funzione visualizzano la W del logo Wikipedia in fondo a destra parzialmente sovrapposta al testo come watermark.</p>
+          <p>Properly tagged parts of text show a preview of the corresponding Wikipedia page when hovering. Names with this feature enabled have the W of the Wikipedia logo at the right end, partially overlaid on the text as a watermark.</p>
           <p>Questa funzione è stata realizzata tramite il componente JavaScript <a href="https://github.com/wikimedia/wikipedia-preview" target="_blank">Wikipedia Preview</a>. Gli elementi su cui è attiva la funzione hanno l'attributo booleano <code>data-wikipedia-preview</code> e la classe <code>wmf-wp-with-preview</code>.</p>
 
           <h3>Internal Search Engine</h3>
