@@ -78,6 +78,11 @@ button {
    display: none;
  }
 
+/* Issue Cover */
+#issueMeta {
+  text-align: center !important;
+}
+
 /* Article columns */
 .artiCol {
     height: 66vh;
