@@ -23,6 +23,8 @@
 
 .headerCustom {
   background-color: transparent !important;
+  background-image: url(topb3r.png);
+  background-size: contain;
 }
 .headerCustom h1 {
   color: fuchsia;
@@ -35,6 +37,8 @@
 
 .footerCustom {
   background-color: transparent !important;
+  background-image: url(footer.png);
+  background-size: cover;
 }
 .footerCustom p {
 }
