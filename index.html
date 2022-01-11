@@ -43,12 +43,12 @@
 
     <!-- body -->
 
-    <main class="container-fluid justify-content-md-around my-4">
+    <main id="mainBody" class="container-fluid justify-content-md-around my-2">
 
       <div class="nav-scroller align-items-start py-0 px-4 mb-4">
         <nav id="keywordsList" class="nav d-flex justify-content-between">
             <!-- Keywords list loaded by JS -->
-            <p class="p-2 fw-normal text-dark" href="#"><input type="text" id="currentDateTime" disabled></p>
+            <p class="p-2 fw-normal text-dark" href="#"><input type="text" id="currentDateTime"></p>
         </nav>
       </div>
 
@@ -57,7 +57,7 @@
       <div class="col">
         <div class="position-sticky" style="top: 2rem;">
           <div class="p-4 mb-3 bg-light rounded customCol">
-              <h4 class="fst-italic">Think you’re not biased? Think again</h4>
+              <h3 class="fst-italic">Think you’re not biased? Think again</h3>
               <p class="mb-0"><b>Project Implicit</b> is a non-profit organization committed to advancing scientific knowledge about stereotypes, prejudice, and other group-based biases.</p>
               <button class="btn mt-3 btn-outline-dark" type="submit"><a href=" https://implicit.harvard.edu/implicit/takeatest.html">Take their test now</a></button>
               <button class="btn mt-3 btn-outline-dark" type="submit"><a href="https://www.projectimplicit.net">Learn more about the project</a></button>
@@ -107,7 +107,7 @@
       <div class="col">
         <div class="position-sticky" style="top: 2rem;">
           <div class="p-4 mb-3 bg-light rounded customCol">
-            <h4 class="fst-italic">Learn a new word!</h4>
+            <h3 class="fst-italic">Learn a new word!</h3>
             <strong class="mb-0" id="learnterm">:</strong>  <!-- This div gets filled up with random term from glossaryDb.json -->
             <span class="mb-0" id="learndefinition"></span> <!-- This div gets filled up with correspondent definition from glossaryDb.json -->
           </div>
@@ -215,11 +215,11 @@
     var cntr=0;
     for (let item of kwSet){
       if (cntr<9) {
-        $("#keywordsList").prepend('<p class="p-2 link-secondary">' + item + '</p>');
+        $("#keywordsList").prepend('<p class="p-2 link-secondary kwCustom">' + item + '</p>');
         cntr++;
       }
     }
-    $("#keywordsList").prepend('<p class="p-2 fw-normal text-dark">Keywords:</p>');
+    $("#keywordsList").prepend('<p id="kW" class="p-2 fw-normal text-dark">Keywords:</p>');
   }).fail(function(){
     console.log("Get from issuesDb: an error has occurred.");
   });

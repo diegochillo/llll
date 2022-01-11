@@ -16,7 +16,16 @@
  }
 
  /* topbar (background and glass effect specified with the articles and the footer) */
+#mainMenu li {
+  font-family: Britanica;
+  text-transform: uppercase;
+  font-style: italic;
+}
 
+#issuesList li {
+  font-family: Ankitor Reg;
+  text-transform: lowercase;
+}
 
 
 /* text */
@@ -27,7 +36,7 @@ body {
  background-size: contain;
 }
 
-h2, h3, .subtitle {
+h2, h3, .subtitle, #kW {
   font-family: Britanica;
   font-style: italic;
   font-weight: 100;
@@ -43,8 +52,26 @@ h1 {
 
 /* homepage */ 
 
+.kwCustom {
+  color: #48eefc;
+  border-style: none;
+  margin-right: 5px;
+  background: rgba(238, 207, 155, 0.45) !important;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ) !important;
+  backdrop-filter: blur( 13px ) !important;
+  -webkit-backdrop-filter: blur( 13px ) !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba( 255, 255, 255, 0.18 ) !important;
+}
 
-
+#currentDateTime {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+  font-family: Britanica;
+  font-style: italic;
+  text-shadow: none;
+}
 
 /* cover issue */
 
@@ -71,7 +98,7 @@ h1 {
 
 /* articles */
 
-.artiCol, .metaCol, #footerBar, .headerCustom {
+.artiCol, .metaCol, #footerBar, .headerCustom, .dropdown-menu, .dropdown-item:hover {
   background: rgba(238, 207, 155, 0.45) !important;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ) !important;
   backdrop-filter: blur( 13px ) !important;
@@ -82,7 +109,7 @@ h1 {
 
 /* metadata nav tablist style */
 
-.nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
+.nav-tabs .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover, .dropdown-item:hover {
   border: 0;
   color: #48eefc;
   border-radius: 20px;
