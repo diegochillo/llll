@@ -31,24 +31,6 @@
 
     <!-- Load our JS Library -->
     <script language="javascript" src="js/llll.js"></script>
-
-    <!-- style for the spaceholders -->
-    <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-
 </head>
 
 
@@ -61,22 +43,20 @@
 
     <!-- body -->
 
-    <main class="container justify-content-md-center my-4">
+    <main class="container-fluid justify-content-md-around my-4">
 
-      <div class="nav-scroller py-0 mb-4">
+      <div class="nav-scroller align-items-start py-0 px-4 mb-4">
         <nav id="keywordsList" class="nav d-flex justify-content-between">
             <!-- Keywords list loaded by JS -->
             <p class="p-2 fw-normal text-dark" href="#"><input type="text" id="currentDateTime" disabled></p>
         </nav>
       </div>
 
-    </div>
-
-    <div class="row g-5">
+    <div class="row align-items-start px-4">
 
       <div class="col">
         <div class="position-sticky" style="top: 2rem;">
-          <div class="p-4 mb-3 bg-light rounded">
+          <div class="p-4 mb-3 bg-light rounded customCol">
               <h4 class="fst-italic">Think you’re not biased? Think again</h4>
               <p class="mb-0"><b>Project Implicit</b> is a non-profit organization committed to advancing scientific knowledge about stereotypes, prejudice, and other group-based biases.</p>
               <button class="btn mt-3 btn-outline-dark" type="submit"><a href=" https://implicit.harvard.edu/implicit/takeatest.html">Take their test now</a></button>
@@ -85,7 +65,7 @@
         </div>
       </div>
 
-      <div class="col-6">
+      <div class="col col-md-6">
           <nav class="navbar navbar-light justify-content-center">
     <a class="nav-item nav-link active " href="#"onclick="switchToSS (document.getElementById('cssstyle1'),document.getElementById('cssstyle2'),document.getElementById('cssstyle3'),document.getElementById('cssstyle4'))">
       <img id="itemIcon1" class="itemIcon" src="img/btns/one.png" width="92" height="92" alt="onefinger">
@@ -126,7 +106,7 @@
 
       <div class="col">
         <div class="position-sticky" style="top: 2rem;">
-          <div class="p-4 mb-3 bg-light rounded">
+          <div class="p-4 mb-3 bg-light rounded customCol">
             <h4 class="fst-italic">Learn a new word!</h4>
             <strong class="mb-0" id="learnterm">:</strong>  <!-- This div gets filled up with random term from glossaryDb.json -->
             <span class="mb-0" id="learndefinition"></span> <!-- This div gets filled up with correspondent definition from glossaryDb.json -->
