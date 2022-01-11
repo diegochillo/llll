@@ -36,7 +36,7 @@
     <div id="topBar" class="sticky-top"></div> <!-- A jQuery function loads content inside this div -->
 
     <!-- body -->
-    
+
     <div id="documentationMain">
     <main class="container justify-content-md-center" data-bs-spy="scroll" data-bs-target="#navbar-example">
 
@@ -116,16 +116,16 @@
 
 
           <h3 id="list-item-3">Markup</h3>
-          <p>Gli articoli sono stati taggati con i metadati ritenuti significativi per la successiva consultazione. Sono stati utilizzati gli attributi HTML <code>data-*</code></p>
-          <p>In particolare, ciascun tag contiene i seguenti attributi (che sono richiesti per il corretto funzionamento del selettore):</p>
+          <p>The articles were tagged with significant metadata using <code>data-*</code> attributes, that gives us the ability to embed custom data inside HTML elements and avoid Ajax calls or server-side database queries.</p>
+          <p>Each tag contains the following attributes (required for the selector to work properly):</p>
           <ul>
             <li><code>data-label</code>: It's the label that will be used in the Metadata Selector;</li>
             <li><code>data-sort</code>: It's the string that will be used for sorting (e.g. for persons, with the last name before the first name);</li>
-            <li><code>about</code>: è l'indicatore normalizzato del topic (es. i testi "social group" e "community" possono essere taggati entrambi con attributo <code>about="society"</code>)</li>
+            <li><code>about</code>: Is the normalized topic indicator (e.g. both "social group" and "community" could be tagged with the <code>about="society"</code> attribute)</li>
           </ul>
 
           <h3 id="list-item-3">Metadata Selection</h3>
-          <p>Sopra ogni articolo compare il corrispondente Metadata Selector, che organizza in tab distinti le categorie di metadati identificate nel contenuto. Ogni tab contiene l'elenco delle voci taggate nel corpo dell'articolo per quella categoria, ordinate secondo il contenuto dell'attributo <code>data-sort</code>.</p>
+          <p>Each article has a related Metadata Selector on top. It organizes into distinct tabs the metadata categories as identified inside the content. Each tab contains the list of words marked in the article body for that category, ordered by the content of the <code>data-sort</code> attribute.</p>
           <p>Cliccando sul checkbox corrispondente a un valore, gli articoli scrollano fino a visualizzare la prima occorrenza del dato, e ne evidenziano ogni altra occorrenza con un colore di sfondo casuale. L'etichetta del checkbox selezionato viene evidenziata con lo stesso colore. Deselezionando il checkbox, gli sfondi dei testi tornano trasparenti.</p>
           <p>A prescindere dalle categorie di metadati presenti, in fondo a ogni Metadata Selector è presente un tab intitolato "Analysis" che contiene i dati descritti nella sezione seguente.</p>
 
