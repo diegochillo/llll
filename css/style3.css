@@ -23,10 +23,12 @@
 
 .headerCustom {
   background-color: transparent !important;
-  box-shadow: none;
 }
 .headerCustom h1 {
   color: fuchsia;
+}
+#topBar {
+ 
 }
 
 /* footer */ 
@@ -35,7 +37,6 @@
   background-color: transparent !important;
 }
 .footerCustom p {
-  color: white;
 }
 
 h1 {
@@ -72,7 +73,6 @@ a:hover {
 /* homepage
 
 #harvardTest, #learnANewWord {
-  background-image: url(tornpaper.png) !important;
   background-color: transparent !important;
   background-position: center;
   background-size: cover;
@@ -82,30 +82,37 @@ a:hover {
 }
  */
 
+#mainBody {
+  background-image: url(coverstyl3.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-origin: margin-box;
+  background-size: 400px;
+}
+
 .customCol{
   background-color: transparent !important;
 }
-
 
 /* coverissue */
 
 .coverCustom {
   background-color: transparent !important;
-  
 }
+
 #art1 {
-  transform: rotate(-7deg);
+  transform: rotate(-5deg);
   position: relative;
 }
 #art2 {
-  transform: rotate(7deg);
+  transform: rotate(5deg);
   position: relative;
-  top: 40px;
+  top: 50px;
 }
 #art3 {
-  transform: rotate(-7deg);
+  transform: rotate(-5deg);
   position: relative;
-  top: 40px;
+  top: 50px;
 }
 
 #coverstyle1 {
