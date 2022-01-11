@@ -29,9 +29,7 @@
 .headerCustom h1 {
   color: fuchsia;
 }
-#topBar {
- 
-}
+
 
 /* footer */ 
 
@@ -127,13 +125,15 @@ a:hover {
   background-size: auto, 400px;
 }
 
-#issueMeta{
+#issueMeta p {
   text-align: center;
-  padding: 90px 10px 90px 90px;
   margin-left: auto;
   margin-right: auto;
-  height: 36vh;
   overflow-y: clip;
+}
+
+#issueMeta {
+  padding-top: 80px;
 }
 
 #cover1 {
