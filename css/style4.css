@@ -93,12 +93,16 @@ h1 {
 }
 
 #artN1, #artN2, #artN3 {
+}
 
+.coverCustom {
+  margin-bottom: 15px;
+  text-align: justify;
 }
 
 /* articles */
 
-.artiCol, .metaCol, #footerBar, .headerCustom, .dropdown-menu, .dropdown-item:hover {
+.artiCol, .metaCol, #footerBar, .headerCustom, .dropdown-menu, .dropdown-item:hover, .customCol, .coverCustom {
   background: rgba(238, 207, 155, 0.45) !important;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ) !important;
   backdrop-filter: blur( 13px ) !important;
