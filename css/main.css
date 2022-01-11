@@ -55,7 +55,7 @@ button {
 }
 
 #arrow4 {
-  position: absolute;
+  position: relative;
   transition: transform 250ms;
 }
 
@@ -76,7 +76,7 @@ button {
  }
  #docCenter::-webkit-scrollbar {
    display: none;
- }
+}
 
 /* Issue Cover */
 #issueMeta {
