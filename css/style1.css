@@ -48,6 +48,21 @@
 }
 
 /* text */ 
+
+
+h1 {
+  color: #B63323;
+  font-family: Flanker Bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2, h3, #kW {
+  color: #B63323 !important;
+  text-transform: uppercase;
+}
+
 body {
   background: #f6f1e8;
   background-position: center;
@@ -56,6 +71,22 @@ body {
   font-family: Flanker Reg;
   font-size: 18px;
   text-align: justify;
+}
+
+/* homepage */ 
+
+.kwCustom {
+  font-family: Flanker Bold;
+  color: black;
+}
+
+#currentDateTime {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  color: #B63323 !important;
+  text-transform: uppercase;
 }
 
 /* documentatin pg */
@@ -131,20 +162,7 @@ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
 
 /* articles */
 
-h1 {
-  color: #B63323;
-  font-family: Flanker Bold;
-  font-size: 30px;
-  text-transform: uppercase;
-  text-align: center;
-}
 
-h2 {
-  color: #B63323;
-  text-transform: uppercase;
-}
-
-h3
 
 .big-first-letter {
   font-family: ArabesqueInitialen;
