@@ -23,12 +23,19 @@
 
 .headerCustom {
   background-color: transparent !important;
+  box-shadow: none;
+}
+.headerCustom h1 {
+  color: fuchsia;
 }
 
 /* footer */ 
 
 .footerCustom {
-  background-color: transparent!important;
+  background-color: transparent !important;
+}
+.footerCustom p {
+  color: white;
 }
 
 h1 {
@@ -40,13 +47,6 @@ h1 {
 h2, h3, .subtitle {
   font-family: ZineTime;
 }
-
-/*
-.subtitle {
-  text-transform: uppercase;
-  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-}
-*/
 
 body {
   background-color: white;
@@ -69,15 +69,69 @@ a:hover {
   border-bottom: 1px dashed fuchsia !important;
 }
 
+/* homepage */
+
+#harvardTest, #learnANewWord {
+  background-image: url(tornpaper.png) !important;
+  background-color: transparent !important;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 38vh;
+}
+
+.customCol{
+  background-color: transparent !important;
+}
+
+
 /* coverissue */
 
-#issueMeta {
-  text-align: center;
+.coverCustom {
+  background-color: transparent !important;
   
+}
+#art1 {
+  transform: rotate(-7deg);
+  position: relative;
+}
+#art2 {
+  transform: rotate(7deg);
+  position: relative;
+  top: 40px;
+}
+#art3 {
+  transform: rotate(-7deg);
+  position: relative;
+  top: 40px;
+}
+
+#coverstyle1 {
+  background-image: url(sexpistols.png), url(coverstyl3.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom right, top left;
+  background-origin: content-box, margin-box;
+  background-size: auto, 400px;
+}
+
+#issueMeta{
+  text-align: center;
+  padding: 90px 10px 90px 90px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 36vh;
+  overflow-y: clip;
 }
 
 #cover1 {
- 
+  background-image: url(tornpaper.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 40vh;
+  
 }
 
 #issueArticles {
@@ -86,20 +140,25 @@ a:hover {
 }
 
 .metaTitle {
-
-  text-transform: uppercase;
+  font-family: ZineTime;
 }
 
 #artN1, #artN2, #artN3 {
-  
+  font-family: ZineTime;
   color: black;
 }
 
-#btnIssue {
-  border-radius: 50%;
-  border: 1px solid black;
-  padding: 18px;
+#openIssue {
+  margin-top: 40px;
 }
+#btnIssue {
+  padding: 20px;
+  background-image: url(btn3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+}
+
 
 /* articles */
 
@@ -133,8 +192,6 @@ a:hover {
   border-bottom: transparent;
 }
 
-#metaRow {
-}
 
 #metaData1, #metaData2, #metaData3 {
   background-image: url(tornpaper.png);
