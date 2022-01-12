@@ -273,11 +273,14 @@ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
   color: black;
 }
 
-#btnIssue {
+#btnIssue, .customCol button, #centralMain button {
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid black !important;
+  background-color: #f6f1e8 !important;
+  text-align: center;
   padding: 18px;
-  text-transform: uppercase;
+  text-transform: uppercase !important;
+  color:#B63323;
 }
 
 #openIssue {
@@ -286,8 +289,6 @@ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
 
 
 /* articles */
-
-
 
 .big-first-letter {
   font-family: ArabesqueInitialen;
