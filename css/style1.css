@@ -107,6 +107,7 @@ footer form {
   border: 1px solid black;
   background-color: #f6f1e8;
   padding: 20px !important;
+  border-radius: 10px;
 }
 
 /* text */ 
@@ -153,6 +154,8 @@ body {
 .customCol {
   background: #f6f1e8 !important;
 }
+
+button 
 
 /* documentatin pg */
 
