@@ -48,7 +48,7 @@
       <main class="container-fluid justify-content-md-around my-4">  <!-- The smaller centered page is class "container" -->
 
         <!-- METADATA ROW -->
-        <div id="metaRow" class="row align-items-start px-4">
+        <div id="metaRow" class="row align-items-start px-4 wrap">
           <div class="col metaCol pt-2 mr-2" id="metaData1">
             <div id="frameData1">
             <ul class="nav nav-tabs justify-content-between" id="tabs1" role="tablist"></ul>
@@ -77,7 +77,7 @@
 
 
         <!-- ARTICLE ROW -->
-        <div class="row align-items-start px-4 py-4">
+        <div class="row align-items-start px-4 py-4 wrap">
            <div class="col artiCol pt-2 mr-2" id="article1"></div>
            <div class="col artiCol pt-2 mr-2" id="article2"></div>
            <div class="col artiCol pt-2" id="article3"></div>
@@ -106,6 +106,74 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <script>
+        // Metadata and article columns widening only for style 4
+        $(function() {
+
+          // Column 1
+          $('#metaData1').hover(function() {
+            if ($('#cssstyle4').attr('media')=='') {
+              $('#article1').css('flex', '3');
+              $('#metaData1').css('flex', '3');
+            }
+          }, function() {
+              $('#article1').css('flex', '1');
+              $('#metaData1').css('flex', '1');
+          });
+          $('#article1').hover(function() {
+            if ($('#cssstyle4').attr('media')=='') {
+              $('#article1').css('flex', '3');
+              $('#metaData1').css('flex', '3');
+            }
+          }, function() {
+              $('#article1').css('flex', '1');
+              $('#metaData1').css('flex', '1');
+          });
+
+          // Column 2
+          $('#metaData2').hover(function() {
+            if ($('#cssstyle4').attr('media')=='') {
+              $('#article2').css('flex', '3');
+              $('#metaData2').css('flex', '3');
+            }
+          }, function() {
+              $('#article2').css('flex', '1');
+              $('#metaData2').css('flex', '1');
+          });
+          $('#article2').hover(function() {
+            if ($('#cssstyle4').attr('media')=='') {
+              $('#article2').css('flex', '3');
+              $('#metaData2').css('flex', '3');
+            }
+          }, function() {
+              $('#article2').css('flex', '1');
+              $('#metaData2').css('flex', '1');
+          });
+
+          // Column 3
+          $('#metaData3').hover(function() {
+            if ($('#cssstyle4').attr('media')=='') {
+              $('#article3').css('flex', '3');
+              $('#metaData3').css('flex', '3');
+            }
+          }, function() {
+              $('#article3').css('flex', '1');
+              $('#metaData3').css('flex', '1');
+          });
+          $('#article3').hover(function() {
+            if ($('#cssstyle4').attr('media')=='') {
+              $('#article3').css('flex', '3');
+              $('#metaData3').css('flex', '3');
+            }
+          }, function() {
+              $('#article3').css('flex', '1');
+              $('#metaData3').css('flex', '1');
+          });
+
+
+        });
+
+    </script>
 
 
   </body>
