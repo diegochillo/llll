@@ -144,18 +144,34 @@ body {
 
 #currentDateTime {
   background-color: transparent !important;
-  border: none;
+  border: none !important;
   box-shadow: none;
   text-shadow: none;
   color: #B63323 !important;
   text-transform: uppercase;
 }
 
-.customCol {
-  background: #f6f1e8 !important;
+.nav-scroller {
+  border-bottom: 1px solid black;
 }
 
-button 
+.customCol {
+  background: #f6f1e8 !important;
+  background-image: url(spacestyle1.png), url(space2style1.png) !important;
+  background-size: contain  !important;
+  background-size: 300px, 300px !important;
+  background-repeat: no-repeat  !important;
+  background-position: bottom, top  !important;
+  background-origin: border-box, border-box  !important;
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+}
+
+#centralMain {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
 
 /* documentatin pg */
 
