@@ -31,9 +31,10 @@
 /* text */
 
 body {
- background-image: url("sfondo4.jpg");
+ background-image: url("sfondo4_3.jpg");
  font-family: Ankitor Reg;
- background-size: contain;
+ background-size: cover;
+ background-repeat: no-repeat;
 }
 
 h2, h3, .subtitle, #kW {
@@ -50,7 +51,7 @@ h1 {
   font-weight: 100;
 }
 
-/* homepage */
+/* homepage */ 
 
 .kwCustom {
   color: #48eefc;
@@ -62,6 +63,7 @@ h1 {
   -webkit-backdrop-filter: blur( 13px ) !important;
   border-radius: 20px !important;
   border: 1px solid rgba( 255, 255, 255, 0.18 ) !important;
+  height: fit-content;
 }
 
 #currentDateTime {
@@ -80,7 +82,7 @@ h1 {
 }
 
 #cover1 {
-
+ 
 }
 
 #issueArticles {
@@ -123,6 +125,7 @@ h1 {
              -26px -26px 55px rgba(113, 115, 139, 0.199);
   margin-right: 5px;
   margin-bottom: 5px;
+  height: fit-content;
 }
 
 .nav-tabs .nav-link.active {
@@ -139,7 +142,6 @@ h1 {
 
 /* hover effect */
 
-/*
 #article1:hover {
  transform: scale(1.05);
  box-shadow: 0 10px 35px 0 rgba( 31, 38, 135, 0.37 );
@@ -198,30 +200,28 @@ h1 {
 #metaData1:hover + #metaData2 {
   transform: scale(0.99);
  }
-
+ 
  #metaData1:hover ~ #metaData3 {
   transform: scale(0.99);
  }
-
+ 
  #metaData2:hover + #metaData1 {
   transform: scale(0.99);
  }
-
+ 
  #metaData2:hover + #metaData3 {
   transform: scale(0.99);
  }
-
+ 
  #metaData3:hover ~ #metaData1 {
   transform: scale(0.99);
  }
-
+ 
  #metaData3:hover + #metaData2 {
   transform: scale(0.99);
  }
 
- */
-
-/* scrollbar */
+/* scrollbar */ 
 
 #article1::-webkit-scrollbar-track {
  background: linear-gradient( 90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 45%, #48eefc 45%, #48eefc 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
@@ -331,7 +331,7 @@ h1 {
 }
 
 
-/* footer */
+/* footer */ 
 
 .footerCustom {
   background-color: transparent!important;
@@ -372,7 +372,7 @@ button {
   }
 
 input, label {
-  box-shadow:
+  box-shadow: 
     12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
     -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
 }
@@ -414,10 +414,11 @@ input:focus {
 }
 
 
-/* Widening transition time for metadata and article columns */
-.wrap > div {
-    /*width: 33%;
-    flex: 1;*/
-    -webkit-transition: flex .3s;
-    transition: flex .3s;
-}
+
+
+
+
+
+
+
+
