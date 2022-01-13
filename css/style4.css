@@ -57,7 +57,7 @@ h1 {
   color: #48eefc;
   border-style: none;
   margin-right: 5px;
-  background: rgba(238, 207, 155, 0.45) !important;
+  background: #f8eadf8e!important;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ) !important;
   backdrop-filter: blur( 13px ) !important;
   -webkit-backdrop-filter: blur( 13px ) !important;
@@ -105,7 +105,7 @@ h1 {
 /* articles */
 
 .artiCol, .metaCol, #footerBar, .headerCustom, .dropdown-menu, .dropdown-item:hover, .customCol, .coverCustom {
-  background: rgba(238, 207, 155, 0.45) !important;
+  background: #f8eadf8e!important;
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ) !important;
   backdrop-filter: blur( 13px ) !important;
   -webkit-backdrop-filter: blur( 13px ) !important;
