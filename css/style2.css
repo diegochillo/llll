@@ -36,9 +36,7 @@
 }
 
 .dropdown-menu {
-
 }
-
 
 #issuesList li {
   background: none;
@@ -321,4 +319,7 @@ footer h3 {
   color: #d4121a !important;
 }
 
+label, input {
+  font-family: Rocket;
+}
 
