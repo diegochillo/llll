@@ -49,7 +49,7 @@
   background-color: #f6f1e8 !important;
   border-radius: 50px !important;
   border: 1px solid black !important;
-  margin-right: 5px;
+  margin-right: 1vw;
 }
 
 #logo {
@@ -60,7 +60,7 @@
 }
 
 #mainMenu li {
-  margin-left: 5px;
+  margin-left: 1vw;
   font-family: Flanker Bold;
   background-color: #f6f1e8;
 }
@@ -188,19 +188,18 @@ body {
   background: #f6f1e8 !important;
   background-image: url(spacestyle1.png), url(space2style1.png) !important;
   background-size: contain  !important;
-  background-size: 300px, 300px !important;
+  background-size: 50vh, 50vh !important;
   background-repeat: no-repeat  !important;
   background-position: bottom, top  !important;
   background-origin: border-box, border-box  !important;
-  padding-top: 100px !important;
-  padding-bottom: 100px !important;
+  padding-top: 20vh !important;
+  padding-bottom: 20vh !important;
 }
 
 #centralMain {
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
-
 
 /* documentatin pg */
 
@@ -230,33 +229,29 @@ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
 }
 
 #artMetaDiv {
-  height: 54vh;
-  background-image: url(spacestyle1.png), url(space2style1.png);
-  background-size: 400px, 400px;
-  background-repeat: no-repeat;
-  background-position: bottom, top;
-  background-origin: content-box, content-box;
+  height: 50vh;
 }
+
 .olCustom {
  border-radius: 20px !important;
  border:1px solid black;
  background-color: #f6f1e8 !important;
- padding-top: 20px;
- padding-bottom: 20px;
+ padding: 5vh 5vw 5vh;
 }
 
 #issueMeta p {
   text-align: center;
+  overflow-y: clip;
 }
 
 #issueMeta {
-  padding-top: 100px;
+ padding-top: 15vh;
 }
 
 #cover1 {
   height: 54vh;
   background-image: url(spacestyle1.png), url(space2style1.png);
-  background-size: 400px, 400px;
+  background-size: 50vh, 50vh !important;
   background-repeat: no-repeat;
   background-position: bottom, top;
   background-origin: content-box, content-box;
@@ -288,9 +283,8 @@ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
 }
 
 #openIssue {
-  margin-top: 100px;
+  margin-top: 20vh;
 }
-
 
 /* articles */
 
@@ -433,17 +427,22 @@ hr {
   background-image: url(metaFrame1.png);
   height: 48vh;
   width: 100%;
-  background-size: 350px;
+  background-size: 48vh, auto;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 #frameData1, #frameData2, #frameData3 {
-   margin: 120px 40px 0px 45px;
+   margin: 17vh 4vw 0vh 4vw;
    overflow-y: scroll;
    overflow-x: hidden;
-   height: 36vh;
+   height: 36vh !important;
 }
+
+#frameData1 ul, #frameData2 ul, #frameData3 ul {
+  overflow-y: clip;
+}
+
 
 #metaData1::-webkit-scrollbar, #metaData2::-webkit-scrollbar, #metaData3::-webkit-scrollbar, #frameData1::-webkit-scrollbar, #frameData2::-webkit-scrollbar, #frameData3::-webkit-scrollbar {
   display: none;
@@ -472,42 +471,16 @@ hr {
 
 /* scrollbar */
 
-#article1::-webkit-scrollbar-track {
+#article1::-webkit-scrollbar-track, #article2::-webkit-scrollbar-track, #article3::-webkit-scrollbar-track  {
   background-image: url(scrollstyle1.png);
   background-size: contain;
 }
-#article1::-webkit-scrollbar {
-  width: 35px;
+#article1::-webkit-scrollbar, #article2::-webkit-scrollbar, #article3::-webkit-scrollbar {
+  width: 4vw;
 }
-#article1::-webkit-scrollbar-thumb {
+#article1::-webkit-scrollbar-thumb, #article2::-webkit-scrollbar-thumb, #article3::-webkit-scrollbar-thumb {
   background-color: #B63323;
-  height: 10px;
-  border-radius: 100px;
-}
-
-#article2::-webkit-scrollbar-track {
-  background-image: url(scrollstyle1.png);
-  background-size: contain;
-}
-#article2::-webkit-scrollbar {
-  width: 35px;
-}
-#article2::-webkit-scrollbar-thumb {
-  background-color: #B63323;
-  height: 10px;
-  border-radius: 100px;
-}
-
-#article3::-webkit-scrollbar-track {
-  background-image: url(scrollstyle1.png);
-  background-size: contain;
-}
-#article3::-webkit-scrollbar {
-  width: 35px;
-}
-#article3::-webkit-scrollbar-thumb {
-  background-color: #B63323;
-  height: 10px;
+  height: 1vh;
   border-radius: 100px;
 }
 
