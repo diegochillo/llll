@@ -210,13 +210,15 @@ iframe{
 .tech-slideshow > div {
   height: 100%;
   width: 2526px;
-  background: url(bannerstyle2.png);
+  background-image: url(bannerstyle2.png);
+  background-repeat: repeat-x;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   transform: translate3d(0, 0, 0);
 }
+
 .tech-slideshow .mover {
   animation: moveSlideshow 20s linear infinite !important;
 }
