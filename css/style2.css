@@ -107,6 +107,8 @@ button a {
   background-color: #db5550 !important;
   font-family: Rocket;
   height: fit-content;
+  margin-right: 1vw;
+  margin-bottom: 1vh;
 }
 
 #currentDateTime {
