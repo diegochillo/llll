@@ -35,8 +35,6 @@
 .headerCustom {
 }
 
-#mainMenu li {
-}
 
 #mainMenu .nav-link{
 }
@@ -57,13 +55,12 @@ textarea::-webkit-scrollbar {
 
 /* text */ 
 
-h1 {
+h1, h2, h3, #kW {
   font-family: Rocket;
   color: black;
   text-transform: uppercase;
   text-align: center;
 }
-
 
 body {
   background-color: #FAF8F9;
@@ -74,20 +71,51 @@ body {
   font-family: Rockwell;
 }
 
-button {
-  background-image: url(btn.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  color:#FAF8F9;
+button, #mainMenu li {
+  border-color: #FAF8F9 !important;
+  color: #FAF8F9 !important;
+  border-radius: 10px 10px 10px 10px !important;
+  background-color: #db5550 !important;
+  font-family: Rocket;
+}
+
+#mainMenu li {
+  text-transform: uppercase;
+}
+
+#mainMenu a {
+  color: #FAF8F9 !important;
+}
+
+button:hover,#mainMenu li:hover  {
+  background: #d4121a !important;
+}
+
+button a {
+  color: #FAF8F9 !important;
 }
 
 /* homepage */
 
+.kwCustom {
+  border-color: #FAF8F9 !important;
+  color: #FAF8F9 !important;
+  border-radius: 10px 10px 10px 10px !important;
+  background-color: #db5550 !important;
+  font-family: Rocket;
+  height: fit-content;
+}
 
-
+#currentDateTime {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+  font-family: Rocket;
+  text-transform: uppercase;
+  text-shadow: none;
+}
 
 /* cover issue */
-
 
 #coverstyle1 {
   background-image: url(pinup.png);
@@ -195,7 +223,7 @@ iframe{
   padding: 1.6vh 5.5vw 1.6vh 1.3vw;
 }
 
-/* spacee */ 
+/* space */ 
 
 
 .tech-slideshow {
@@ -274,4 +302,21 @@ iframe{
 #metaData1::-webkit-scrollbar, #metaData2::-webkit-scrollbar, #metaData3::-webkit-scrollbar { 
   display: none;
 }
+
+
+/* footer */
+
+footer p, footer .nav-link {
+  color: black !important;
+}
+
+footer h3 {
+  text-transform: uppercase;
+}
+
+#teamMate1, #teamMate2 {
+  font-family: Rocket !important;
+  color: #d4121a !important;
+}
+
 
