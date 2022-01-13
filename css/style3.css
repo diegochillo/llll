@@ -41,6 +41,10 @@
 .footerCustom p {
 }
 
+textarea::-webkit-scrollbar {
+  display: none;
+ }
+ 
 h1 {
   font-family: Doctor Punk;
   color: black;

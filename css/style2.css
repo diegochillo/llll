@@ -57,6 +57,10 @@
   background-color: transparent!important;
 }
 
+textarea::-webkit-scrollbar {
+  display: none;
+ }
+ 
 /* text */ 
 
 h1 {

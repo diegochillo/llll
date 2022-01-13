@@ -117,6 +117,10 @@ footer form {
   border-radius: 10px;
 }
 
+textarea::-webkit-scrollbar {
+  display: none;
+ }
+
 footer p, footer li {
   background-color: #f6f1e8 !important;
   padding: 10px;
@@ -290,7 +294,12 @@ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
 
 /* articles */
 
-.big-first-letter {
+.big-first-letter::first-letter{
+  font-family: ArabesqueInitialen;
+  font-size: 80px;
+}
+
+.big-first-line::first-line {
   font-family: ArabesqueInitialen;
   font-size: 80px;
 }
