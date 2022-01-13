@@ -33,18 +33,12 @@
 /* topbar */
 
 .headerCustom {
-  background-color: transparent !important;
 }
 
 #mainMenu li {
-  background-image: url(button.png);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 #mainMenu .nav-link{
-  color: #FAF8F9 !important;
-  padding: 0 10px 10px 10px;
 }
 
 #issuesList li {
@@ -54,13 +48,13 @@
 /* footer */ 
 
 .footerCustom {
-  background-color: transparent!important;
+
 }
 
 textarea::-webkit-scrollbar {
   display: none;
  }
- 
+
 /* text */ 
 
 h1 {
@@ -94,20 +88,14 @@ button {
 
 /* cover issue */
 
-#cover1 {
-  background-size: 280px, 200px;
-  background-repeat: no-repeat;
-  background-position: center, center;
-  background-origin: content-box, content-box;
-}
 
 #coverstyle1 {
   background-image: url(pinup.png);
-  background-size: 400px;
+  background-size: 60vh;
   background-repeat: no-repeat;
   background-position: left bottom;
   background-origin: content-box;
- }
+}
 
 #issueMeta p {
   text-align: center;
@@ -119,7 +107,6 @@ button {
 }
 
 .metaTitle {
-  
   text-transform: uppercase;
 }
 
@@ -138,12 +125,15 @@ button {
 #content1, #content2, #content3 {
   border: solid 1px #FAF8F9;
   border-radius: 0 10px 10px 10px ;
-  padding: 0 5px 5px 5px;
+  padding: 1vh 1vw 1vh 1vw;
   border-top: 0;
   margin-top: 0;
   background-color: #d4121a;
   color:#FAF8F9;
+  height: 15vh;
+  overflow-y: scroll;
 }
+
 #tabs1, #tabs2, #tabs3 {
 border-bottom: transparent;
 justify-content: start !important;
@@ -162,16 +152,29 @@ position: sticky !important;
   background-color: #d4121a !important; 
 }
  
-
 #tabs1 a:hover, #tabs2 a:hover, #tabs3 a:hover {
-    border-bottom-color: transparent;
-    background-color: #d4121a; 
+  border-bottom-color: transparent;
+  background-color: #d4121a; 
 }
 
 #tabs1, #tabs2, #tabs3 {
   justify-content: start !important;
 }
 
+#metaData1, #metaData2, #metaData3 {
+  height: 28vh;
+}
+/* controllare */
+
+#frameData1, #frameData2, #frameData3 {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 30vh;
+}
+
+#frameData1::-webkit-scrollbar, #frameData2::-webkit-scrollbar, #frameData3::-webkit-scrollbar, #content1::-webkit-scrollbar, #content2::-webkit-scrollbar, #content3::-webkit-scrollbar {
+ display: none;
+}
 
 img {
 filter: grayscale(6%) brightness(85%) saturate(216%) contrast(55%);
@@ -189,33 +192,14 @@ iframe{
   border-image-repeat: stretch round;
   width: 100%;
   height: auto;
-  padding: 10px 53px 10px 10px;
+  padding: 1.6vh 5.5vw 1.6vh 1.3vw;
 }
-
-/*
-.article {
-  color: lightgray;
-}
-
-.navbar-light .navbar-nav .nav-link.active {
-  color: lightgray!important;
-}
-
-.navbar-brand {
-  color: lightgray!important;
-}
-
-img.itemIcon {
-  filter: invert(100%);
-}
-
-*/
 
 /* spacee */ 
 
 
 .tech-slideshow {
-  height: 81px;
+  height: 11.5vh;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -224,7 +208,7 @@ img.itemIcon {
 }
 
 .tech-slideshow > div {
-  height: 200px;
+  height: 100%;
   width: 2526px;
   background: url(bannerstyle2.png);
   position: absolute;
@@ -233,8 +217,8 @@ img.itemIcon {
   height: 100%;
   transform: translate3d(0, 0, 0);
 }
-.tech-slideshow .mover-1 {
-  animation: moveSlideshow 20s linear infinite;
+.tech-slideshow .mover {
+  animation: moveSlideshow 20s linear infinite !important;
 }
 
 @keyframes moveSlideshow {
@@ -242,7 +226,6 @@ img.itemIcon {
     transform: translateX(-66.6666%);  
   }
 }
-
 
 /* articles */
 
@@ -257,27 +240,27 @@ img.itemIcon {
   color: black;
 }
 
-
 .wmf-wp-with-preview {
   color: #d4121a !important;
   font-family: Rockwell !important;
   border-bottom: 1px dashed #d4121a !important;
 }
 
-#article1::-webkit-scrollbar { 
-  width: 10px;
+/* scrollbar */ 
+
+#article1::-webkit-scrollbar, #article2::-webkit-scrollbar, #article3::-webkit-scrollbar { 
+  width: 1.5vw;
 }
 
-#article1::-webkit-scrollbar-track {
+#article1::-webkit-scrollbar-track, #article2::-webkit-scrollbar-track, #article3::-webkit-scrollbar-track {
   background-color: transparent;
 }
 
-#article1::-webkit-scrollbar-thumb {  
+#article1::-webkit-scrollbar-thumb, #article2::-webkit-scrollbar-thumb, #article3::-webkit-scrollbar-thumb  {  
   border-radius: 10px;
   min-height: 60px;
   background-color: #d4121a;
-  background-image: -webkit-linear-gradient(45deg,
-                                            rgb(255,255,255) 25%,
+  background-image: -webkit-linear-gradient(45deg,rgb(255,255,255) 25%,
                                             transparent 25%,
                                             transparent 50%,
                                             rgb(255, 255, 255) 50%,
@@ -286,118 +269,7 @@ img.itemIcon {
                                             transparent)
 }
 
-#article2::-webkit-scrollbar { 
-  width: 10px;
-}
-
-#article2::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-#article2::-webkit-scrollbar-thumb {  
-  border-radius: 10px;
-  min-height: 60px;
-  background-color: #d4121a;
-  background-image: -webkit-linear-gradient(45deg,
-                                            rgb(255,255,255) 25%,
-                                            transparent 25%,
-                                            transparent 50%,
-                                            rgb(255, 255, 255) 50%,
-                                            rgba(255, 255, 255) 75%,
-                                            transparent 75%,
-                                            transparent)
-}
-
-#article3::-webkit-scrollbar { 
-  width: 10px;
-}
-
-#article3::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-#article3::-webkit-scrollbar-thumb {  
-  border-radius: 10px;
-  min-height: 60px;
-  background-color: #d4121a;
-  background-image: -webkit-linear-gradient(45deg,
-                                            rgb(255,255,255) 25%,
-                                            transparent 25%,
-                                            transparent 50%,
-                                            rgb(255, 255, 255) 50%,
-                                            rgba(255, 255, 255) 75%,
-                                            transparent 75%,
-                                            transparent)
-}
-
-#metaData1::-webkit-scrollbar { 
-  width: 10px;
+#metaData1::-webkit-scrollbar, #metaData2::-webkit-scrollbar, #metaData3::-webkit-scrollbar { 
   display: none;
 }
-
-#metaData1::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-#metaData1::-webkit-scrollbar-thumb {  
-  border-radius: 10px;
-  min-height: 60px;
-  background-color: #a80e0e;
-  background-image: -webkit-linear-gradient(45deg,
-                                            rgb(255,255,255) 25%,
-                                            transparent 25%,
-                                            transparent 50%,
-                                            rgb(255, 255, 255) 50%,
-                                            rgba(255, 255, 255) 75%,
-                                            transparent 75%,
-                                            transparent)
-}
-
-#metaData2::-webkit-scrollbar { 
-  width: 10px;
-  display: none;
-}
-
-#metaData2::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-#metaData2::-webkit-scrollbar-thumb {  
-  border-radius: 10px;
-  min-height: 60px;
-  background-color: #a80e0e;
-  background-image: -webkit-linear-gradient(45deg,
-                                            rgb(255,255,255) 25%,
-                                            transparent 25%,
-                                            transparent 50%,
-                                            rgb(255, 255, 255) 50%,
-                                            rgba(255, 255, 255) 75%,
-                                            transparent 75%,
-                                            transparent)
-}
-
-#metaData3::-webkit-scrollbar { 
-  width: 10px;
-  display: none;
-}
-
-#metaData3::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-#metaData3::-webkit-scrollbar-thumb {  
-  border-radius: 10px;
-  min-height: 60px;
-  background-color: #a80e0e;
-  background-image: -webkit-linear-gradient(45deg,
-                                            rgb(255,255,255) 25%,
-                                            transparent 25%,
-                                            transparent 50%,
-                                            rgb(255, 255, 255) 50%,
-                                            rgba(255, 255, 255) 75%,
-                                            transparent 75%,
-                                            transparent)
-}
-
-
 
