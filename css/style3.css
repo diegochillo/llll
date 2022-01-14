@@ -44,14 +44,14 @@
 textarea::-webkit-scrollbar {
   display: none;
  }
- 
-h1 {
+
+h1, h3 {
   font-family: Doctor Punk;
   color: black;
   text-align: center;
 }
 
-h2, h3, .subtitle {
+h2, .subtitle {
   font-family: ZineTime;
 }
 
@@ -66,6 +66,7 @@ body {
 a {
   color: fuchsia;
 }
+
 a:hover {
   color: black;
 }
@@ -86,7 +87,8 @@ a:hover {
   background-origin: border-box;
   height: 38vh;
 }
- */
+
+*/
 
 #mainBody {
   background-image: url(coverstyl3.png);
@@ -207,7 +209,6 @@ a:hover {
   border-bottom: transparent;
 }
 
-
 #metaData1, #metaData2, #metaData3 {
   background-image: url(tornpaper.png);
   background-position: center;
@@ -230,7 +231,6 @@ a:hover {
   -ms-filter: brightness(80%) saturate(139%) contrast(198%) ;
   -o-filter: brightness(80%) saturate(139%) contrast(198%);
 }
-
 
 .imgFrame {
  width: 100%;
@@ -307,3 +307,19 @@ a:hover {
   top: -1.5em;
   position: relative;
 }
+
+/* footer */
+
+footer p, footer .nav-link {
+  color: black !important;
+}
+
+#teamMate1, #teamMate2 {
+  font-family: ZineTime;
+  color: fuchsia !important;
+}
+
+label, input {
+  font-family: ZineTime;
+}
+
