@@ -288,6 +288,9 @@ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
 
 /* articles */
 
+#artRow {
+  border-top: 1px solid black;
+}
 .big-first-letter::first-letter{
   font-family: ArabesqueInitialen;
   font-size: 80px;
