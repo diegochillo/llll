@@ -51,7 +51,7 @@ h1, h3 {
   text-align: center;
 }
 
-h2, .subtitle {
+h2, #kW, .subtitle {
   font-family: ZineTime;
 }
 
@@ -77,25 +77,23 @@ a:hover {
   border-bottom: 1px dashed fuchsia !important;
 }
 
-/* homepage
+/* homepage */
 
-#harvardTest, #learnANewWord {
-  background-color: transparent !important;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-origin: border-box;
-  height: 38vh;
+.kwCustom {
+  border-color: #FAF8F9 !important;
+  color: #FAF8F9 !important;
+  border-radius: 10px 10px 10px 10px !important;
+  background-image: url(tape2.png) !important;
+  height: fit-content;
+  margin-right: 1vw;
+  margin-bottom: 1vh;
 }
 
-*/
-
-#mainBody {
-  background-image: url(coverstyl3.png);
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-origin: margin-box;
-  background-size: 400px;
+#currentDateTime {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
 }
 
 .customCol{
@@ -109,27 +107,53 @@ a:hover {
 }
 
 #art1 {
-  transform: rotate(-5deg);
+  background-image: url(bgpaper.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 35vh;
+  transform: rotate(-4deg);
   position: relative;
+  padding: 8vh;
 }
 #art2 {
-  transform: rotate(5deg);
+  background-image: url(bgpaper.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 35vh;
+  transform: rotate(4deg);
   position: relative;
-  top: 50px;
+  padding: 8vh;
 }
 #art3 {
-  transform: rotate(-5deg);
+  background-image: url(bgpaper.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  height: 35vh;
+  transform: rotate(-4deg);
   position: relative;
-  top: 50px;
+  padding: 8vh;
 }
 
 #coverstyle1 {
-  background-image: url(sexpistols.png), url(coverstyl3.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom right, top left;
-  background-origin: content-box, margin-box;
-  background-size: auto, 400px;
+  background-image: url(styl4.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-y: center;
 }
+/*
+  background-image: url(sexpistols.png), url(9.png), url(warning.png), url(security.png);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: bottom left, top right, center left, bottom right;
+  background-origin: content-box, margin-box, content-box, content-box;
+  background-size: auto, 50vh, 20vh, 20vh;
+}
+*/
 
 #issueMeta p {
   text-align: center;
@@ -148,7 +172,7 @@ a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: border-box;
-  height: 40vh;
+  height: 42vh;
 }
 
 #issueArticles {

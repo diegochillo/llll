@@ -32,21 +32,11 @@
 
 /* topbar */
 
-.headerCustom {
-}
-
-.dropdown-menu {
-}
-
 #issuesList li {
   background: none;
 }
 
 /* footer */ 
-
-.footerCustom {
-
-}
 
 textarea::-webkit-scrollbar {
   display: none;
@@ -224,7 +214,6 @@ iframe{
 }
 
 /* space */ 
-
 
 .tech-slideshow {
   height: 11.5vh;
