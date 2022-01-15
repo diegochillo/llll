@@ -1,12 +1,12 @@
 /* Style 4 */
 
 @font-face{
-  font-family: "Ankitor Reg";
+  font-family: "Antikor Reg";
   src: url("./fonts/style4/Taner\ Ardali\ \ Antikor\ Mono\ Regular.ttf");
  }
 
 @font-face{
-  font-family: "Ankitor BI";
+  font-family: "Antikor BI";
   src: url("./fonts/style4/Taner\ Ardali\ \ Antikor\ Mono\ Bold\ Italic.ttf");
  }
 
@@ -23,7 +23,7 @@
 }
 
 #issuesList li {
-  font-family: Ankitor Reg;
+  font-family: Antikor Reg;
   text-transform: lowercase;
 }
 
@@ -32,7 +32,7 @@
 
 body {
  background-image: url("sfondo4_6.jpg");
- font-family: Ankitor Reg;
+ font-family: Antikor Reg;
  background-size: cover;
  background-repeat: no-repeat;
 }
