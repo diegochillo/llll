@@ -119,6 +119,7 @@
   function scrollFunction() {
     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
       document.getElementById("reviewName").style.fontSize = "30px";
+      document.getElementById("reviewName").style.zIndex = "100";
       document.getElementById("styleSelector").style.padding = "0px";
       document.getElementById("styleSelector").style.height = "60px";
     } else {

@@ -114,6 +114,7 @@ button {
 }
 
 #reviewName {
+  position:relative; /* NEEDED FOR Z-INDEX TO WORK! */
   transition: .3s;  /* When it shrinks on scroll*/
 }
 
