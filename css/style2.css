@@ -86,6 +86,12 @@ button a {
   color: #FAF8F9 !important;
 }
 
+.customCol {
+  border: solid;
+  border-radius: 10px;
+  border-color: #db5550 !important;
+}
+
 /* homepage */
 
 .kwCustom {
@@ -111,25 +117,50 @@ button a {
 /* cover issue */
 
 #coverstyle1 {
-  background-image: url(pinup.png);
-  background-size: 60vh;
+  background-image: url(style2.png);
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: left bottom;
-  background-origin: content-box;
+  background-position: center top;
+  background-origin: margin-box;
+}
+
+#cover1 {
+  height: 50vh;
+  background-image: url(exballoon.png);
+  background-position: center;
+  background-size: 70vh;
+  background-repeat: no-repeat;
+  background-origin: margin-box;
+}
+
+.olCustom {
+  background-color: white !important;
+  border: solid;
+  border-radius: 10px;
+  border-color: #db5550 !important;
+  padding: 5vh 5vw 5vh;
 }
 
 #issueMeta p {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: clip;
+  color: white ;
+}
+.metaTitle {
+  color: white;
+}
+#artN1KW1, #artN2KW1, #artN3KW1, #artN1KW2, #artN2KW2, #artN3KW2, #artN1KW3, #artN2KW3, #artN3KW3 {
+  font-family: Rocket !important;
+}
+#issueMeta {
+padding-top: 15vh;
 }
 
 #issueArticles {
   text-align: center;
   height: auto;
-}
-
-
-#artN1, #artN2, #artN3 {
- 
 }
 
 #btnIssue {
@@ -308,7 +339,7 @@ footer h3 {
   color: #d4121a !important;
 }
 
-label, input {
+footer input, header input, #currentDateTime input, textarea {
   font-family: Rocket;
 }
 

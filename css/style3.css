@@ -100,6 +100,20 @@ a:hover {
   background-color: transparent !important;
 }
 
+.customCol button, .customCol button:hover, .customCol button:active, footer button, footer button:active, footer button:hover  {
+  padding: 20px;
+  background-image: url(btn3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: black;
+  border: none;
+  background-color: transparent !important;
+}
+
+#mainBody hr {
+  content: none;
+}
+
 /* coverissue */
 
 .coverCustom {
@@ -192,6 +206,7 @@ a:hover {
 #openIssue {
   margin-top: 40px;
 }
+
 #btnIssue {
   padding: 20px;
   background-image: url(btn3.png);
@@ -204,7 +219,7 @@ a:hover {
 /* articles */
 
 .mention {
- background-image: url(mention.png);
+ background-image: url(btn3.png);
  background-size: contain;
  color: fuchsia;
 }
@@ -221,6 +236,7 @@ a:hover {
   color: black;
   font-size: 18px;
 }
+
 
 .nav-tabs .nav-link.active {
   border-color: transparent !important;
