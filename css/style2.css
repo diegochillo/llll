@@ -62,6 +62,7 @@ body {
 
 button, #mainMenu li, .dropdown-menu {
   border-color: #FAF8F9 !important;
+  border: 2px solid!important;
   color: #FAF8F9 !important;
   border-radius: 10px 10px 10px 10px !important;
   background-color: #db5550 !important;
@@ -80,6 +81,7 @@ button, #mainMenu li, .dropdown-menu {
 
 button:hover,#mainMenu li:hover, .dropdown-item:hover  {
   background: #d4121a !important;
+  border-radius: 10px 10px 10px 10px !important;
 }
 
 button a {
