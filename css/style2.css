@@ -36,13 +36,13 @@
   background: none;
 }
 
-/* footer */ 
+/* footer */
 
 textarea::-webkit-scrollbar {
   display: none;
  }
 
-/* text */ 
+/* text */
 
 h1, h2, h3, #kW, .metaTitle {
   font-family: Rocket;
@@ -112,6 +112,11 @@ button a {
   font-family: Rocket;
   text-transform: uppercase;
   text-shadow: none;
+}
+
+#centralMain {
+  border-left: none;
+  border-right: none;
 }
 
 /* cover issue */
@@ -198,12 +203,12 @@ position: sticky !important;
 
 .nav-tabs .nav-link.active {
   border-bottom-color: transparent !important;
-  background-color: #d4121a !important; 
+  background-color: #d4121a !important;
 }
- 
+
 #tabs1 a:hover, #tabs2 a:hover, #tabs3 a:hover {
   border-bottom-color: transparent;
-  background-color: #d4121a; 
+  background-color: #d4121a;
 }
 
 #tabs1, #tabs2, #tabs3 {
@@ -235,16 +240,16 @@ filter: grayscale(6%) brightness(85%) saturate(216%) contrast(55%);
 
 iframe{
   border-image: url(VideoPlayer.png);
-  border-image-slice: 27 161 27 27; 
-  border-image-width: 20px 60px 20px 20px; 
-  border-image-outset: 0px 0px 0px 0px; 
+  border-image-slice: 27 161 27 27;
+  border-image-width: 20px 60px 20px 20px;
+  border-image-outset: 0px 0px 0px 0px;
   border-image-repeat: stretch round;
   width: 100%;
   height: auto;
   padding: 1.6vh 5.5vw 1.6vh 1.3vw;
 }
 
-/* space */ 
+/* space */
 
 .tech-slideshow {
   height: 11.5vh;
@@ -270,8 +275,8 @@ iframe{
 }
 
 @keyframes moveSlideshow {
-  100% { 
-    transform: translateX(-66.6666%);  
+  100% {
+    transform: translateX(-66.6666%);
   }
 }
 
@@ -294,9 +299,9 @@ iframe{
   border-bottom: 1px dashed #d4121a !important;
 }
 
-/* scrollbar */ 
+/* scrollbar */
 
-#article1::-webkit-scrollbar, #article2::-webkit-scrollbar, #article3::-webkit-scrollbar { 
+#article1::-webkit-scrollbar, #article2::-webkit-scrollbar, #article3::-webkit-scrollbar {
   width: 1.5vw;
 }
 
@@ -304,7 +309,7 @@ iframe{
   background-color: transparent;
 }
 
-#article1::-webkit-scrollbar-thumb, #article2::-webkit-scrollbar-thumb, #article3::-webkit-scrollbar-thumb  {  
+#article1::-webkit-scrollbar-thumb, #article2::-webkit-scrollbar-thumb, #article3::-webkit-scrollbar-thumb  {
   border-radius: 10px;
   min-height: 60px;
   background-color: #d4121a;
@@ -317,7 +322,7 @@ iframe{
                                             transparent)
 }
 
-#metaData1::-webkit-scrollbar, #metaData2::-webkit-scrollbar, #metaData3::-webkit-scrollbar { 
+#metaData1::-webkit-scrollbar, #metaData2::-webkit-scrollbar, #metaData3::-webkit-scrollbar {
   display: none;
 }
 
@@ -340,4 +345,3 @@ footer h3 {
 footer input, header input, #currentDateTime input, textarea {
   font-family: Rocket;
 }
-

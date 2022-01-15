@@ -25,13 +25,18 @@
   background-color: transparent !important;
   background-image: url(topb3r.png);
   background-size: contain;
+  border-bottom: none;
 }
 .headerCustom h1 {
   color: fuchsia;
 }
 
+#mainMenu {
+  font-family: "Simple Things";
+}
 
-/* footer */ 
+
+/* footer */
 
 .footerCustom {
   background-color: transparent !important;
@@ -112,6 +117,11 @@ a:hover {
 
 #mainBody hr {
   content: none;
+}
+
+#centralMain {
+  border-left: none;
+  border-right: none;
 }
 
 /* coverissue */
@@ -362,4 +372,3 @@ footer p, footer .nav-link {
 label, input {
   font-family: ZineTime;
 }
-

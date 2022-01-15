@@ -2,7 +2,7 @@
 
 /* Queste righe andavano in errore su tutte le pagine: */
 /* @import docsearch from '@docsearch/js'; */
-/* @import '@docsearch/css'; 
+/* @import '@docsearch/css';
 
 #docsearch{
   container: '#docsearch',
@@ -15,6 +15,7 @@
 body {
   overflow-y: scroll;
   overflow-x: hidden;
+  font-family: georgia,'times new roman',serif;
 }
 
 body::-webkit-scrollbar {
@@ -68,7 +69,7 @@ button {
 }
 
 
-/* documentation */ 
+/* documentation */
 
 #docCenter{
   height: 72vh;
@@ -109,6 +110,7 @@ button {
 
 #mainMenu {
   transition: .3s;  /* When it shrinks on scroll*/
+  font-family: "";
 }
 
 #reviewName {
@@ -249,4 +251,23 @@ a.link-dark {
 
 .searchResult {
   margin-bottom: 20px;
+}
+
+
+/* Basic Style */
+
+#centralMain {
+  border-left: 1px solid darkgray;
+  border-right: 1px solid darkgray;
+}
+
+
+.headerCustom {
+  border-bottom: 1px solid darkgray;
+}
+
+.customCol {
+  border-bottom: 1px solid darkgray;
+  border-radius:0!important;
+  background-color:transparent!important;
 }
