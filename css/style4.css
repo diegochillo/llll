@@ -80,6 +80,10 @@ h1 {
   border-right: none;
 }
 
+#keywordsList {
+  border-bottom: none;
+}
+
 /* cover issue */
 
 #issueMeta p{

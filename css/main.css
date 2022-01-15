@@ -265,10 +265,16 @@ a.link-dark {
 
 .headerCustom {
   border-bottom: 1px solid darkgray;
+  margin-bottom:20px!important;
 }
 
 .customCol {
   border-bottom: 1px solid darkgray;
   border-radius:0!important;
   background-color:transparent!important;
+}
+
+
+#keywordsList {
+  border-bottom: 1px solid darkgray;
 }
