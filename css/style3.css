@@ -25,25 +25,17 @@
   background-color: transparent !important;
   background-image: url(topb3r.png);
   background-size: contain;
-  border-bottom: none;
 }
 .headerCustom h1 {
-  color: fuchsia;
+  color: #fb42cc;
 }
 
-#mainMenu {
-  font-family: "Simple Things";
-}
-
-
-/* footer */
+/* footer */ 
 
 .footerCustom {
   background-color: transparent !important;
   background-image: url(footer.png);
   background-size: cover;
-}
-.footerCustom p {
 }
 
 textarea::-webkit-scrollbar {
@@ -69,7 +61,7 @@ body {
 }
 
 a {
-  color: fuchsia;
+  color: #fb42cc;
 }
 
 a:hover {
@@ -77,9 +69,9 @@ a:hover {
 }
 
 .wmf-wp-with-preview {
-  color: fuchsia !important;
+  color: #fb42cc !important;
   font-family: Zine Time !important;
-  border-bottom: 1px dashed fuchsia !important;
+  border-bottom: 1px dashed #fb42cc !important;
 }
 
 /* homepage */
@@ -115,17 +107,12 @@ a:hover {
   background-color: transparent !important;
 }
 
-#mainBody hr {
-  content: none;
-}
-
-#centralMain {
-  border-left: none;
-  border-right: none;
-}
-
-#keywordsList {
-  border-bottom: none;
+.mover { /* sto coso non funziona */
+  height: 10vh;
+  background:url(spac3.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-origin: margin-box;
 }
 
 /* coverissue */
@@ -169,10 +156,11 @@ a:hover {
 }
 
 #coverstyle1 {
-  background-image: url(styl4.png);
+  background-image: url(queenel.png), url(grrrlpower.png), url(bikikill.png), url(warning.png), url(dtfyw.png), url(satan.jpg);
   background-repeat: no-repeat;
-  background-size: auto;
-  background-position-y: center;
+  background-size: 50vh, 30vh, 30vh, 30vh, 30vh, 30vh;
+  background-origin: content-box;
+  background-position: bottom left, top right, top left, bottom right, center left, center right;
 }
 /*
   background-image: url(sexpistols.png), url(9.png), url(warning.png), url(security.png);
@@ -235,7 +223,7 @@ a:hover {
 .mention {
  background-image: url(btn3.png);
  background-size: contain;
- color: fuchsia;
+ color: #fb42cc;
 }
 
 /* nav-tabs */
@@ -255,7 +243,7 @@ a:hover {
 .nav-tabs .nav-link.active {
   border-color: transparent !important;
   background-color: transparent !important;
-  color: rgb(255, 0, 255);
+  color: #fb42cc;
 }
 
 #tabs1, #tabs2, #tabs3 {
@@ -370,9 +358,10 @@ footer p, footer .nav-link {
 
 #teamMate1, #teamMate2 {
   font-family: ZineTime;
-  color: fuchsia !important;
+  color: #fb42cc !important;
 }
 
 label, input {
   font-family: ZineTime;
 }
+
