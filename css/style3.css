@@ -102,9 +102,13 @@ a:hover {
   background-image: url(btn3.png);
   background-size: contain;
   background-repeat: no-repeat;
-  color: black;
-  border: none;
+  color: black !important;
+  border: none !important;
   background-color: transparent !important;
+}
+
+footer button:active, footer button:hover {
+  color: #fb42cc !important;
 }
 
 .mover { /* sto coso non funziona */
