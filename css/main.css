@@ -68,7 +68,6 @@ button {
  text-align: center;
 }
 
-
 /* documentation */
 
 #docCenter{
@@ -281,17 +280,15 @@ a.link-dark {
 
 
 
-
+/*
 a[year]:hover:after {
   content: attr(year);
-  font-size:120px;
-  /* letter-spacing:40px; */
+  font-size:80px;
   color: rgba(0,0,0,0.1);
   position: absolute;
-  left: 6%;
-  top: -50px;
+  left: -10px;
+  top: 20px;
   z-index: 0;
-  width:50px;
   background: transparent;
-  pointer-events: none;
 }
+*/
