@@ -281,15 +281,17 @@ a.link-dark {
 
 
 
-/*
+
 a[year]:hover:after {
   content: attr(year);
   font-size:80px;
+  /* letter-spacing:40px; */
   color: rgba(0,0,0,0.1);
   position: absolute;
-  left: -10px;
-  top: 20px;
+  left: 20%;
+  top: -10px;
   z-index: 0;
+  width:50px;
   background: transparent;
+  pointer-events: none;
 }
-*/
