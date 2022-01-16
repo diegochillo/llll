@@ -307,9 +307,8 @@ label {
 button {
   border-radius: 50px;
   border-color: transparent !important;
-  background: #ebebeb;
-  box-shadow:  20px 20px 60px #c8c8c8,
-               -20px -20px 60px #ffffff;
+  box-shadow:  20px 20px 30px #dad9d9e5,
+               -10px -10px 30px #ffffffc2;
   }
 
 input, textarea {
