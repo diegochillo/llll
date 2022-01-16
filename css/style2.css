@@ -1,19 +1,5 @@
 /* Style 2 */
 
-@font-face {
-  font-family: "Milestone";
-  src: url("./fonts/style2/MilestoneFreeVersion-Script.otf");
-}
-
-@font-face {
-  font-family: "Maddison";
-  src: url("./fonts/style2/Maddison.ttf");
-}
-
-@font-face {
-  font-family: "Roots";
-  src: url("./fonts/style2/Roots.ttf");
-}
 
 @font-face {
   font-family: "Rockwell";
@@ -28,6 +14,17 @@
 @font-face {
   font-family: "Rocket";
   src: url("./fonts/style2/RocketScript.ttf");
+}
+
+@font-face {
+  font-family: "Optima";
+  src: url("./fonts/style2/OPTIMA.TTF");
+}
+
+
+@font-face {
+  font-family: "Futura";
+  src: url("./fonts/style2/futura\ light\ bt.ttf");
 }
 
 /* topbar */
@@ -57,7 +54,7 @@ body {
   background-size: contain;
   background-blend-mode: color-burn;
   color: black;
-  font-family: Rockwell;
+  font-family: Optima;
 }
 
 button, #mainMenu li, .dropdown-menu {
