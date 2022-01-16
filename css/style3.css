@@ -124,6 +124,10 @@ a:hover {
   border-right: none;
 }
 
+#keywordsList {
+  border-bottom: none;
+}
+
 /* coverissue */
 
 .coverCustom {

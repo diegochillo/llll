@@ -93,7 +93,7 @@ input, textarea {
   border: 1px solid black !important;
 }
 
-/* footer */ 
+/* footer */
 
 .footerCustom {
   background-color: #f6f1e8 !important;
@@ -142,7 +142,7 @@ footer .nav-link {
   border-radius: 10px;
 }
 
-/* text */ 
+/* text */
 
 h1 {
   color: #B63323;
@@ -168,7 +168,7 @@ body {
   text-align: justify;
 }
 
-/* homepage */ 
+/* homepage */
 
 .kwCustom {
   font-family: Flanker Bold;
@@ -205,6 +205,10 @@ body {
   border-right: 1px solid black;
 }
 
+#keywordsList {
+  border-bottom: none;
+}
+
 
 /* documentatin pg */
 
@@ -223,7 +227,7 @@ background-image: url(framesxstyle1.png), url(framedxstyle1.png);
   box-shadow: black;
 }
 
-/* cover */ 
+/* cover */
 
 #coverstyle1 {
  background-image: url(framesxstyle1.png), url(framedxstyle1.png);
@@ -348,7 +352,7 @@ background-size: contain;
 background-origin: content-box;
 }
 
-/* imgFrame before 
+/* imgFrame before
 height: 36vh;
 width: auto;
 border: 30px solid;

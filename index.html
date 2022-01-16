@@ -51,7 +51,7 @@
             <p class="p-2 fw-normal text-dark" href="#"><input type="text" id="currentDateTime"></p>
         </nav>
       </div>
-      
+
       <div class="container-fluid justify-content-center pb-3">
         <div class="tech-slideshow">
           <div class="mover"></div>
@@ -107,7 +107,7 @@
           <h1 class="display-4 fst-italic">Welcome to this mf magazine</h1>
           <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
 
-  
+
             <h3 class="fst-italic">Want to learn more?</h3>
             <p class="lead my-3">Read the full documentation about hUmagazine's philosophy, design, and techical choices.</p>
            <button type="button" class="btn mt-3 btn-outline-dark"><a href="documentation.html" target="_blank">Learn more...</a></button>
@@ -125,13 +125,13 @@
       </div>
 
     </div>
-   
+
     <div class="container-fluid justify-content-center py-3">
       <div class="tech-slideshow">
         <div class="mover"></div>
       </div>
     </div>
-  
+
   </main>
 
 
@@ -171,7 +171,7 @@
     $("#learnterm").prepend(objson["glossary"][rndInt]["term"]);
     $("#learndefinition").append(objson["glossary"][rndInt]["definition"]);
   }).fail(function(){
-    console.log("Get from glossaryDb: an error has occurred.");
+    //console.log("Get from glossaryDb: an error has occurred.");
   });
 
   // Populates the list of keywords on top of page reading keywords from issuesDb.json
@@ -180,11 +180,11 @@
     const kwSet = new Set();
     //for (i=objson["issues"].length-1; i>=0; i--) {
     for (i=0; i<objson["issues"].length; i++) {
-      console.log("i="+i);
+      //console.log("i="+i);
       for (a=1; a<=3; a++) { // Three articles for each magazine issue
-        console.log("a="+a);
+        //console.log("a="+a);
         for (k=1; k<=3; k++) { // Three keywords for each article
-          console.log("k="+k);
+          //console.log("k="+k);
           if (objson["issues"][i]["art"+a+"KW"+k]) {
             kwSet.add(objson["issues"][i]["art"+a+"KW"+k]); // To avoid repetitions
           }
@@ -194,24 +194,14 @@
     var cntr=0;
     for (let item of kwSet){
       if (cntr<9) {
-        $("#keywordsList").prepend('<p class="p-2 link-secondary kwCustom">' + item + '</p>');
+        $("#keywordsList").prepend('<p class="p-2 link-secondary kwCustom mt-2">' + item + '</p>');
         cntr++;
       }
     }
-    $("#keywordsList").prepend('<p id="kW" class="p-2 fw-normal text-dark">Keywords:</p>');
+    $("#keywordsList").prepend('<p id="kW" class="p-2 fw-normal text-dark mt-2">Keywords:</p>');
   }).fail(function(){
     console.log("Get from issuesDb: an error has occurred.");
   });
-
-  // <p class="p-2 link-secondary">Language</p>
-  // <p class="p-2 link-secondary">Bias</p>
-  // <a  class="p-2 link-secondary" href="#">Gender</a>
-  // <a class="p-2 link-secondary" href="#">Culture</a>
-  // <a class="p-2 link-secondary" href="#">Sexuality</a>
-  // <a class="p-2 link-secondary" href="#">Politics</a>
-  // <a class="p-2 link-secondary" href="#">Opinion</a>
-  // <a class="p-2 link-secondary" href="#">Science</a>
-  // <a class="p-2 link-secondary" href="#">Health</a>
 
 
 </script>

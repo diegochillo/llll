@@ -119,6 +119,10 @@ button a {
   border-right: none;
 }
 
+#keywordsList {
+  border-bottom: none;
+}
+
 /* cover issue */
 
 #coverstyle1 {

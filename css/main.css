@@ -114,6 +114,7 @@ button {
 }
 
 #reviewName {
+  position:relative; /* NEEDED FOR Z-INDEX TO WORK! */
   transition: .3s;  /* When it shrinks on scroll*/
 }
 
@@ -264,6 +265,7 @@ a.link-dark {
 
 .headerCustom {
   border-bottom: 1px solid darkgray;
+  margin-bottom:20px!important;
 }
 
 .customCol {
@@ -271,3 +273,23 @@ a.link-dark {
   border-radius:0!important;
   background-color:transparent!important;
 }
+
+
+#keywordsList {
+  border-bottom: 1px solid darkgray;
+}
+
+
+
+/*
+a[year]:hover:after {
+  content: attr(year);
+  font-size:80px;
+  color: rgba(0,0,0,0.1);
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  z-index: 0;
+  background: transparent;
+}
+*/
